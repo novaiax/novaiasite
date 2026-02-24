@@ -156,8 +156,9 @@
         </div>
         <p>Détection automatisée de failles techniques sur le web. Scan, scoring et dashboard pour identifier les leads à fort potentiel.</p>
         <div class="project-preview" id="novaradar-preview" style="display:none;">
-          <img src="capture novaRadar.png" alt="Dashboard NovaRadar Tech — scan, scoring et leads détectés" loading="lazy">
+          <img src="capture novaRadar.png" alt="Dashboard NovaRadar Tech — scan, scoring et leads détectés" loading="lazy" id="novaradar-img">
         </div>
+
         <button class="btn btn-discover" id="novaradar-toggle">Découvrir</button>
       </div>
     </div>
@@ -446,8 +447,27 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleBtn.textContent = hidden ? 'Masquer' : 'Découvrir';
     });
   }
+
+  // Lightbox — clic image = plein écran
+  const lbImg = document.getElementById('novaradar-img');
+  const lb = document.getElementById('novaradar-lightbox');
+  if (lbImg && lb) {
+    lbImg.addEventListener('click', () => {
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+    lb.addEventListener('click', () => {
+      lb.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
 });
 </script>
+
+<!-- Lightbox -->
+<div class="lightbox" id="novaradar-lightbox">
+  <img src="capture novaRadar.png" alt="Dashboard NovaRadar Tech">
+</div>
 
 </body>
 </html>

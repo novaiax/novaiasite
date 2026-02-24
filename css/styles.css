@@ -488,11 +488,42 @@ button:focus-visible {
   width: 100%;
   height: auto;
   display: block;
+  cursor: zoom-in;
   transition: transform 0.4s ease;
 }
 
 .project-card-featured:hover .project-preview img {
   transform: scale(1.015);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.92);
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  padding: 24px;
+}
+
+.lightbox.active {
+  display: flex;
+  animation: lbFadeIn 0.25s ease;
+}
+
+.lightbox img {
+  max-width: 95%;
+  max-height: 95vh;
+  border-radius: var(--r-md);
+  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes lbFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .btn-discover {

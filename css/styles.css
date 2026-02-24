@@ -446,6 +446,46 @@ button:focus-visible {
   opacity: 1;
 }
 
+/* Featured project card (with image) */
+.project-card-featured {
+  grid-column: 1 / -1;
+}
+
+.project-preview {
+  margin-top: 16px;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.project-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card-featured:hover .project-preview img {
+  transform: scale(1.02);
+}
+
+.btn-discover {
+  margin-top: 20px;
+  align-self: flex-start;
+  background: rgba(124, 106, 255, 0.1);
+  color: var(--accent-violet);
+  border: 1px solid rgba(124, 106, 255, 0.3);
+  padding: 10px 24px;
+  font-size: 0.85rem;
+}
+
+.btn-discover:hover {
+  background: var(--accent-violet);
+  color: var(--text);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 24px rgba(124, 106, 255, 0.35);
+}
+
 /* Badges */
 .badge {
   font-family: var(--font-mono);

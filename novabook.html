@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Nova — Livres</title>
+  <!-- Favicon classique -->
+  <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+
+  <!-- Apple / iOS -->
+  <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+
+  <!-- PWA / Android -->
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --accent: #4da3ff;
+      --accent2: #ff3c8e;
+      --dark: #0f0f0f;
+      --mid: #1f1f1f;
+      --radius: 14px;
+      --transition: 0.25s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: var(--dark);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .books-page {
+      width: 100%;
+      padding: 60px 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Grille centrée */
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 330px);
+      gap: 32px;
+      justify-content: center;
+    }
+
+    /* Carte */
+    .book-card {
+      background: var(--mid);
+      border-radius: var(--radius);
+      overflow: hidden;
+      text-decoration: none;
+      color: white;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .book-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .book-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(77,163,255,0.25);
+    }
+
+    .book-title {
+      padding: 10px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+      background: linear-gradient(to right, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="books-page">
+    <section class="books-grid">
+
+      <a href="novalove.html" class="book-card">
+        <img src="images/couvertureavant.png" alt="Couverture du livre NovaLove">
+        <div class="book-title">NovaLove</div>
+      </a>
+
+
+    </section>
+  </main>
+
+</body>
+</html>
+
+

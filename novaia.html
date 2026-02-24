@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>NovaIA — L'Intelligence qui S'éveille | Waitlist</title>
+  <meta name="description" content="Une IA construite en public sur 735 jours. Rejoignez la waitlist pour l'accès anticipé et les coulisses du développement.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NovaIA — Intelligence en Construction">
+  <meta property="og:description" content="Suivez la construction d'une IA unique. 735 jours. Apprentissage public.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* Page-specific styles */
+    .novaia-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--s10) var(--s5);
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-mid) 100%);
+    }
+
+    .novaia-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(77, 163, 255, 0.1), transparent 80%);
+      animation: pulse 4s ease-in-out infinite alternate;
+    }
+
+    .novaia-content {
+      position: relative;
+      z-index: var(--z-base);
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .novaia-badge {
+      display: inline-block;
+      padding: var(--s2) var(--s5);
+      background: rgba(0, 255, 163, 0.1);
+      border: 1px solid var(--accent-green);
+      border-radius: var(--r-full);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      color: var(--accent-green);
+      margin-bottom: var(--s6);
+    }
+
+    .novaia-title {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 900;
+      margin-bottom: var(--s5);
+      line-height: 1.1;
+    }
+
+    .novaia-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: var(--text-secondary);
+      margin-bottom: var(--s8);
+      line-height: 1.7;
+    }
+
+    .progress-section {
+      max-width: 600px;
+      margin: 0 auto var(--s8);
+      padding: var(--s6);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--s4);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+    }
+
+    .progress-header-label {
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+    }
+
+    .progress-header-value {
+      color: var(--accent-blue);
+      font-weight: 700;
+    }
+
+    .progress-bar-novaia {
+      height: 10px;
+      background: rgba(77, 163, 255, 0.1);
+      border-radius: var(--r-full);
+      overflow: hidden;
+      margin-bottom: var(--s4);
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 10.6%;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-pink));
+      border-radius: var(--r-full);
+      box-shadow: var(--sh-glow-blue);
+      position: relative;
+    }
+
+    .progress-bar-fill::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      animation: shimmer 2s infinite;
+    }
+
+    .progress-footer {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--s5);
+      margin-bottom: var(--s8);
+    }
+
+    .feature-item {
+      padding: var(--s6);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      text-align: center;
+      transition: all var(--trans-base);
+    }
+
+    .feature-item:hover {
+      border-color: var(--accent-blue);
+      transform: translateY(-4px);
+    }
+
+    .feature-icon {
+      font-size: 2.8rem;
+      margin-bottom: var(--s4);
+    }
+
+    .feature-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: var(--s3);
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .waitlist-section {
+      max-width: 600px;
+      margin: 0 auto var(--s8);
+    }
+
+    .waitlist-title {
+      font-size: 2rem;
+      margin-bottom: var(--s4);
+    }
+
+    .waitlist-description {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--s6);
+    }
+
+    .waitlist-form {
+      display: flex;
+      gap: var(--s3);
+      margin-bottom: var(--s4);
+    }
+
+    .waitlist-input {
+      flex: 1;
+      padding: var(--s4) var(--s5);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      color: var(--text-primary);
+      font-size: 1rem;
+      font-family: var(--font-sans);
+      transition: all var(--trans-base);
+      outline: none;
+    }
+
+    .waitlist-input::placeholder {
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    .waitlist-input:focus {
+      border-color: var(--accent-blue);
+      box-shadow: var(--sh-glow-blue);
+    }
+
+    .waitlist-btn {
+      padding: var(--s4) var(--s6);
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+      border: none;
+      border-radius: var(--r-md);
+      color: var(--text-primary);
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all var(--trans-base);
+      white-space: nowrap;
+    }
+
+    .waitlist-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(77, 163, 255, 0.5);
+    }
+
+    .waitlist-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .roadmap-section {
+      max-width: 700px;
+      margin: 0 auto var(--s8);
+      padding: var(--s6);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+    }
+
+    .roadmap-title {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: var(--s6);
+    }
+
+    .roadmap-item {
+      display: flex;
+      gap: var(--s4);
+      padding: var(--s4) 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .roadmap-item:last-child {
+      border-bottom: none;
+    }
+
+    .roadmap-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(77, 163, 255, 0.1);
+      border: 1px solid var(--accent-blue);
+      border-radius: var(--r-md);
+      font-size: 1.5rem;
+    }
+
+    .roadmap-content h4 {
+      font-size: 1rem;
+      margin-bottom: var(--s2);
+      color: var(--accent-blue);
+    }
+
+    .roadmap-content p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .back-home {
+      text-align: center;
+      padding-top: var(--s7);
+    }
+
+    .back-home-text {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--s5);
+    }
+
+    @media (max-width: 768px) {
+      .waitlist-form {
+        flex-direction: column;
+      }
+
+      .waitlist-btn {
+        width: 100%;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header role="banner">
+  <div class="header-container">
+    <a href="index.html" aria-label="Retour à l'accueil">
+      <img src="images/logo Nova sans fond.png" alt="NovaIA Logo" class="logo" width="40" height="40">
+    </a>
+    <a href="index.html" class="btn btn-secondary btn-sm">← Retour</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="novaia-hero">
+  <div class="novaia-content">
+    <div class="novaia-badge">
+      EN DÉVELOPPEMENT — JOUR 79/735
+    </div>
+
+    <h1 class="novaia-title">
+      NovaIA<br>
+      <span class="gradient-text">S'éveille</span>
+    </h1>
+
+    <p class="novaia-subtitle">
+      Une intelligence artificielle construite en public, jour après jour.<br>
+      Observer l'émergence d'une IA pensée pour comprendre, anticiper et évoluer.
+    </p>
+
+    <!-- Progress -->
+    <div class="progress-section">
+      <div class="progress-header">
+        <span class="progress-header-label">AVANCEMENT PROTOCOLE</span>
+        <span class="progress-header-value">10.7%</span>
+      </div>
+      <div class="progress-bar-novaia">
+        <div class="progress-bar-fill" style="width: 10.7%"></div>
+      </div>
+      <div class="progress-footer">
+        <strong>79 jours</strong> sur 735 complétés
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">🧠</div>
+        <h3>Apprentissage Public</h3>
+        <p>Chaque phase documentée et partagée en direct</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">⚡</div>
+        <h3>Évolution Continue</h3>
+        <p>735 jours de construction intensive</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">🔮</div>
+        <h3>Architecture Unique</h3>
+        <p>Une approche différente de l'IA</p>
+      </div>
+    </div>
+
+    <!-- Waitlist -->
+    <div class="waitlist-section">
+      <h2 class="waitlist-title">Rejoindre la Waitlist</h2>
+      <p class="waitlist-description">
+        Soyez notifié du lancement et accédez en priorité à NovaIA.<br>
+        Accès anticipé + coulisses exclusives du développement.
+      </p>
+
+      <form class="waitlist-form" id="waitlist-form" aria-label="Formulaire d'inscription waitlist">
+        <input
+          type="email"
+          class="waitlist-input"
+          placeholder="votre@email.com"
+          required
+          id="email-input"
+          aria-label="Adresse email"
+        >
+        <button type="submit" class="waitlist-btn">Rejoindre</button>
+      </form>
+
+      <p class="waitlist-note" id="form-message">
+        💡 Aucun spam. Uniquement les mises à jour importantes.
+      </p>
+    </div>
+
+    <!-- Roadmap -->
+    <div class="roadmap-section">
+      <h3 class="roadmap-title">🗺️ Roadmap</h3>
+
+      <div class="roadmap-item">
+        <div class="roadmap-icon" aria-hidden="true">✅</div>
+        <div class="roadmap-content">
+          <h4>Phase 1 — Fondations (90%)</h4>
+          <p>Programmation, algorithmique, systèmes informatiques</p>
+        </div>
+      </div>
+
+      <div class="roadmap-item">
+        <div class="roadmap-icon" aria-hidden="true">🔄</div>
+        <div class="roadmap-content">
+          <h4>Phase 2 — Automatisation (Prochain)</h4>
+          <p>Scripts avancés, workflows intelligents, premiers prototypes</p>
+        </div>
+      </div>
+
+      <div class="roadmap-item">
+        <div class="roadmap-icon" aria-hidden="true">🔒</div>
+        <div class="roadmap-content">
+          <h4>Phase 3 — Machine Learning</h4>
+          <p>Modèles prédictifs, NLP, deep learning</p>
+        </div>
+      </div>
+
+      <div class="roadmap-item">
+        <div class="roadmap-icon" aria-hidden="true">🔒</div>
+        <div class="roadmap-content">
+          <h4>Phase 4-6 — Architecture NovaIA</h4>
+          <p>Construction de l'IA finale. Détails révélés au fil du protocole.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Back -->
+    <div class="back-home">
+      <p class="back-home-text">
+        En attendant, suivez la construction en direct
+      </p>
+      <a href="index.html" class="btn btn-primary">
+        <span>Retour au Protocole</span>
+        →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Waitlist form submission
+  const form = document.getElementById('waitlist-form');
+  const emailInput = document.getElementById('email-input');
+  const formMessage = document.getElementById('form-message');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const email = emailInput.value.trim();
+
+    // Store in localStorage (in production, send to backend)
+    let waitlist = JSON.parse(localStorage.getItem('novaWaitlist') || '[]');
+
+    if (!waitlist.includes(email)) {
+      waitlist.push(email);
+      localStorage.setItem('novaWaitlist', JSON.stringify(waitlist));
+
+      // Success feedback
+      const btn = form.querySelector('.waitlist-btn');
+      const originalText = btn.textContent;
+      btn.textContent = '✓ Inscrit !';
+      btn.style.background = 'linear-gradient(135deg, #00ffa3, #4da3ff)';
+
+      formMessage.textContent = '🎉 Vous êtes sur la liste ! Check vos emails.';
+      formMessage.style.color = 'var(--accent-green)';
+
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        emailInput.value = '';
+        formMessage.textContent = '💡 Aucun spam. Uniquement les mises à jour importantes.';
+        formMessage.style.color = '';
+      }, 3000);
+    } else {
+      formMessage.textContent = 'Cet email est déjà inscrit sur la waitlist.';
+      formMessage.style.color = 'var(--accent-pink)';
+
+      setTimeout(() => {
+        formMessage.textContent = '💡 Aucun spam. Uniquement les mises à jour importantes.';
+        formMessage.style.color = '';
+      }, 3000);
+    }
+  });
+
+  // Console Easter Egg
+  console.log('%c🚀 NOVAIA PROTOCOL ACTIVE', 'color: #4da3ff; font-size: 20px; font-weight: bold;');
+  console.log('%cNovaIA — En construction publique', 'color: #ff3c8e; font-size: 14px;');
+  console.log('%cPour contribuer: novaia.space@gmail.com', 'color: #00ffa3; font-size: 12px;');
+});
+</script>
+
+</body>
+</html>

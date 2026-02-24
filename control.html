@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Nova Timer Control</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: var(--s5);
+    }
+
+    .control-container {
+      width: 100%;
+      max-width: 500px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: var(--s8) var(--s6);
+      text-align: center;
+      box-shadow: var(--sh-lg);
+    }
+
+    .control-header {
+      margin-bottom: var(--s6);
+    }
+
+    .control-title {
+      font-family: var(--font-mono);
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: var(--s3);
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 0.05em;
+    }
+
+    .control-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s4);
+      margin-bottom: var(--s6);
+    }
+
+    .control-btn {
+      width: 100%;
+      padding: var(--s5) var(--s6);
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: var(--r-md);
+      cursor: pointer;
+      transition: all var(--trans-base);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s3);
+      font-family: var(--font-sans);
+    }
+
+    .control-btn-start {
+      background: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
+      color: var(--text-primary);
+    }
+
+    .control-btn-start:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 255, 163, 0.4);
+    }
+
+    .control-btn-pause {
+      background: linear-gradient(135deg, var(--accent-pink), #ff6b4d);
+      color: var(--text-primary);
+    }
+
+    .control-btn-pause:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 60, 142, 0.4);
+    }
+
+    .control-btn-reset {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+
+    .control-btn-reset:hover {
+      border-color: var(--accent-blue);
+      color: var(--text-primary);
+      background: rgba(77, 163, 255, 0.1);
+    }
+
+    .status-display {
+      padding: var(--s4);
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: var(--r-md);
+      border: 1px solid var(--border);
+    }
+
+    .status-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: var(--s2);
+      display: block;
+    }
+
+    .status-value {
+      font-size: 1rem;
+      color: var(--accent-green);
+      font-weight: 600;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: var(--s6);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      transition: color var(--trans-fast);
+    }
+
+    .back-link:hover {
+      color: var(--accent-blue);
+    }
+  </style>
+</head>
+<body>
+  <div class="control-container">
+    <div class="control-header">
+      <h1 class="control-title">NOVA TIMER</h1>
+      <p class="control-subtitle">Contrôlez le timer Pomodoro en direct</p>
+    </div>
+
+    <div class="controls">
+      <button class="control-btn control-btn-start" onclick="send('start')" aria-label="Démarrer le timer">
+        <span aria-hidden="true">▶</span>
+        <span>Démarrer</span>
+      </button>
+
+      <button class="control-btn control-btn-pause" onclick="send('pause')" aria-label="Mettre en pause">
+        <span aria-hidden="true">⏸</span>
+        <span>Pause</span>
+      </button>
+
+      <button class="control-btn control-btn-reset" onclick="send('reset')" aria-label="Réinitialiser">
+        <span aria-hidden="true">🔁</span>
+        <span>Reset</span>
+      </button>
+    </div>
+
+    <div class="status-display">
+      <span class="status-label">Statut</span>
+      <div class="status-value" id="status">En attente...</div>
+    </div>
+
+    <a href="index.html" class="back-link">← Retour à l'accueil</a>
+  </div>
+
+  <script>
+    const channel = new BroadcastChannel('nova-pomodoro');
+    const statusEl = document.getElementById('status');
+
+    function send(action) {
+      channel.postMessage(action);
+
+      // Update status
+      if (action === 'start') {
+        statusEl.textContent = '▶ Timer démarré';
+        statusEl.style.color = 'var(--accent-green)';
+      } else if (action === 'pause') {
+        statusEl.textContent = '⏸ Timer en pause';
+        statusEl.style.color = 'var(--accent-pink)';
+      } else if (action === 'reset') {
+        statusEl.textContent = '🔁 Timer réinitialisé';
+        statusEl.style.color = 'var(--accent-blue)';
+      }
+
+      // Reset status after 2s
+      setTimeout(() => {
+        statusEl.textContent = 'En attente...';
+        statusEl.style.color = 'var(--accent-green)';
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

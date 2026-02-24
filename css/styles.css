@@ -460,6 +460,15 @@ button:focus-visible {
   gap: 10px;
 }
 
+.subsection-objective {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: -10px;
+  margin-bottom: 24px;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
 .subsection-tag {
   font-family: var(--font-mono);
   font-size: 0.65rem;
@@ -474,14 +483,54 @@ button:focus-visible {
 /* Featured project card (with image) */
 .project-card-featured {
   grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(15, 15, 26, 1) 0%, rgba(124, 106, 255, 0.04) 100%);
+  border: 1px solid rgba(124, 106, 255, 0.12);
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card-featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-violet), transparent);
+  opacity: 0.5;
+}
+
+.project-card-featured:hover {
+  border-color: rgba(124, 106, 255, 0.3);
+  box-shadow: 0 8px 40px rgba(124, 106, 255, 0.1), inset 0 0 60px rgba(124, 106, 255, 0.02);
+}
+
+.project-card-featured .project-header {
+  margin-bottom: 16px;
+}
+
+.project-card-featured .project-header h3 {
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+}
+
+.project-card-featured p strong {
+  color: var(--accent-violet);
+  font-weight: 600;
+}
+
+.project-card-featured p + p {
+  margin-top: 12px;
 }
 
 .project-preview {
-  margin-top: 20px;
-  border-radius: var(--r-md);
+  margin-top: 24px;
+  border-radius: var(--r-lg);
   overflow: hidden;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(124, 106, 255, 0.1);
   background: var(--bg);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .project-preview img {
@@ -527,18 +576,18 @@ button:focus-visible {
 }
 
 .btn-discover {
-  margin-top: 20px;
+  margin-top: 24px;
   align-self: flex-start;
-  background: rgba(124, 106, 255, 0.08);
+  background: rgba(124, 106, 255, 0.1);
   color: var(--accent-violet);
-  border: 1px solid rgba(124, 106, 255, 0.25);
-  padding: 10px 28px;
+  border: 1px solid rgba(124, 106, 255, 0.3);
+  padding: 11px 32px;
   font-size: 0.85rem;
-  border-radius: var(--r-md);
+  border-radius: 100px;
   cursor: pointer;
   font-family: var(--font-title);
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   transition: all var(--trans);
 }
 
@@ -546,7 +595,7 @@ button:focus-visible {
   background: var(--accent-violet);
   color: var(--text);
   transform: translateY(-2px);
-  box-shadow: 0 4px 24px rgba(124, 106, 255, 0.3);
+  box-shadow: 0 4px 24px rgba(124, 106, 255, 0.35);
 }
 
 /* Badges */
@@ -567,9 +616,10 @@ button:focus-visible {
 }
 
 .badge-building {
-  background: rgba(124, 106, 255, 0.1);
+  background: rgba(124, 106, 255, 0.12);
   color: var(--accent-violet);
-  border: 1px solid rgba(124, 106, 255, 0.2);
+  border: 1px solid rgba(124, 106, 255, 0.25);
+  box-shadow: 0 0 12px rgba(124, 106, 255, 0.1);
 }
 
 /* ==================== INFO TOOLTIP ==================== */

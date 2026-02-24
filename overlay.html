@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Nova Pomodoro Overlay</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent-blue: #4da3ff;
+      --accent-pink: #ff3c8e;
+      --accent-green: #00ffa3;
+      --text-primary: #ffffff;
+      --text-muted: #6b7280;
+      --bg-card: #1c1c26;
+      --border: rgba(255, 255, 255, 0.08);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background: transparent;
+      font-family: var(--font-sans);
+      color: var(--text-primary);
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 32px;
+      text-align: center;
+    }
+
+    #mode {
+      font-family: var(--font-mono);
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-transform: uppercase;
+    }
+
+    #timer {
+      font-family: var(--font-mono);
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      color: var(--text-primary);
+      text-shadow: 0 0 40px rgba(77, 163, 255, 0.6);
+    }
+
+    #bar {
+      width: 400px;
+      max-width: 80vw;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 16px;
+    }
+
+    #bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-pink));
+      border-radius: 50px;
+      transition: width 1s linear;
+      box-shadow: 0 0 20px rgba(77, 163, 255, 0.8);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #bar-fill::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 24px;
+      background: rgba(28, 28, 38, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .status-dot.paused {
+      background: var(--accent-pink);
+      animation: none;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    @media (max-width: 768px) {
+      #mode {
+        font-size: 1.3rem;
+      }
+
+      #timer {
+        font-size: 3rem;
+      }
+
+      #bar {
+        width: 90vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="mode">FOCUS TIME</div>
+    <div id="timer">25:00</div>
+    <div id="bar">
+      <div id="bar-fill"></div>
+    </div>
+    <div class="status-indicator">
+      <div class="status-dot" id="status-dot"></div>
+      <span id="status-text">En attente</span>
+    </div>
+  </div>
+
+  <script>
+    let focusDuration = 25 * 60; // 25 minutes
+    let breakDuration = 5 * 60;  // 5 minutes
+    let isFocus = true;
+    let timeLeft = focusDuration;
+    let totalTime = focusDuration;
+    let running = false;
+
+    const timerEl = document.getElementById('timer');
+    const modeEl = document.getElementById('mode');
+    const barFill = document.getElementById('bar-fill');
+    const statusDot = document.getElementById('status-dot');
+    const statusText = document.getElementById('status-text');
+
+    function updateDisplay() {
+      const min = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+      const sec = (timeLeft % 60).toString().padStart(2, '0');
+      timerEl.textContent = `${min}:${sec}`;
+
+      const progress = 100 * (1 - timeLeft / totalTime);
+      barFill.style.width = `${progress}%`;
+
+      // Update status
+      if (running) {
+        statusText.textContent = isFocus ? 'Deep Focus' : 'Pause Active';
+        statusDot.classList.remove('paused');
+      } else {
+        statusText.textContent = 'En pause';
+        statusDot.classList.add('paused');
+      }
+    }
+
+    function switchMode() {
+      isFocus = !isFocus;
+      timeLeft = isFocus ? focusDuration : breakDuration;
+      totalTime = timeLeft;
+      modeEl.textContent = isFocus ? 'FOCUS TIME' : 'BREAK TIME';
+      modeEl.style.background = isFocus
+        ? 'linear-gradient(135deg, #4da3ff, #ff3c8e)'
+        : 'linear-gradient(135deg, #00ffa3, #4da3ff)';
+      modeEl.style.webkitBackgroundClip = 'text';
+      modeEl.style.webkitTextFillColor = 'transparent';
+    }
+
+    function tick() {
+      if (!running) return;
+
+      timeLeft--;
+
+      if (timeLeft < 0) {
+        switchMode();
+      }
+
+      updateDisplay();
+    }
+
+    setInterval(tick, 1000);
+    updateDisplay();
+
+    // BroadcastChannel for control
+    const channel = new BroadcastChannel('nova-pomodoro');
+    channel.onmessage = (e) => {
+      const action = e.data;
+
+      if (action === 'start') {
+        running = true;
+      } else if (action === 'pause') {
+        running = false;
+      } else if (action === 'reset') {
+        timeLeft = isFocus ? focusDuration : breakDuration;
+        totalTime = timeLeft;
+        running = false;
+      }
+
+      updateDisplay();
+    };
+  </script>
+</body>
+</html>

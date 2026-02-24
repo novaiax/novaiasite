@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nova Pomodoro Overlay</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+    }
+    #mode {
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 0.3em;
+      margin-top: 30px;
+    }
+    #timer {
+      font-size: 2.5em;
+      margin-top: 10px;
+    }
+    #bar {
+      width: 60%;
+      height: 10px;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    #bar-fill {
+      height: 100%;
+      width: 0%;
+      background-color: white;
+      transition: width 1s linear;
+    }
+  </style>
+</head>
+<body>
+  <div id="mode">FOCUS TIME</div>
+  <div id="bar"><div id="bar-fill"></div></div>
+  <div id="timer">25:00</div>
+
+  <script>
+    let focusDuration = 25 * 60;
+    let breakDuration = 5 * 60;
+    let isFocus = true;
+    let timeLeft = focusDuration;
+    let totalTime = focusDuration;
+    let running = false;
+
+    const timerEl = document.getElementById('timer');
+    const modeEl = document.getElementById('mode');
+    const barFill = document.getElementById('bar-fill');
+
+    function updateDisplay() {
+      const min = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+      const sec = (timeLeft % 60).toString().padStart(2, '0');
+      timerEl.textContent = `${min}:${sec}`;
+      barFill.style.width = `${100 * (1 - timeLeft / totalTime)}%`;
+    }
+
+    function switchMode() {
+      isFocus = !isFocus;
+      timeLeft = isFocus ? focusDuration : breakDuration;
+      totalTime = timeLeft;
+      modeEl.textContent = isFocus ? 'FOCUS TIME' : 'BREAK TIME';
+    }
+
+    function tick() {
+      if (!running) return;
+      timeLeft--;
+      if (timeLeft < 0) {
+        switchMode();
+      }
+      updateDisplay();
+    }
+
+    setInterval(tick, 1000);
+    updateDisplay();
+
+    const channel = new BroadcastChannel('nova-pomodoro');
+    channel.onmessage = (e) => {
+      const action = e.data;
+      if (action === 'start') running = true;
+      if (action === 'pause') running = false;
+      if (action === 'reset') {
+        timeLeft = isFocus ? focusDuration : breakDuration;
+        updateDisplay();
+      }
+    };
+  </script>
+</body>
+</html>

@@ -469,6 +469,32 @@ button:focus-visible {
   border: 1px solid rgba(124, 106, 255, 0.2);
 }
 
+/* Subsection titles */
+.subsection-title {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.subsection-title:first-of-type {
+  margin-top: 24px;
+}
+
+.subsection-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-left: 8px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  letter-spacing: 0.02em;
+}
+
 /* ==================== INFO TOOLTIP ==================== */
 .info-tooltip {
   position: relative;

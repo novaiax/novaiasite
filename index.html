@@ -155,10 +155,10 @@
           <span class="badge badge-building">Beta</span>
         </div>
         <p>Détection automatisée de failles techniques sur le web. Scan, scoring et dashboard pour identifier les leads à fort potentiel.</p>
-        <div class="project-preview">
+        <div class="project-preview" id="novaradar-preview" style="display:none;">
           <img src="capture novaRadar.png" alt="Dashboard NovaRadar Tech — scan, scoring et leads détectés" loading="lazy">
         </div>
-        <a href="#" class="btn btn-discover">Découvrir</a>
+        <button class="btn btn-discover" id="novaradar-toggle">Découvrir</button>
       </div>
     </div>
   </div>
@@ -433,6 +433,17 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.remove('open');
         burger.setAttribute('aria-expanded', 'false');
       });
+    });
+  }
+
+  // NovaRadar Tech — toggle preview
+  const toggleBtn = document.getElementById('novaradar-toggle');
+  const preview = document.getElementById('novaradar-preview');
+  if (toggleBtn && preview) {
+    toggleBtn.addEventListener('click', () => {
+      const hidden = preview.style.display === 'none';
+      preview.style.display = hidden ? 'block' : 'none';
+      toggleBtn.textContent = hidden ? 'Masquer' : 'Découvrir';
     });
   }
 });

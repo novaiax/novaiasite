@@ -446,16 +446,42 @@ button:focus-visible {
   opacity: 1;
 }
 
+/* Subsection titles */
+.subsection-title {
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  margin-top: 48px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subsection-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+}
+
 /* Featured project card (with image) */
 .project-card-featured {
   grid-column: 1 / -1;
 }
 
 .project-preview {
-  margin-top: 16px;
+  margin-top: 20px;
   border-radius: var(--r-md);
   overflow: hidden;
   border: 1px solid var(--border);
+  background: var(--bg);
 }
 
 .project-preview img {
@@ -466,24 +492,30 @@ button:focus-visible {
 }
 
 .project-card-featured:hover .project-preview img {
-  transform: scale(1.02);
+  transform: scale(1.015);
 }
 
 .btn-discover {
   margin-top: 20px;
   align-self: flex-start;
-  background: rgba(124, 106, 255, 0.1);
+  background: rgba(124, 106, 255, 0.08);
   color: var(--accent-violet);
-  border: 1px solid rgba(124, 106, 255, 0.3);
-  padding: 10px 24px;
+  border: 1px solid rgba(124, 106, 255, 0.25);
+  padding: 10px 28px;
   font-size: 0.85rem;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  font-family: var(--font-title);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all var(--trans);
 }
 
 .btn-discover:hover {
   background: var(--accent-violet);
   color: var(--text);
   transform: translateY(-2px);
-  box-shadow: 0 4px 24px rgba(124, 106, 255, 0.35);
+  box-shadow: 0 4px 24px rgba(124, 106, 255, 0.3);
 }
 
 /* Badges */

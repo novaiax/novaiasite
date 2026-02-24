@@ -154,7 +154,9 @@
           <h3>NovaRadar Tech</h3>
           <span class="badge badge-building">Beta</span>
         </div>
-        <p>Détection automatisée de failles techniques sur le web. Scan, scoring et dashboard pour identifier les leads à fort potentiel.</p>
+        <p><strong>Objectif :</strong> trouver rapidement et cibler précisément.</p>
+        <p><strong>Problème :</strong> prospecter à la main, c'est long, aléatoire, et sans garantie de tomber sur un client qui a un vrai besoin.</p>
+        <p>NovaRadar Tech scanne automatiquement des sites web, détecte les pannes, certificats SSL expirés, erreurs DNS et score chaque lead par urgence et potentiel business. Résultat : des prospects qualifiés avec un problème concret, prêts à être contactés pour leur proposer nos services.</p>
         <div class="project-preview" id="novaradar-preview" style="display:none;">
           <img src="capture novaRadar.png" alt="Dashboard NovaRadar Tech — scan, scoring et leads détectés" loading="lazy" id="novaradar-img">
         </div>
@@ -164,11 +166,17 @@
 
       <div class="project-card project-card-featured">
         <div class="project-header">
-          <h3>Agent scan commerce</h3>
+          <h3>NovaCommerce Radar</h3>
           <span class="badge badge-building">Beta</span>
         </div>
-        <p>L'agent explore automatiquement le web pour identifier des sites e-commerce à fort potentiel. Chaque boutique détectée est ensuite analysée via AgentCheck.fr afin d'évaluer sa performance et sa compatibilité.</p>
-        <p>À partir du score obtenu, le système décide s'il s'agit d'un lead pertinent à contacter. Les opportunités qualifiées sont automatiquement ajoutées au dashboard pour traitement commercial.</p>
+        <p><strong>Objectif :</strong> trouver rapidement et cibler précisément.</p>
+        <p><strong>Problème :</strong> impossible de savoir quelles boutiques en ligne ont vraiment besoin d'aide sans les analyser une par une.</p>
+        <p>NovaCommerce Radar détecte automatiquement des boutiques e-commerce (Shopify, WooCommerce, Prestashop, Magento...), analyse leur Schema.org, checkout, mobile, vitesse, et score leur IA-readiness avec l'aide de AgentCheck. Résultat : des prospects à fort potentiel, déjà qualifiés, prêts à se voir proposer des services.</p>
+        <div class="project-preview" id="novacommerce-preview" style="display:none;">
+          <img src="NovaCommerce.png" alt="Dashboard NovaCommerce Radar — scan e-commerce, scoring et analyse" loading="lazy" id="novacommerce-img">
+        </div>
+
+        <button class="btn btn-discover" id="novacommerce-toggle">Découvrir</button>
       </div>
     </div>
   </div>
@@ -470,12 +478,40 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     });
   }
+
+  // NovaCommerce Radar — toggle preview
+  const toggleBtnCommerce = document.getElementById('novacommerce-toggle');
+  const previewCommerce = document.getElementById('novacommerce-preview');
+  if (toggleBtnCommerce && previewCommerce) {
+    toggleBtnCommerce.addEventListener('click', () => {
+      const hidden = previewCommerce.style.display === 'none';
+      previewCommerce.style.display = hidden ? 'block' : 'none';
+      toggleBtnCommerce.textContent = hidden ? 'Masquer' : 'Découvrir';
+    });
+  }
+
+  // Lightbox NovaCommerce — clic image = plein écran
+  const lbImgCommerce = document.getElementById('novacommerce-img');
+  const lbCommerce = document.getElementById('novacommerce-lightbox');
+  if (lbImgCommerce && lbCommerce) {
+    lbImgCommerce.addEventListener('click', () => {
+      lbCommerce.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+    lbCommerce.addEventListener('click', () => {
+      lbCommerce.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
 });
 </script>
 
 <!-- Lightbox -->
 <div class="lightbox" id="novaradar-lightbox">
   <img src="capture novaRadar.png" alt="Dashboard NovaRadar Tech">
+</div>
+<div class="lightbox" id="novacommerce-lightbox">
+  <img src="NovaCommerce.png" alt="Dashboard NovaCommerce Radar">
 </div>
 
 </body>

@@ -17,7 +17,10 @@ const MIME = {
 };
 
 const server = http.createServer((req, res) => {
-  let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : decodeURIComponent(req.url));
+  let url = decodeURIComponent(req.url);
+  if (url === '/') url = '/index.html';
+  else if (url === '/en/' || url === '/en') url = '/en/index.html';
+  let filePath = path.join(__dirname, url);
   const ext = path.extname(filePath);
   const contentType = MIME[ext] || 'application/octet-stream';
 

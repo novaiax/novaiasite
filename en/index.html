@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>
+  (function(){
+    var p = localStorage.getItem('lang');
+    if (p === 'en') return;
+    if (p === 'fr') { location.replace('/'); return; }
+    var l = (navigator.language || '').toLowerCase();
+    if (l.startsWith('fr')) location.replace('/');
+  })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
@@ -94,7 +103,7 @@
       <a href="#portfolio">Portfolio</a>
       <a href="#vision">Vision</a>
       <a href="#contact">Contact</a>
-      <a href="/" class="nav-lang">FR</a>
+      <a href="/" class="nav-lang" onclick="localStorage.setItem('lang','fr')">FR</a>
     </div>
   </div>
 </nav>

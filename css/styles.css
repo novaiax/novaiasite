@@ -745,6 +745,74 @@ button:focus-visible {
 }
 
 /* ==================== PORTFOLIO ==================== */
+.portfolio-category {
+  margin-bottom: 48px;
+}
+
+.portfolio-category:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio-category-title {
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  padding-left: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.portfolio-category-title::before {
+  content: '';
+  width: 3px;
+  height: 18px;
+  background: var(--accent-violet);
+  border-radius: 2px;
+}
+
+/* Muted card (marque blanche) */
+.portfolio-card-muted {
+  border: 1px dashed rgba(240, 238, 248, 0.08);
+  background: transparent;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-card-muted:hover {
+  border-color: rgba(240, 238, 248, 0.12);
+  box-shadow: none;
+  transform: none;
+}
+
+.portfolio-info-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.portfolio-muted-count {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.portfolio-card-muted p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -425,6 +425,12 @@ button:focus-visible {
   gap: 12px;
 }
 
+.badge-group {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
 .project-header h3 {
   font-family: var(--font-title);
   font-size: 1.1rem;

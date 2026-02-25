@@ -252,6 +252,15 @@ button:focus-visible {
   filter: drop-shadow(0 0 30px rgba(124, 106, 255, 0.08));
 }
 
+.hero-name-complement {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
 .hero-name-nova {
   background: linear-gradient(
     105deg,
@@ -979,6 +988,12 @@ button:focus-visible {
   max-width: 640px;
 }
 
+.vision-text-secondary {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
 /* ==================== FONDATEUR ==================== */
 .founder-block {
   text-align: center;
@@ -1033,6 +1048,7 @@ button:focus-visible {
   font-size: 0.85rem;
   color: var(--text-secondary);
   font-weight: 500;
+  margin-top: 80px;
   margin-bottom: 32px;
   letter-spacing: 0.02em;
   text-align: center;

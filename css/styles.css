@@ -222,7 +222,7 @@ button:focus-visible {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../images/1.png') center center / cover no-repeat;
+  background: url('../images/1.webp') center center / cover no-repeat;
   opacity: 0.22;
   pointer-events: none;
 }
@@ -1330,6 +1330,27 @@ button:focus-visible {
   .socials-row {
     gap: 16px;
   }
+
+  .nav-brand {
+    animation: none;
+  }
+
+  .hero-name-nova {
+    animation: none;
+    background-size: 100% 100%;
+  }
+
+  .hero-name {
+    filter: none;
+  }
+
+  .name-ia {
+    filter: none;
+  }
+
+  .footer-yann {
+    animation: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1351,6 +1372,21 @@ button:focus-visible {
 
   .section {
     padding: 64px 0;
+  }
+}
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+  .nav-brand,
+  .hero-name-nova,
+  .footer-yann {
+    animation: none;
+  }
+
+  .section {
+    transition: none;
+    opacity: 1;
+    transform: none;
   }
 }
 

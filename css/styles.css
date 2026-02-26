@@ -1291,6 +1291,9 @@ button:focus-visible {
 
   .section {
     padding: 80px 0;
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 
   .hero-name {

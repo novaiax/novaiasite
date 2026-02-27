@@ -1036,8 +1036,6 @@ button:focus-visible {
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 20%;
-  transform: scale(1.3);
   border: 3px solid var(--accent-violet);
   flex-shrink: 0;
 }

@@ -706,7 +706,8 @@ button:focus-visible {
   z-index: 10;
 }
 
-.info-tooltip:hover .tooltip-text {
+.info-tooltip:hover .tooltip-text,
+.info-tooltip.active .tooltip-text {
   display: block;
 }
 
@@ -1402,6 +1403,22 @@ button:focus-visible {
 
   .portfolio-info {
     padding: 16px;
+  }
+
+  .info-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .tooltip-text {
+    min-width: 220px;
+    max-width: 280px;
+    font-size: 0.8rem;
+    padding: 12px 14px;
+    left: auto;
+    right: -10px;
+    transform: none;
   }
 
   .section {

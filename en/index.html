@@ -170,11 +170,63 @@
         <p><strong>Problem:</strong> manual prospecting is slow, random, and you never know if the lead actually needs help.</p>
         <p>NovaRadar Tech automatically scans websites across 10+ analysis layers (SSL, security, GDPR, SEO, speed, mobile, branding, emailing...), detects real problems with evidence, and scores each lead by urgency and business potential. The v4 engine weighs each issue by reliability and site maturity to eliminate false positives.</p>
         <p>Full dashboard with AI-powered sales pitch generation, per-lead PDF export, and partner distribution system.</p>
-        <div class="project-preview" id="novaradar-preview" style="display:none;">
-          <img src="../capture-novaRadar.png" alt="NovaRadar Tech Dashboard, scan, scoring and detected leads" loading="lazy" id="novaradar-img">
+        <div id="novaradar-preview" style="display:none;margin-top:24px;">
+          <style>
+            .nr-carousel{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(124,106,255,0.15);background:#0d0d14;box-shadow:0 8px 32px rgba(0,0,0,0.4)}
+            .nr-carousel img{width:100%;height:auto;display:block;cursor:zoom-in}
+            .nr-carousel .nr-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,0.65);backdrop-filter:blur(8px);color:#fff;border:1px solid rgba(255,255,255,0.15);font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:3}
+            .nr-carousel .nr-btn:hover{background:rgba(124,106,255,0.7);border-color:rgba(124,106,255,0.8);transform:translateY(-50%) scale(1.1)}
+            .nr-carousel .nr-prev{left:14px}
+            .nr-carousel .nr-next{right:14px}
+            .nr-bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 16px;background:linear-gradient(180deg,rgba(13,13,20,0.95),rgba(13,13,20,1))}
+            .nr-bar .nr-count{color:#7c6aff;font-weight:700;font-size:0.85rem;font-family:monospace;min-width:40px}
+            .nr-bar .nr-label{color:rgba(255,255,255,0.6);font-size:0.8rem;font-family:monospace}
+            .nr-dots{display:flex;justify-content:center;gap:8px;padding:0 16px 14px;background:#0d0d14}
+            .nr-dots button{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.15);border:none;padding:0;cursor:pointer;transition:all 0.25s}
+            .nr-dots button.on{background:#7c6aff;box-shadow:0 0 10px rgba(124,106,255,0.6);transform:scale(1.35)}
+            .nr-dots button:hover:not(.on){background:rgba(255,255,255,0.35)}
+            .nr-lb{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.95);align-items:center;justify-content:center;flex-direction:column;padding:24px}
+            .nr-lb.open{display:flex}
+            .nr-lb img{max-width:95%;max-height:82vh;border-radius:12px;box-shadow:0 8px 48px rgba(0,0,0,0.7)}
+            .nr-lb .nr-btn{position:fixed;top:50%}
+            .nr-lb .nr-prev{left:24px}
+            .nr-lb .nr-next{right:24px}
+            .nr-lb .nr-close{position:fixed;top:20px;right:24px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.2);font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10000;transition:all 0.2s}
+            .nr-lb .nr-close:hover{background:rgba(255,70,70,0.5)}
+            .nr-lb .nr-bar{background:transparent;margin-top:16px}
+          </style>
+          <div class="nr-carousel" id="novaradar-carousel">
+            <img src="../images/novaradar/1.png" alt="NovaRadar Tech Dashboard" id="nr-img">
+            <button class="nr-btn nr-prev" aria-label="Previous">&#8249;</button>
+            <button class="nr-btn nr-next" aria-label="Next">&#8250;</button>
+            <div class="nr-bar">
+              <span class="nr-count" id="nr-count">1 / 11</span>
+              <span class="nr-label" id="nr-label">Dashboard overview</span>
+            </div>
+            <div class="nr-dots" id="nr-dots"></div>
+          </div>
+          <div class="nr-lb" id="nr-lb">
+            <button class="nr-close" aria-label="Close">&times;</button>
+            <img src="../images/novaradar/1.png" alt="" id="nr-lb-img">
+            <button class="nr-btn nr-prev" aria-label="Previous">&#8249;</button>
+            <button class="nr-btn nr-next" aria-label="Next">&#8250;</button>
+            <div class="nr-bar">
+              <span class="nr-count" id="nr-lb-count">1 / 11</span>
+              <span class="nr-label" id="nr-lb-label">Dashboard overview</span>
+            </div>
+          </div>
         </div>
 
-        <button class="btn btn-discover" id="novaradar-toggle">Discover</button>
+        <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;">
+          <button class="btn btn-discover" id="novaradar-toggle">Discover</button>
+          <button class="btn btn-discover" id="novaradar-v1-toggle" style="opacity:0.6;font-size:0.75rem;">See v1</button>
+        </div>
+        <div id="novaradar-v1" style="display:none;margin-top:16px;">
+          <div style="border-radius:16px;overflow:hidden;border:1px solid rgba(124,106,255,0.1);box-shadow:0 4px 24px rgba(0,0,0,0.3);">
+            <img src="../capture-novaRadar.png" alt="NovaRadar Tech v1 — original dashboard" style="width:100%;height:auto;display:block;" loading="lazy">
+            <div style="text-align:center;padding:8px;background:#0d0d14;color:rgba(255,255,255,0.4);font-size:0.75rem;font-family:monospace;">NovaRadar Tech v1 — first prototype</div>
+          </div>
+        </div>
       </div>
 
       <div class="project-card project-card-featured">
@@ -594,19 +646,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Lightbox click image = fullscreen
-  const lbImg = document.getElementById('novaradar-img');
-  const lb = document.getElementById('novaradar-lightbox');
-  if (lbImg && lb) {
-    lbImg.addEventListener('click', () => {
-      lb.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-    lb.addEventListener('click', () => {
-      lb.classList.remove('active');
-      document.body.style.overflow = '';
+  // NovaRadar v1 toggle
+  const v1Btn = document.getElementById('novaradar-v1-toggle');
+  const v1Box = document.getElementById('novaradar-v1');
+  if (v1Btn && v1Box) {
+    v1Btn.addEventListener('click', () => {
+      const hidden = v1Box.style.display === 'none';
+      v1Box.style.display = hidden ? 'block' : 'none';
+      v1Btn.textContent = hidden ? 'Hide v1' : 'See v1';
     });
   }
+
+  // NovaRadar Carousel
+  (function() {
+    var S = [
+      {src:'../images/novaradar/1.png',t:"Dashboard overview"},
+      {src:'../images/novaradar/2.png',t:"Qualified leads list"},
+      {src:'../images/novaradar/3.png',t:"Lead detail — Score and recommendation"},
+      {src:'../images/novaradar/4.png',t:"Detected problems — High Severity"},
+      {src:'../images/novaradar/5.png',t:"Detected problems — Medium Severity"},
+      {src:'../images/novaradar/6.png',t:"Detected problems — Low Severity"},
+      {src:'../images/novaradar/7.png',t:"Business signals and Sales AI"},
+      {src:'../images/novaradar/8.png',t:"Sales AI — Sales strategy"},
+      {src:'../images/novaradar/9.png',t:"AI-generated sales email"},
+      {src:'../images/novaradar/10.png',t:"Notes, answers and PDF export"},
+      {src:'../images/novaradar/11.png',t:"Phone pitch and LinkedIn"}
+    ];
+    var N=S.length, i=0;
+    var img=document.getElementById('nr-img');
+    var cnt=document.getElementById('nr-count');
+    var lbl=document.getElementById('nr-label');
+    var dots=document.getElementById('nr-dots');
+    var car=document.getElementById('novaradar-carousel');
+    var lb=document.getElementById('nr-lb');
+    if(lb) document.body.appendChild(lb);
+    var lbi=document.getElementById('nr-lb-img');
+    var lbc=document.getElementById('nr-lb-count');
+    var lbl2=document.getElementById('nr-lb-label');
+    if(!car||!img) return;
+    S.forEach(function(s){var x=new Image();x.src=s.src;});
+    for(var j=0;j<N;j++){var d=document.createElement('button');d.className=j===0?'on':'';d.setAttribute('data-i',j);d.addEventListener('click',function(e){e.stopPropagation();go(+this.getAttribute('data-i'));});dots.appendChild(d);}
+    function go(n){dots.children[i].classList.remove('on');i=((n%N)+N)%N;img.src=S[i].src;img.alt=S[i].t;cnt.textContent=(i+1)+' / '+N;lbl.textContent=S[i].t;dots.children[i].classList.add('on');if(lbi)lbi.src=S[i].src;if(lbc)lbc.textContent=(i+1)+' / '+N;if(lbl2)lbl2.textContent=S[i].t;}
+    car.querySelector('.nr-prev').addEventListener('click',function(e){e.stopPropagation();go(i-1);});
+    car.querySelector('.nr-next').addEventListener('click',function(e){e.stopPropagation();go(i+1);});
+    img.addEventListener('click',function(){if(!lb)return;lbi.src=S[i].src;lbc.textContent=(i+1)+' / '+N;lbl2.textContent=S[i].t;lb.classList.add('open');document.body.style.overflow='hidden';});
+    if(lb){
+      lb.querySelector('.nr-close').addEventListener('click',function(e){e.stopPropagation();lb.classList.remove('open');document.body.style.overflow='';});
+      lb.querySelector('.nr-prev').addEventListener('click',function(e){e.stopPropagation();go(i-1);});
+      lb.querySelector('.nr-next').addEventListener('click',function(e){e.stopPropagation();go(i+1);});
+      lb.addEventListener('click',function(e){if(e.target===lb){lb.classList.remove('open');document.body.style.overflow='';}});
+    }
+    document.addEventListener('keydown',function(e){if(lb&&lb.classList.contains('open')){if(e.key==='Escape'){lb.classList.remove('open');document.body.style.overflow='';}if(e.key==='ArrowLeft')go(i-1);if(e.key==='ArrowRight')go(i+1);}});
+  })();
 
   // NovaCommerce Radar toggle preview
   const toggleBtnCommerce = document.getElementById('novacommerce-toggle');
@@ -649,10 +740,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<!-- Lightbox -->
-<div class="lightbox" id="novaradar-lightbox">
-  <img src="../capture-novaRadar.png" alt="NovaRadar Tech Dashboard" loading="lazy">
-</div>
 <div class="lightbox" id="novacommerce-lightbox">
   <img src="../NovaCommerce.png" alt="NovaCommerce Radar Dashboard" loading="lazy">
 </div>

@@ -163,12 +163,12 @@
             }).then(function(response) {
                 if (response.ok) {
                     form.innerHTML = '<div style="text-align:center;padding:2rem 0;">' +
-                        '<p style="font-size:1.3rem;font-weight:600;color:#fff;margin-bottom:1rem;">Merci, c\'est envoyé !</p>' +
-                        '<p style="color:rgba(255,255,255,0.7);margin-bottom:1.5rem;">On vous recontacte très vite.</p>' +
+                        '<p style="font-size:1.3rem;font-weight:600;color:#111;margin-bottom:1rem;">Merci, c\'est envoyé !</p>' +
+                        '<p style="color:#555;margin-bottom:1.5rem;">On vous recontacte très vite.</p>' +
                         '<a href="https://discord.gg/eVxQWU3EYX" target="_blank" rel="noopener" ' +
                         'style="display:inline-block;padding:0.8rem 2rem;background:#5865F2;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;">' +
                         'Rejoindre le Discord</a>' +
-                        '<p style="color:rgba(255,255,255,0.5);margin-top:1rem;font-size:0.85rem;">N\'oubliez pas de rejoindre le Discord pour suivre l\'avancement !</p>' +
+                        '<p style="color:#888;margin-top:1rem;font-size:0.85rem;">N\'oubliez pas de rejoindre le Discord pour suivre l\'avancement !</p>' +
                         '</div>';
                 } else {
                     if (btn) {

@@ -1,0 +1,274 @@
+/* ============================================
+   NovaMemory — Desktop Override (min-width: 768px)
+   ============================================ */
+
+/* --- CONTAINER --- */
+.container {
+    padding: 0 40px;
+}
+
+/* --- NAV --- */
+.nav-inner {
+    padding: 16px 40px;
+}
+
+.nav-burger {
+    display: none;
+}
+
+.nav-links {
+    display: flex !important;
+    position: static;
+    background: none;
+    flex-direction: row;
+    padding: 0;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 0.75rem;
+    padding: 0;
+    border-bottom: none;
+}
+
+.nav-cta {
+    margin-top: 0 !important;
+    padding: 10px 20px !important;
+    background: rgba(124, 92, 252, 0.06);
+    border: 1px solid rgba(124, 92, 252, 0.2);
+    transition: all 0.3s;
+}
+
+.nav-cta:hover {
+    background: rgba(124, 92, 252, 0.12) !important;
+}
+
+/* --- HERO --- */
+.hero {
+    padding: 140px 40px 100px;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    min-height: 100vh;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+}
+
+.hero-stats {
+    gap: 32px;
+}
+
+.hero-stat-number {
+    font-size: 2.2rem;
+}
+
+.hero-ctas {
+    flex-direction: row;
+}
+
+.hero-ctas .btn {
+    width: auto;
+}
+
+.hero-visual {
+    flex: 1;
+    margin-top: 0;
+    max-width: 560px;
+}
+
+.terminal-line {
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.terminal-prompt-user,
+.terminal-prompt-ai,
+.terminal-prompt-system {
+    flex-shrink: 0;
+    min-width: 50px;
+}
+
+/* --- SECTIONS --- */
+.section {
+    padding: 120px 0;
+}
+
+/* --- PROBLEM --- */
+.problem-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.problem-card {
+    padding: 36px 32px;
+}
+
+.problem-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* --- SOLUTION --- */
+.solution-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.solution-feature {
+    padding: 36px 32px;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+}
+
+.solution-feature:nth-child(2n) {
+    border-right: none;
+}
+
+.solution-feature:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+/* --- AGENTS --- */
+.agents-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.agents-grid .agent-card:nth-child(4),
+.agents-grid .agent-card:nth-child(5) {
+    max-width: none;
+}
+
+.agent-card {
+    padding: 36px 28px;
+}
+
+/* --- HOW --- */
+.how-steps {
+    max-width: 600px;
+}
+
+/* --- USE CASES --- */
+.usecases-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.usecase-card {
+    padding: 36px 32px;
+}
+
+.usecase-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* --- PROOF --- */
+.proof-block {
+    padding: 48px 40px;
+    max-width: 700px;
+}
+
+.proof-quote p {
+    font-size: 1.15rem;
+}
+
+/* --- PRICING --- */
+.pricing-card {
+    padding: 48px 40px;
+}
+
+/* --- FAQ --- */
+.faq-list {
+    max-width: 700px;
+}
+
+/* --- WAITLIST --- */
+.waitlist-form {
+    max-width: 540px;
+}
+
+.waitlist-form-row {
+    flex-direction: row;
+    gap: 12px;
+}
+
+/* --- FOOTER --- */
+.footer {
+    padding: 60px 0 40px;
+}
+
+.footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* --- MOBILE STICKY CTA (HIDDEN ON DESKTOP) --- */
+.mobile-sticky-cta {
+    display: none;
+}
+
+.footer {
+    padding-bottom: 40px;
+}
+
+/* --- LARGE SCREENS --- */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 60px;
+    }
+
+    .nav-inner {
+        padding: 18px 60px;
+    }
+
+    .hero {
+        padding: 140px 60px 100px;
+        gap: 80px;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .problem-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .usecases-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .agents-grid .agent-card:nth-child(4),
+    .agents-grid .agent-card:nth-child(5) {
+        max-width: 380px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        padding: 0 80px;
+    }
+
+    .hero {
+        padding: 160px 80px 120px;
+    }
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .section {
+        padding: 140px 0;
+    }
+}

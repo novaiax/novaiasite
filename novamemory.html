@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaMemory - La mémoire long terme pour votre IA | Ne répétez plus jamais vos conversations</title>
+    <meta name="description" content="NovaMemory donne une vraie mémoire long terme à Claude AI. 5 agents IA maintiennent vos souvenirs. Fini les conversations oubliées. Rejoignez la beta à 10€/mois.">
+    <meta name="keywords" content="mémoire IA, Claude AI, mémoire long terme, MCP, chatbot mémoire, LLM mémoire, intelligence artificielle">
+    <link rel="canonical" href="https://novamemory.com/">
+    <meta property="og:title" content="NovaMemory - Votre IA se souvient enfin de vous">
+    <meta property="og:description" content="Une mémoire long terme pour Claude AI. 5 agents IA qui maintiennent vos souvenirs comme un vrai cerveau. Beta ouverte à 10€/mois.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://novamemory.com/">
+    <meta property="og:image" content="images/og-novamemory.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NovaMemory - Votre IA se souvient enfin de vous">
+    <meta name="twitter:description" content="Une mémoire long terme pour Claude AI. 5 agents IA. Beta ouverte.">
+    <link rel="icon" type="image/png" href="images/logo-novamemory.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/novamemory-mobile.css">
+    <link rel="stylesheet" href="css/novamemory-desktop.css" media="(min-width: 768px)">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "NovaMemory",
+        "applicationCategory": "AI Tool",
+        "operatingSystem": "Web",
+        "description": "Mémoire long terme pour Claude AI via MCP. 5 agents IA maintiennent vos souvenirs.",
+        "offers": {
+            "@type": "Offer",
+            "price": "10",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/PreOrder"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <img src="images/logo-novamemory.png" alt="NovaMemory" class="nav-logo-img">
+                <span class="nav-logo-text"><span class="logo-nova">Nova</span><span class="logo-memory">Memory</span></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#probleme">Le problème</a>
+                <a href="#solution">La solution</a>
+                <a href="#agents">Les agents</a>
+                <a href="#fonctionnement">Comment ça marche</a>
+                <a href="#pricing">Tarif</a>
+                <a href="#waitlist" class="nav-cta">Rejoindre la beta</a>
+            </div>
+            <button class="nav-burger" id="navBurger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Prototype en cours - On cherche des beta testeurs
+            </div>
+            <h1 class="hero-title">
+                Votre IA se souvient<br>
+                <span class="hero-title-accent">enfin de vous.</span>
+            </h1>
+            <p class="hero-subtitle">
+                On est en train de construire une vraie mémoire long terme pour Claude AI. L'idée est simple : plus besoin de tout répéter à chaque conversation. Votre IA se souvient de vous, de vos projets, de vos échanges d'hier ou d'il y a 3 mois.
+            </p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">5</span>
+                    <span class="hero-stat-label">Agents IA dédiés</span>
+                </div>
+                <div class="hero-stat-separator"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">∞</span>
+                    <span class="hero-stat-label">Mémoire long terme</span>
+                </div>
+                <div class="hero-stat-separator"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">10€</span>
+                    <span class="hero-stat-label">/ mois en beta</span>
+                </div>
+            </div>
+            <div class="hero-ctas">
+                <a href="#waitlist" class="btn btn-primary">
+                    Accès anticipé
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#fonctionnement" class="btn btn-secondary">Voir la démo</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="terminal-title">Claude AI + NovaMemory</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line terminal-line-user">
+                        <span class="terminal-prompt-user">Vous :</span>
+                        <span class="terminal-text">Reprends là où on en était hier</span>
+                    </div>
+                    <div class="terminal-line terminal-line-ai">
+                        <span class="terminal-prompt-ai">Claude :</span>
+                        <span class="terminal-text">Bien sûr. Hier on travaillait sur votre projet de refonte API. Vous aviez décidé de partir sur FastAPI au lieu de Flask, et on avait commencé le schéma de la base de données. On avait aussi parlé de votre entretien de jeudi -comment ça s'est passé ?</span>
+                    </div>
+                    <div class="terminal-line terminal-line-system">
+                        <span class="terminal-prompt-system">📡</span>
+                        <span class="terminal-text terminal-text-dim">Mémoire long terme consultée -47 souvenirs pertinents récupérés</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PROBLÈME -->
+    <section class="section section-problem" id="probleme">
+        <div class="container">
+            <div class="section-label">Le problème</div>
+            <h2 class="section-title">
+                Chaque nouvelle conversation,<br>
+                <span class="text-accent">votre IA repart de zéro.</span>
+            </h2>
+            <div class="problem-grid">
+                <div class="problem-card" data-animate>
+                    <div class="problem-icon">🔄</div>
+                    <h3>Tout répéter</h3>
+                    <p>Vous devez ré-expliquer votre contexte, vos préférences, vos projets en cours à chaque nouvelle session.</p>
+                </div>
+                <div class="problem-card" data-animate>
+                    <div class="problem-icon">🧊</div>
+                    <h3>Zéro continuité</h3>
+                    <p>La conversation d'hier ? Celle de la semaine dernière ? Votre IA n'en a aucun souvenir. Comme parler à un inconnu chaque jour.</p>
+                </div>
+                <div class="problem-card" data-animate>
+                    <div class="problem-icon">📋</div>
+                    <h3>Contexte perdu</h3>
+                    <p>Les décisions prises, les idées explorées, les pistes abandonnées -tout disparaît quand la fenêtre de contexte est pleine.</p>
+                </div>
+                <div class="problem-card" data-animate>
+                    <div class="problem-icon">⏱️</div>
+                    <h3>Temps gaspillé</h3>
+                    <p>Vous passez 20% de votre temps à remettre votre IA dans le bain au lieu de travailler sur ce qui compte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="section section-solution" id="solution">
+        <div class="container">
+            <div class="section-label">Ce qu'on construit</div>
+            <h2 class="section-title">
+                Une mémoire qui fonctionne<br>
+                <span class="text-accent">comme la vôtre.</span>
+            </h2>
+            <p class="section-description">
+                L'idée derrière NovaMemory, c'est de connecter Claude AI à une vraie mémoire externe persistante. On s'inspire du fonctionnement du cerveau humain : comme vos souvenirs se consolident pendant le sommeil, nos 5 agents IA travaillent chaque nuit pour organiser, nettoyer et relier vos souvenirs.
+            </p>
+            <div class="solution-features">
+                <div class="solution-feature" data-animate>
+                    <div class="solution-feature-number">01</div>
+                    <h3>Mémoire persistante</h3>
+                    <p>Vos conversations sont synthétisées et stockées dans une base PostgreSQL dédiée. L'objectif : que rien ne se perde, même après des mois.</p>
+                </div>
+                <div class="solution-feature" data-animate>
+                    <div class="solution-feature-number">02</div>
+                    <h3>Connexion native via MCP</h3>
+                    <p>Claude se connecte directement à votre mémoire via le protocole MCP. Pas de copier-coller, pas de prompt engineering -c'est transparent.</p>
+                </div>
+                <div class="solution-feature" data-animate>
+                    <div class="solution-feature-number">03</div>
+                    <h3>Consolidation nocturne</h3>
+                    <p>Comme votre cerveau pendant le sommeil, 5 agents IA scannent et organisent votre mémoire chaque nuit. Les souvenirs inutiles sont archivés, les contradictions résolues.</p>
+                </div>
+                <div class="solution-feature" data-animate>
+                    <div class="solution-feature-number">04</div>
+                    <h3>Court terme + Long terme</h3>
+                    <p>Claude garde sa mémoire court terme native ET gagne une mémoire long terme. Double couche de contexte pour des réponses bien plus pertinentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AGENTS -->
+    <section class="section section-agents" id="agents">
+        <div class="container">
+            <div class="section-label">L'architecture (en cours)</div>
+            <h2 class="section-title">
+                5 agents IA qui veillent<br>
+                <span class="text-accent">sur vos souvenirs.</span>
+            </h2>
+            <p class="section-description">
+                On a développé 5 agents IA qui tournent chaque nuit pendant que vous dormez. Certains sont plus avancés que d'autres, on les améliore en continu. Voici ce que chacun fait.
+            </p>
+            <div class="agents-grid">
+                <div class="agent-card" data-animate>
+                    <div class="agent-card-glow"></div>
+                    <div class="agent-icon">🛡️</div>
+                    <div class="agent-name">Agent Gardien</div>
+                    <div class="agent-role">Score Decay &amp; Archivage</div>
+                    <p class="agent-desc">Il surveille l'âge et la pertinence de chaque souvenir. Les vieux souvenirs inutilisés sont archivés progressivement, comme votre mémoire naturelle qui laisse filer les détails sans importance.</p>
+                </div>
+                <div class="agent-card" data-animate>
+                    <div class="agent-card-glow"></div>
+                    <div class="agent-icon">✅</div>
+                    <div class="agent-name">Agent Vérificateur</div>
+                    <div class="agent-role">Détection de contradictions</div>
+                    <p class="agent-desc">Il détecte quand deux souvenirs se contredisent. Vous avez changé de job ? Déménagé ? Il garde l'info la plus récente et archive l'ancienne. Pas de confusion.</p>
+                </div>
+                <div class="agent-card" data-animate>
+                    <div class="agent-card-glow"></div>
+                    <div class="agent-icon">🕸️</div>
+                    <div class="agent-name">Agent Tisserand</div>
+                    <div class="agent-role">Graphe relationnel</div>
+                    <p class="agent-desc">Il relie vos souvenirs entre eux pour créer un réseau de sens. "Rupture" se connecte à "période difficile" qui se connecte à "nouveau projet". Votre IA comprend votre histoire.</p>
+                </div>
+                <div class="agent-card" data-animate>
+                    <div class="agent-card-glow"></div>
+                    <div class="agent-icon">📝</div>
+                    <div class="agent-name">Agent Condenseur</div>
+                    <div class="agent-role">Profil synthétique</div>
+                    <p class="agent-desc">Il crée et met à jour un résumé vivant de qui vous êtes : vos projets, vos préférences, vos objectifs. Claude accède à ce profil à chaque conversation pour un contexte instantané.</p>
+                </div>
+                <div class="agent-card" data-animate>
+                    <div class="agent-card-glow"></div>
+                    <div class="agent-icon">💜</div>
+                    <div class="agent-name">Agent Émotionnel</div>
+                    <div class="agent-role">Pondération des priorités</div>
+                    <p class="agent-desc">Il donne plus de poids aux souvenirs qui comptent. Pour l'instant il se base sur la fréquence et la longueur des conversations. C'est l'agent le moins avancé, on cherche encore comment il pourrait mieux juger l'importance d'un souvenir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMENT ÇA MARCHE -->
+    <section class="section section-how" id="fonctionnement">
+        <div class="container">
+            <div class="section-label">Comment ça marche</div>
+            <h2 class="section-title">
+                Simple à utiliser,<br>
+                <span class="text-accent">on gère le reste.</span>
+            </h2>
+            <div class="how-steps">
+                <div class="how-step" data-animate>
+                    <div class="how-step-number">1</div>
+                    <div class="how-step-content">
+                        <h3>Connectez NovaMemory à Claude</h3>
+                        <p>Installez notre MCP en quelques minutes. Claude se connecte automatiquement à votre mémoire externe hébergée sur nos serveurs sécurisés.</p>
+                    </div>
+                </div>
+                <div class="how-step-line"></div>
+                <div class="how-step" data-animate>
+                    <div class="how-step-number">2</div>
+                    <div class="how-step-content">
+                        <h3>Discutez normalement</h3>
+                        <p>Utilisez Claude comme d'habitude. Au début de chaque conversation, il récupère automatiquement votre contexte global depuis la mémoire long terme.</p>
+                    </div>
+                </div>
+                <div class="how-step-line"></div>
+                <div class="how-step" data-animate>
+                    <div class="how-step-number">3</div>
+                    <div class="how-step-content">
+                        <h3>Dites "retiens ça"</h3>
+                        <p>À la fin de votre conversation, demandez à Claude de retenir. Il synthétise l'échange et l'injecte dans la mémoire long terme.</p>
+                    </div>
+                </div>
+                <div class="how-step-line"></div>
+                <div class="how-step" data-animate>
+                    <div class="how-step-number">4</div>
+                    <div class="how-step-content">
+                        <h3>Dormez, les agents travaillent</h3>
+                        <p>Chaque nuit, les 5 agents scannent votre mémoire : ils archivent, vérifient, relient, condensent et priorisent vos souvenirs. Au réveil, tout est propre.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vidéo démo -->
+            <div class="how-demo" data-animate style="margin-top: 3rem;">
+                <h3 style="text-align:center; margin-bottom: 1.5rem; font-size: 1.3rem; color: #fff;">Voir la démo en vidéo</h3>
+                <div style="max-width:960px; margin:0 auto;">
+                    <video controls preload="metadata" playsinline style="width:100%; border-radius:12px; background:#000; box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+                        <source src="novamemory-demo.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture vidéo.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section section-pricing" id="pricing">
+        <div class="container">
+            <div class="section-label">Tarif beta</div>
+            <h2 class="section-title">
+                Accès anticipé.<br>
+                <span class="text-accent">Aidez-nous à construire.</span>
+            </h2>
+            <div class="pricing-card" data-animate>
+                <div class="pricing-card-glow"></div>
+                <div class="pricing-badge">Beta - Limité à 10 places</div>
+                <div class="pricing-price">
+                    <span class="pricing-amount">10€</span>
+                    <span class="pricing-period">/mois</span>
+                </div>
+                <div class="pricing-subtitle">Chaque utilisateur a son propre serveur, sa propre base PostgreSQL, et 5 agents IA qui tournent chaque nuit. Ça a un coût en infrastructure, les 10€ nous aident à le couvrir. Seulement 10 places pour cette beta, au-delà une file d'attente sera mise en place.</div>
+                <ul class="pricing-features">
+                    <li>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                        Mémoire long terme illimitée
+                    </li>
+                    <li>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                        5 agents IA de maintenance
+                    </li>
+                    <li>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                        Consolidation nocturne automatique
+                    </li>
+                    <li>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                        Connexion MCP native à Claude
+                    </li>
+                    <li>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                        Base PostgreSQL dédiée et sécurisée
+                    </li>
+                    <li>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                        Accès direct à l'équipe pour vos retours
+                    </li>
+                </ul>
+                <a href="#waitlist" class="btn btn-primary btn-full">
+                    Accès anticipé
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-faq" id="faq">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">
+                Questions fréquentes
+            </h2>
+            <div class="faq-list">
+                <div class="faq-item" data-animate>
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Ça fonctionne avec ChatGPT aussi ?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Pour le moment, NovaMemory fonctionne uniquement avec Claude AI via le protocole MCP. On aimerait bien supporter d'autres LLMs à terme, mais pour l'instant on se concentre sur Claude.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-animate>
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Mes données sont-elles sécurisées ?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui. Chaque utilisateur a sa propre base de données PostgreSQL isolée, hébergée sur des serveurs sécurisés. Vos souvenirs ne sont jamais partagés ni utilisés pour entraîner des modèles.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-animate>
+                    <button class="faq-question" aria-expanded="false">
+                        <span>C'est quoi un MCP ?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>MCP (Model Context Protocol) est un protocole qui permet à Claude de se connecter à des outils et sources de données externes. C'est ce qui permet à Claude d'accéder à votre mémoire long terme de façon native et transparente.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-animate>
+                    <button class="faq-question" aria-expanded="false">
+                        <span>C'est compliqué à installer ?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Non. On vous guide pas à pas. Vous ajoutez notre MCP dans la configuration de Claude, on vous fournit vos identifiants, et c'est parti. Et si vous bloquez, on est là pour vous aider.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-animate>
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Que se passe-t-il la nuit avec mes souvenirs ?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Chaque nuit, 5 agents IA passent en revue votre mémoire. Ils archivent les souvenirs obsolètes, résolvent les contradictions, relient les souvenirs entre eux, mettent à jour votre profil synthétique et pondèrent les priorités. C'est comme le processus de consolidation de votre cerveau pendant le sommeil.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-animate>
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Je peux supprimer des souvenirs ?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, vous gardez le contrôle total. Vous pouvez demander à Claude de supprimer n'importe quel souvenir, ou gérer votre mémoire directement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAITLIST / CTA FINAL -->
+    <section class="section section-waitlist" id="waitlist">
+        <div class="container">
+            <div class="waitlist-glow"></div>
+            <h2 class="section-title">
+                On construit ça ensemble.<br>
+                <span class="text-accent">Venez tester.</span>
+            </h2>
+            <p class="section-description">
+                On est encore au stade de prototype et on cherche des beta testeurs prêts à nous aider à améliorer NovaMemory. Le profil idéal : quelqu'un qui discute beaucoup avec des LLMs et qui est capable de nous donner du feedback honnête. Une démo live arrive bientôt.
+            </p>
+            <form class="waitlist-form" id="waitlistForm" action="https://formspree.io/f/xreoewqd" method="POST">
+                <div class="waitlist-form-row">
+                    <input type="text" name="name" placeholder="Votre prénom" required class="waitlist-input" autocomplete="given-name">
+                    <input type="email" name="email" placeholder="Votre email" required class="waitlist-input" autocomplete="email">
+                </div>
+                <div class="waitlist-form-row">
+                    <input type="text" name="discord" placeholder="Votre pseudo Discord" class="waitlist-input" autocomplete="off">
+                </div>
+                <div class="waitlist-form-row">
+                    <select name="usage" class="waitlist-input waitlist-select" required>
+                        <option value="" disabled selected>Vous utilisez quelle IA principalement ?</option>
+                        <option value="claude">Claude AI</option>
+                        <option value="chatgpt">ChatGPT</option>
+                        <option value="les-deux">Les deux</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    Accès anticipé
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <p class="waitlist-note">10 places disponibles. Au-delà, vous serez ajouté à la file d'attente et contacté dès qu'une place se libère.</p>
+                <p class="waitlist-note" style="margin-top: 1rem;">
+                    <a href="https://discord.gg/eVxQWU3EYX" target="_blank" rel="noopener" style="color: #7c6ff7; text-decoration: underline;">Rejoignez le Discord</a> pour suivre l'avancement et discuter avec l'équipe.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <img src="images/logo-novamemory.png" alt="NovaMemory" class="nav-logo-img">
+                        <span class="nav-logo-text"><span class="logo-nova">Nova</span><span class="logo-memory">Memory</span></span>
+                    </div>
+                    <p class="footer-tagline">La mémoire long terme pour votre IA.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#probleme">Le problème</a>
+                    <a href="#solution">La solution</a>
+                    <a href="#agents">Les agents</a>
+                    <a href="#fonctionnement">Comment ça marche</a>
+                    <a href="#pricing">Tarif</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NovaMemory par Yann WIRTZ - <a href="https://novaia.org" target="_blank" rel="noopener">novaia.org</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="#waitlist" class="btn btn-primary btn-full">Accès anticipé</a>
+    </div>
+
+    <script src="js/novamemory.js" defer></script>
+</body>
+</html>

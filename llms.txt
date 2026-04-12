@@ -1,0 +1,19 @@
+# NovaIA.org
+
+> NovaIA est un écosystème d'outils d'intelligence artificielle créé par Yann Wirtz. La plateforme propose des solutions IA innovantes : mémoire persistante pour agents IA, assistant conversationnel intelligent, outils de productivité augmentée par l'IA, et services de création web optimisés pour les agents IA.
+
+## Pages principales
+
+- [Accueil](https://novaia.org/): Présentation de l'écosystème NovaIA
+- [NovaIA](https://novaia.org/novaia.html): L'assistant IA principal
+- [NovaMemory](https://novaia.org/novamemory.html): Système de mémoire persistante pour agents IA
+- [NovaBook](https://novaia.org/novabook.html): Outil de productivité IA
+- [NovaLove](https://novaia.org/novalove.html): Assistant IA conversationnel
+
+## Informations clés
+
+- Créé par Yann Wirtz, développeur IA basé à Strasbourg, France
+- Chaîne YouTube associée avec 559+ vidéos sur l'IA
+- Expertise : intelligence artificielle, agents IA, mémoire persistante, LLM
+- Technologies : Python, Claude API, systèmes multi-agents, MCP
+- Open source et innovation IA

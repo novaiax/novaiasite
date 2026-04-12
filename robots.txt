@@ -1,3 +1,108 @@
+# === Search Engine Crawlers ===
+User-agent: Googlebot
+Allow: /
+
+User-agent: BingBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Terracotta Bot
+Allow: /
+
+# === OpenAI ===
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# === Anthropic (Claude) ===
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# === Perplexity ===
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# === Meta ===
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# === Google AI ===
+User-agent: Google-CloudVertexBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# === Amazon ===
+User-agent: Amazonbot
+Allow: /
+
+# === DuckDuckGo ===
+User-agent: DuckAssistBot
+Allow: /
+
+# === Mistral ===
+User-agent: MistralAI-User
+Allow: /
+
+# === ByteDance ===
+User-agent: Bytespider
+Allow: /
+
+# === Huawei ===
+User-agent: PetalBot
+Allow: /
+
+# === Common Crawl ===
+User-agent: CCBot
+Allow: /
+
+# === Autres AI ===
+User-agent: Manus Bot
+Allow: /
+
+User-agent: Novellum AI Crawl
+Allow: /
+
+User-agent: ProRataInc
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+User-agent: Anchor Browser
+Allow: /
+
+User-agent: Cloudflare Crawler
+Allow: /
+
+# === Archive ===
+User-agent: archive.org_bot
+Allow: /
+
+# === Default ===
 User-agent: *
 Allow: /
 

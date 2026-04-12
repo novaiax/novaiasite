@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comment rendre son site visible pour ChatGPT, Gemini, Perplexity et Claude. Guide concret basé sur ce que j'ai fait sur mes propres sites. Robots.txt, llms.txt, schema JSON-LD.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://novaia.org/blog/comment-se-faire-citer-par-les-ia.html">
+
+  <meta property="og:title" content="Comment se faire citer par ChatGPT, Gemini et les autres IA">
+  <meta property="og:description" content="Guide concret. Pas de theorie. Ce que j'ai fait sur mes 4 sites pour etre visible par les IA.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://novaia.org/blog/comment-se-faire-citer-par-les-ia.html">
+  <meta property="og:locale" content="fr_FR">
+
+  <title>Comment se faire citer par ChatGPT, Gemini et les autres IA | NovaIA</title>
+
+  <link rel="icon" href="../images/favicon/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blog.css">
+
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Comment se faire citer par ChatGPT, Gemini et les autres IA",
+    "description": "Guide concret pour rendre son site visible par les moteurs de recherche IA. Basé sur une implémentation réelle sur 4 sites.",
+    "author": {
+      "@type": "Person",
+      "name": "Yann Wirtz",
+      "url": "https://novaia.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "NovaIA",
+      "url": "https://novaia.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://novaia.org/images/logonova.webp"
+      }
+    },
+    "datePublished": "2026-04-12",
+    "dateModified": "2026-04-12",
+    "mainEntityOfPage": "https://novaia.org/blog/comment-se-faire-citer-par-les-ia.html"
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Comment se faire citer par ChatGPT ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ChatGPT utilise l'index Bing pour trouver du contenu. Pour etre cite, il faut : etre indexe dans Bing (soumettre son sitemap via Bing Webmaster Tools), autoriser les bots GPTBot et OAI-SearchBot dans robots.txt, structurer le contenu en format reponse directe avec des faits verifiables, et ajouter du schema JSON-LD. Les pages avec environ 1 fait unique tous les 80 mots sont 4,2x plus susceptibles d'etre citees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment apparaitre dans les reponses de Gemini ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gemini est ancre dans l'infrastructure Google Search. Un bon SEO classique est la base. Les pages de marque, la documentation et le contenu YouTube performent particulierement bien. Avoir une chaine YouTube liee a son domaine est un avantage majeur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce qu'un fichier llms.txt ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "llms.txt est un standard emergent qui decrit un site web pour les crawlers IA. Place a la racine du domaine, il contient un resume du site, la liste des pages principales, et les informations cles. C'est l'equivalent d'un robots.txt mais concu pour aider les modeles de langage a comprendre le contexte du site."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps faut-il pour etre cite par les IA ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La partie technique (robots.txt, llms.txt, schema JSON-LD) se fait en quelques heures. Mais l'autorite de domaine, qui est le facteur le plus important, prend des mois a construire. 76,4% des pages citees par ChatGPT ont ete mises a jour dans les 30 derniers jours, donc la fraicheur du contenu joue aussi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle est la difference entre SEO et GEO ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le SEO optimise le classement dans Google/Bing. Le GEO (Generative Engine Optimization) optimise la citation dans les reponses IA comme ChatGPT, Gemini ou Perplexity. Seulement 12% des URLs citees par ChatGPT apparaissent aussi dans le top 10 Google. Ce sont deux strategies partiellement decorrelees."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="blog-nav-inner">
+    <a href="https://novaia.org" class="blog-nav-logo">
+      <img src="../images/logonova.webp" alt="NovaIA" width="28" height="28">
+      <span>NovaIA</span>
+    </a>
+    <a href="index.html" class="blog-nav-link">Blog</a>
+  </div>
+</nav>
+
+<main class="blog-main">
+<article class="blog-article">
+
+  <header class="blog-header">
+    <span class="blog-date">12 avril 2026</span>
+    <h1>Comment se faire citer par ChatGPT, Gemini et les autres IA</h1>
+    <p class="blog-subtitle">Ce que j'ai fait concretement sur mes 4 sites. Pas de theorie, que du vecu.</p>
+  </header>
+
+  <section class="blog-content">
+
+    <p>J'ai decouvert un truc. Enormement de gens tapent maintenant sur ChatGPT pour tout et n'importe quoi. Plus seulement Google. Ils demandent des recommandations, des comparatifs, des solutions a leurs problemes. Et l'IA cite des sites dans ses reponses.</p>
+
+    <p>La question c'est : comment faire pour que ce soit <strong>ton</strong> site qui soit cite ?</p>
+
+    <p>J'ai passe une journee a creuser le sujet et a implementer les changements sur mes 4 domaines. Voila ce que j'ai appris.</p>
+
+    <h2>Le truc fondamental a comprendre</h2>
+
+    <p>ChatGPT ne fonctionne pas comme Google. Il ne classe pas des pages web. Il recupere des passages de texte, les valide contre plusieurs sources, et synthetise une reponse. Quand quelqu'un pose une question, ChatGPT Search utilise l'index <strong>Bing</strong> pour trouver du contenu en temps reel.</p>
+
+    <p>Si tu ne rankes pas dans Bing, c'est mort pour ChatGPT. C'est la porte d'entree.</p>
+
+    <p>Et chaque IA a sa propre source :</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>IA</th>
+          <th>Source principale</th>
+          <th>Ce qui compte le plus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>ChatGPT</strong></td>
+          <td>Index Bing</td>
+          <td>Etre indexe dans Bing, contenu factuel</td>
+        </tr>
+        <tr>
+          <td><strong>Gemini</strong></td>
+          <td>Google Search + YouTube</td>
+          <td>SEO classique + videos YouTube</td>
+        </tr>
+        <tr>
+          <td><strong>Perplexity</strong></td>
+          <td>Reddit (45% plus cite)</td>
+          <td>Presence Reddit, fraicheur</td>
+        </tr>
+        <tr>
+          <td><strong>Claude</strong></td>
+          <td>Contenu genere par les utilisateurs</td>
+          <td>Avis, reviews, UGC (2 a 4x plus cite)</td>
+        </tr>
+        <tr>
+          <td><strong>Grok</strong></td>
+          <td>X / Twitter</td>
+          <td>Presence sur X</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Seulement 11% des sites sont cites a la fois par ChatGPT ET Perplexity. Les plateformes piochent dans des pools largement separes. Donc oui, faut une strategie par plateforme.</p>
+
+    <h2>Les 5 facteurs qui font qu'une page est citee</h2>
+
+    <p>J'ai epluche les donnees. Voila ce qui ressort :</p>
+
+    <ol>
+      <li><strong>Reponse directe en premier.</strong> Ton H2 pose une question ? La premiere phrase doit y repondre. Ne pas enterrer l'info sous trois paragraphes de contexte. 44,2% de toutes les citations ChatGPT viennent des premiers 30% du contenu d'une page.</li>
+      <li><strong>Densite de faits.</strong> Les pages avec environ 1 fait unique tous les 80 mots sont 4,2x plus susceptibles d'etre citees. Des chiffres concrets, des comparaisons, des donnees verifiables. Pas du blabla.</li>
+      <li><strong>Fraicheur.</strong> Le contenu cite par les IA est en moyenne 25,7% plus frais que le contenu classique bien classe. Et 76,4% des pages les plus citees par ChatGPT ont ete mises a jour dans les 30 derniers jours.</li>
+      <li><strong>Schema markup.</strong> Article, FAQ, Organization en JSON-LD. Les pages avec du schema structuree sont 3x plus susceptibles d'etre citees.</li>
+      <li><strong>Autorite du domaine.</strong> Les sites avec plus de 32 000 domaines referents sont 3,5x plus susceptibles d'etre cites. C'est le facteur le plus dur a obtenir quand tu pars de zero.</li>
+    </ol>
+
+    <h2>Ce que j'ai fait concretement sur mes sites</h2>
+
+    <p>J'ai 4 domaines : novaia.org, yannservice.fr, yannservice.com, yannwzservice.com. Voila ce que j'ai implemente sur chacun en une seule session.</p>
+
+    <h3>1. robots.txt ouvert a tous les bots IA</h3>
+
+    <p>L'ancien robots.txt de mes sites c'etait juste :</p>
+
+    <pre><code>User-agent: *
+Allow: /</code></pre>
+
+    <p>Ca marche, mais c'est pas assez explicite. Certains bots IA verifient s'ils ont une entree specifique avant de crawler. J'ai ajoute des directives pour 29 bots IA :</p>
+
+    <ul>
+      <li><strong>OpenAI :</strong> GPTBot, OAI-SearchBot, ChatGPT-User</li>
+      <li><strong>Anthropic :</strong> ClaudeBot, Claude-SearchBot, Claude-User</li>
+      <li><strong>Perplexity :</strong> PerplexityBot, Perplexity-User</li>
+      <li><strong>Google AI :</strong> Google-CloudVertexBot, GoogleOther</li>
+      <li><strong>Meta :</strong> FacebookBot, Meta-ExternalAgent, Meta-ExternalFetcher</li>
+      <li><strong>Autres :</strong> Amazonbot, Applebot, DuckAssistBot, MistralAI-User, Bytespider, PetalBot, CCBot, et d'autres</li>
+    </ul>
+
+    <p>Chaque bot a son propre bloc <code>User-agent</code> + <code>Allow: /</code>. Oui c'est long, mais c'est fait une fois.</p>
+
+    <h3>2. Fichier llms.txt a la racine</h3>
+
+    <p>C'est un standard emergent. Un fichier texte a la racine qui decrit ton site pour les crawlers IA. Le format :</p>
+
+    <pre><code># Nom du site
+
+> Description du site en une phrase.
+
+## Pages principales
+- [Accueil](https://tonsite.fr/): Description
+- [Tarifs](https://tonsite.fr/tarifs.html): Description
+
+## Informations cles
+- Ce que tu fais
+- Ou tu es base
+- Tes prix</code></pre>
+
+    <p>C'est basique mais ca donne du contexte aux modeles qui crawlent ton site. Aucun effort, gros potentiel.</p>
+
+    <h3>3. Schema JSON-LD complet</h3>
+
+    <p>J'avais deja du schema sur certains sites, mais pas partout et pas complet. J'ai ajoute :</p>
+
+    <ul>
+      <li><strong>ProfessionalService</strong> ou <strong>Organization</strong> selon le site</li>
+      <li><strong>FAQPage</strong> avec 4-5 vraies questions (pas des FAQ generiques)</li>
+      <li><strong>Offers</strong> avec prix et descriptions</li>
+      <li>Coordonnees geo correctes (j'avais Paris au lieu de Strasbourg sur un site...)</li>
+    </ul>
+
+    <h3>4. Meta tags de base</h3>
+
+    <p>Sur yannservice.com, il manquait <code>&lt;meta name="robots" content="index, follow"&gt;</code> et <code>&lt;link rel="canonical"&gt;</code>. Des trucs basiques mais qui font la difference pour les crawlers.</p>
+
+    <h2>Ce que ca ne fait PAS</h2>
+
+    <p>Soyons honnetes. Tout ca c'est la base technique. Ca ouvre la porte. Mais ca ne garantit pas d'etre cite.</p>
+
+    <p>Les facteurs qui prennent du temps :</p>
+
+    <ul>
+      <li><strong>Backlinks et autorite de domaine</strong> — ca se construit sur des mois, pas des heures</li>
+      <li><strong>Mentions externes</strong> — Reddit, forums, Trustpilot, LinkedIn. Les modeles cross-referencent pour valider qu'une entite existe</li>
+      <li><strong>Contenu informatif dense</strong> — les IA citent des ressources, pas des pages de vente</li>
+    </ul>
+
+    <p>La partie technique que j'ai faite aujourd'hui c'est le minimum. Le vrai travail c'est le contenu et la distribution.</p>
+
+    <h2>Le plan pour la suite</h2>
+
+    <p>Mon approche : concentrer tout sur novaia.org. Un domaine, toute l'autorite. Les autres sites beneficient via des liens.</p>
+
+    <ul>
+      <li>Blog avec des articles qui repondent a des requetes larges en francais</li>
+      <li>Inscription Bing Webmaster Tools + Google Search Console</li>
+      <li>Presence Reddit dans les subreddits pertinents</li>
+      <li>YouTube (j'ai 559+ videos) lie vers les articles et vice-versa</li>
+      <li>Mise a jour reguliere — la fraicheur compte</li>
+    </ul>
+
+    <p>L'idee c'est simple : l'IA est en train de devenir le nouveau Google. Ceux qui bougent maintenant prennent le terrain avant que tout le monde comprenne ce qui se passe. C'est le meme move que le SEO en 2005.</p>
+
+    <p>Sauf que la, la fenetre est ouverte <strong>maintenant</strong>.</p>
+
+    <div class="blog-author-box">
+      <img src="../images/yann.png" alt="Yann Wirtz" width="56" height="56" loading="lazy">
+      <div>
+        <strong>Yann Wirtz</strong>
+        <p>18 ans, fondateur de <a href="https://novaia.org">NovaIA</a>. Je construis des outils IA et je partage tout en public. <a href="https://www.youtube.com/@NovaIA_org">YouTube</a> / <a href="https://www.twitch.tv/novaia_">Twitch</a></p>
+      </div>
+    </div>
+
+  </section>
+
+</article>
+</main>
+
+<footer class="blog-footer">
+  <div class="blog-footer-inner">
+    <span>&copy; 2026 NovaIA</span>
+    <a href="https://novaia.org">novaia.org</a>
+  </div>
+</footer>
+
+</body>
+</html>

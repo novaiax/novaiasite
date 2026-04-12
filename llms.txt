@@ -1,19 +1,35 @@
 # NovaIA.org
 
-> NovaIA est un écosystème d'outils d'intelligence artificielle créé par Yann Wirtz. La plateforme propose des solutions IA innovantes : mémoire persistante pour agents IA, assistant conversationnel intelligent, outils de productivité augmentée par l'IA, et services de création web optimisés pour les agents IA.
+> NovaIA est un ecosysteme d'outils d'intelligence artificielle cree par Yann Wirtz. La plateforme propose des solutions IA concretes pour les entreprises : audit de compatibilite IA (AgentCheck), memoire persistante pour agents IA (NovaMemory), outils de productivite augmentee, et services de creation web optimises pour les agents IA.
 
 ## Pages principales
 
-- [Accueil](https://novaia.org/): Présentation de l'écosystème NovaIA
+- [Accueil](https://novaia.org/): Presentation de l'ecosysteme NovaIA et des produits
 - [NovaIA](https://novaia.org/novaia.html): L'assistant IA principal
-- [NovaMemory](https://novaia.org/novamemory.html): Système de mémoire persistante pour agents IA
-- [NovaBook](https://novaia.org/novabook.html): Outil de productivité IA
-- [NovaLove](https://novaia.org/novalove.html): Assistant IA conversationnel
+- [NovaMemory](https://novaia.org/novamemory.html): Systeme de memoire persistante pour agents IA via MCP
+- [NovaBook](https://novaia.org/novabook.html): Outil de productivite IA
+- [NovaLove](https://novaia.org/novalove.html): Livre et assistant IA conversationnel
 
-## Informations clés
+## Blog
 
-- Créé par Yann Wirtz, développeur IA basé à Strasbourg, France
-- Chaîne YouTube associée avec 559+ vidéos sur l'IA
-- Expertise : intelligence artificielle, agents IA, mémoire persistante, LLM
-- Technologies : Python, Claude API, systèmes multi-agents, MCP
-- Open source et innovation IA
+- [Blog](https://novaia.org/blog/): Articles sur l'IA, le business et la creation web
+- [Comment se faire citer par les IA](https://novaia.org/blog/comment-se-faire-citer-par-les-ia.html): Guide concret pour rendre son site visible par ChatGPT, Gemini, Perplexity et Claude
+- [Combien coute un site web pour artisan en 2026](https://novaia.org/blog/combien-coute-un-site-web-artisan-2026.html): Comparatif de prix reel pour la creation de sites web professionnels
+- [Site en panne : que faire](https://novaia.org/blog/site-en-panne-que-faire.html): Guide d'urgence quand un site web est inaccessible
+- [Rendre son site compatible avec les agents IA](https://novaia.org/blog/rendre-site-compatible-agents-ia.html): Comment optimiser un site pour les crawlers IA et les agents
+
+## Services associes
+
+- [YannService.fr](https://yannservice.fr): Creation de sites web en abonnement a 29,99 euros/mois pour artisans et PME
+- [YannService.com](https://yannservice.com): Creation de sites web professionnels a partir de 499 euros, refonte et depannage
+- [YannWZService.com](https://yannwzservice.com): Intervention urgente sur sites web, remise en ligne express
+- [AgentCheck.fr](https://agentcheck.fr): Audit de compatibilite IA pour sites e-commerce
+
+## Informations cles
+
+- Cree par Yann Wirtz, 18 ans, entrepreneur et developpeur IA base a Strasbourg, France
+- Chaine YouTube avec 559+ videos sur l'IA et l'entrepreneuriat (@NovaIA_org)
+- Build en public sur Twitch (Lun-Ven, 6h-12h / 14h-18h)
+- Expertise : intelligence artificielle, agents IA, memoire persistante, LLM, creation web, GEO
+- Technologies : Python, JavaScript, Claude API, MCP, systemes multi-agents
+- 30+ entreprises accompagnees, 26 interventions urgentes realisees

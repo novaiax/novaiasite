@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Votre site est en panne ? Voici les etapes d'urgence : verifier DNS, SSL, hebergeur, plugins, et savoir quand appeler un pro. Guide concret par un intervenant qui a gere 26 urgences web.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://novaia.org/blog/site-en-panne-que-faire.html">
+
+  <meta property="og:title" content="Site en panne : que faire en urgence ?">
+  <meta property="og:description" content="Les etapes concretes quand ton site tombe. Ce que tu peux tester toi-meme et quand il faut appeler quelqu'un.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://novaia.org/blog/site-en-panne-que-faire.html">
+  <meta property="og:locale" content="fr_FR">
+
+  <title>Site en panne : que faire en urgence ? | NovaIA</title>
+
+  <link rel="icon" href="../images/favicon/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blog.css">
+
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Site en panne : que faire en urgence ?",
+    "description": "Guide d'urgence quand votre site web est en panne. Etapes de diagnostic, erreurs courantes et quand faire appel a un professionnel.",
+    "author": {
+      "@type": "Person",
+      "name": "Yann Wirtz",
+      "url": "https://novaia.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "NovaIA",
+      "url": "https://novaia.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://novaia.org/images/logonova.webp"
+      }
+    },
+    "datePublished": "2026-04-12",
+    "dateModified": "2026-04-12",
+    "mainEntityOfPage": "https://novaia.org/blog/site-en-panne-que-faire.html"
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Mon site affiche une erreur 500, que faire ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Une erreur 500 est une erreur serveur interne. Les causes les plus frequentes sont un fichier .htaccess corrompu, un plugin defaillant (WordPress), ou une limite memoire PHP depassee. Connectez-vous en FTP, renommez le fichier .htaccess et le dossier plugins pour isoler le probleme. Si ca ne resout rien, contactez votre hebergeur ou un intervenant web."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mon site est en panne, est-ce que c'est mon hebergeur ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "C'est possible. Pour verifier, utilisez un outil comme isitdownrightnow.com ou downforeveryoneorjustme.com. Si le site est inaccessible pour tout le monde, verifiez la page de statut de votre hebergeur (OVH, Hostinger, o2switch). Si leur infrastructure est en panne, il n'y a qu'a attendre. Si c'est uniquement votre site, le probleme vient de votre configuration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien coute une intervention d'urgence sur un site web ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le prix varie selon le prestataire et l'urgence. Pour une intervention rapide sur site en panne, comptez entre 100 et 400 euros. Chez yannwzservice.com, l'intervention urgente est a 245 euros et inclut le diagnostic complet plus la remise en ligne."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mon certificat SSL a expire, comment le renouveler ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un certificat SSL expire provoque l'erreur 'Votre connexion n'est pas privee' dans le navigateur. La plupart des hebergeurs proposent le renouvellement automatique via Let's Encrypt. Connectez-vous a votre panel d'hebergement (cPanel, Plesk) et cherchez la section SSL/TLS pour forcer le renouvellement. Si vous utilisez Cloudflare, le certificat se renouvelle automatiquement cote proxy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment savoir si mon site a ete pirate ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les signes d'un piratage sont : redirections vers des sites inconnus, pages injectees (souvent en japonais ou chinois), Google qui affiche 'Ce site a ete pirate', ralentissements soudains, ou des fichiers inconnus dans votre FTP. Scannez avec Sucuri SiteCheck (gratuit). Si votre site est compromis, changez tous les mots de passe, mettez a jour le CMS et les plugins, et nettoyez les fichiers infectes."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="blog-nav-inner">
+    <a href="https://novaia.org" class="blog-nav-logo">
+      <img src="../images/logonova.webp" alt="NovaIA" width="28" height="28">
+      <span>NovaIA</span>
+    </a>
+    <a href="index.html" class="blog-nav-link">Blog</a>
+  </div>
+</nav>
+
+<main class="blog-main">
+<article class="blog-article">
+
+  <header class="blog-header">
+    <span class="blog-date">12 avril 2026</span>
+    <h1>Site en panne : que faire en urgence ?</h1>
+    <p class="blog-subtitle">26 interventions d'urgence. Voilà ce que je fais à chaque fois, étape par étape.</p>
+  </header>
+
+  <section class="blog-content">
+
+    <p>Ton site est en panne. Tu paniques. C'est normal. Voilà ce qu'il faut faire tout de suite : <strong>vérifie si le problème vient de toi ou du serveur</strong>. Va sur <code>downforeveryoneorjustme.com</code> et tape ton URL. Si le site est down pour tout le monde, c'est un vrai problème serveur. Si c'est juste toi, c'est ton DNS local ou ton navigateur. Ensuite, vérifie ta boîte mail : ton hébergeur t'a peut-être envoyé une notification. Et ne touche à rien tant que tu n'as pas identifié la cause.</p>
+
+    <p>J'ai fait 26 interventions d'urgence sur des sites en panne via <a href="https://yannwzservice.com">yannwzservice.com</a>. Dans 90% des cas, c'est un des problèmes que je vais lister en dessous. La bonne nouvelle : tu peux en résoudre pas mal toi-même.</p>
+
+    <h2>Checklist d'urgence : les 7 trucs à vérifier toi-même</h2>
+
+    <p>Avant d'appeler qui que ce soit, fais cette checklist dans l'ordre. Ça prend 10 minutes max.</p>
+
+    <ol>
+      <li><strong>Le site est-il down pour tout le monde ?</strong> Teste sur <code>downforeveryoneorjustme.com</code> ou <code>isitdownrightnow.com</code>. Si c'est juste toi, vide ton cache DNS (<code>ipconfig /flushdns</code> sur Windows, <code>sudo dscacheutil -flushcache</code> sur Mac).</li>
+      <li><strong>Ton hébergeur est-il en panne ?</strong> Va sur la page statut de ton hébergeur (OVH : travaux.ovh.net, Hostinger : statuspage, o2switch : status.o2switch.net). Si c'est une panne globale, tu ne peux qu'attendre.</li>
+      <li><strong>Ton nom de domaine est-il expiré ?</strong> Vérifie sur <code>who.is</code>. Un domaine expiré = site inaccessible. Renouvelle immédiatement chez ton registrar.</li>
+      <li><strong>Ton certificat SSL est-il valide ?</strong> Clique sur le cadenas dans la barre d'adresse. Si le certificat a expiré, va dans le panel de ton hébergeur et force le renouvellement (Let's Encrypt se renouvelle normalement tout seul).</li>
+      <li><strong>Le fichier .htaccess est-il cassé ?</strong> Connecte-toi en FTP, renomme <code>.htaccess</code> en <code>.htaccess.bak</code>. Si le site revient, c'est lui le coupable. Régénère-le depuis WordPress (Réglages > Permaliens > Enregistrer).</li>
+      <li><strong>Un plugin a planté ?</strong> Via FTP, renomme le dossier <code>/wp-content/plugins/</code> en <code>/wp-content/plugins-disabled/</code>. Si le site revient, réactive les plugins un par un pour trouver le fautif.</li>
+      <li><strong>La limite mémoire PHP est-elle atteinte ?</strong> Ajoute <code>define('WP_MEMORY_LIMIT', '256M');</code> dans <code>wp-config.php</code>. Ou augmente <code>memory_limit</code> dans le <code>php.ini</code> de ton hébergeur.</li>
+    </ol>
+
+    <h2>Les erreurs les plus courantes et leurs causes</h2>
+
+    <p>Quand ton site plante, il affiche souvent un code d'erreur. Voilà ce que chaque code veut dire et ce qu'il faut faire :</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Code erreur</th>
+          <th>Ce que ça veut dire</th>
+          <th>Cause probable</th>
+          <th>Quoi faire</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>500</strong></td>
+          <td>Erreur interne du serveur</td>
+          <td>.htaccess corrompu, plugin planté, limite mémoire PHP</td>
+          <td>Renommer .htaccess, désactiver plugins via FTP</td>
+        </tr>
+        <tr>
+          <td><strong>502</strong></td>
+          <td>Bad Gateway</td>
+          <td>Serveur surchargé ou proxy mal configuré</td>
+          <td>Attendre 5 min, contacter l'hébergeur si ça persiste</td>
+        </tr>
+        <tr>
+          <td><strong>503</strong></td>
+          <td>Service indisponible</td>
+          <td>Maintenance, trop de trafic, ou ressources épuisées</td>
+          <td>Vérifier si une mise à jour est en cours, augmenter les ressources</td>
+        </tr>
+        <tr>
+          <td><strong>504</strong></td>
+          <td>Gateway Timeout</td>
+          <td>Le serveur met trop de temps à répondre</td>
+          <td>Augmenter le timeout PHP, optimiser les requêtes lentes</td>
+        </tr>
+        <tr>
+          <td><strong>403</strong></td>
+          <td>Accès interdit</td>
+          <td>Permissions fichiers incorrectes ou IP bloquée</td>
+          <td>Vérifier les permissions (644 fichiers, 755 dossiers), checker le .htaccess</td>
+        </tr>
+        <tr>
+          <td><strong>ERR_NAME_NOT_RESOLVED</strong></td>
+          <td>DNS introuvable</td>
+          <td>Domaine expiré, DNS mal configurés, propagation en cours</td>
+          <td>Vérifier le domaine sur who.is, checker les DNS chez le registrar</td>
+        </tr>
+        <tr>
+          <td><strong>ERR_SSL_PROTOCOL_ERROR</strong></td>
+          <td>Problème de certificat SSL</td>
+          <td>Certificat expiré ou mal installé</td>
+          <td>Renouveler le certificat SSL dans le panel hébergeur</td>
+        </tr>
+        <tr>
+          <td><strong>Page blanche</strong></td>
+          <td>White Screen of Death (WSOD)</td>
+          <td>Erreur PHP fatale, thème ou plugin incompatible</td>
+          <td>Activer le debug (<code>WP_DEBUG</code>) ou checker les logs PHP</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Quand c'est pas un truc que tu peux régler toi-même</h2>
+
+    <p>Soyons honnêtes. Certains problèmes dépassent la checklist du dessus. Voilà quand il faut arrêter de bidouiller et appeler quelqu'un :</p>
+
+    <ul>
+      <li><strong>Ton site a été piraté.</strong> Des redirections bizarres, des pages en japonais qui apparaissent, Google qui te flag "site dangereux". Là c'est du nettoyage en profondeur, pas un rename de plugin.</li>
+      <li><strong>La base de données est corrompue.</strong> Erreur "Error establishing a database connection" qui persiste même après avoir vérifié les identifiants dans <code>wp-config.php</code>. Faut aller dans phpMyAdmin et réparer les tables.</li>
+      <li><strong>Le serveur renvoie des erreurs 500 en boucle</strong> et rien dans la checklist ne marche. Le problème est probablement dans la config serveur (Apache/Nginx) ou la version PHP.</li>
+      <li><strong>Tu as perdu l'accès à tout</strong> : admin WordPress, FTP, panel hébergeur. Là ça devient de la récupération, pas du dépannage.</li>
+      <li><strong>C'est un site e-commerce</strong> et chaque heure d'indisponibilité te coûte de l'argent. Là, la rapidité d'intervention vaut largement le prix d'un pro.</li>
+    </ul>
+
+    <h2>Combien ça coûte de faire réparer son site</h2>
+
+    <p>Je vais être transparent. Le marché du dépannage web c'est le far west. Des agences qui facturent 800 euros pour renommer un fichier .htaccess, ça existe. À l'inverse, des freelances sur Fiverr à 20 euros qui vont casser autre chose, ça existe aussi.</p>
+
+    <p>Voilà les fourchettes réalistes en France en 2026 :</p>
+
+    <ul>
+      <li><strong>Diagnostic seul</strong> : 50 à 100 euros. Juste comprendre le problème, sans forcément le résoudre.</li>
+      <li><strong>Intervention simple</strong> (plugin, .htaccess, SSL) : 80 à 150 euros.</li>
+      <li><strong>Intervention urgente avec remise en ligne</strong> : 200 à 400 euros. C'est là que la plupart des cas tombent.</li>
+      <li><strong>Nettoyage de piratage complet</strong> : 300 à 600 euros selon l'ampleur.</li>
+      <li><strong>Migration d'urgence</strong> (changer d'hébergeur en catastrophe) : 250 à 500 euros.</li>
+    </ul>
+
+    <p>Sur <a href="https://yannwzservice.com">yannwzservice.com</a>, je propose l'intervention urgente à <strong>245 euros</strong>. Ça inclut le diagnostic complet, la résolution du problème et la remise en ligne. Pas de frais cachés, pas d'abonnement forcé. Tu paies, je répare, c'est fini.</p>
+
+    <p>En 26 interventions, le temps moyen de résolution c'est 2 heures. Le plus rapide c'était 15 minutes (un .htaccess corrompu après une mise à jour). Le plus long c'était 6 heures (un piratage avec injection de code dans 400+ fichiers).</p>
+
+    <h2>Ce que tu devrais faire AVANT que ça arrive</h2>
+
+    <p>Le meilleur moment pour préparer une panne, c'est quand tout marche. Voilà le minimum :</p>
+
+    <ul>
+      <li><strong>Backups automatiques.</strong> Au minimum hebdomadaires. Vérifie que ton hébergeur les fait. Si non, installe UpdraftPlus (WordPress) ou fais-les manuellement via cPanel.</li>
+      <li><strong>Mises à jour régulières.</strong> WordPress, thèmes, plugins. 60% des sites piratés le sont à cause d'un plugin obsolète.</li>
+      <li><strong>Un accès FTP qui marche.</strong> Teste-le maintenant, pas le jour où tu en as besoin en urgence.</li>
+      <li><strong>Les identifiants quelque part d'accessible.</strong> Hébergeur, registrar, FTP, admin WordPress. Note-les dans un gestionnaire de mots de passe.</li>
+      <li><strong>Monitoring basique.</strong> UptimeRobot (gratuit) t'envoie un mail dès que ton site tombe. Tu seras au courant avant tes clients.</li>
+    </ul>
+
+    <p>Un site qui tombe, c'est pas une question de "si" mais de "quand". La différence c'est entre paniquer pendant 3 jours et remonter en 30 minutes parce que t'avais un backup.</p>
+
+    <div class="blog-author-box">
+      <img src="../images/yann.png" alt="Yann Wirtz" loading="lazy">
+      <div>
+        <strong>Yann Wirtz</strong>
+        <p>18 ans, fondateur de <a href="https://novaia.org">NovaIA</a>. 26 interventions d'urgence sur des sites en panne via <a href="https://yannwzservice.com">yannwzservice.com</a>. Je construis des outils IA et je partage tout en public.</p>
+      </div>
+    </div>
+
+  </section>
+
+</article>
+</main>
+
+<footer class="blog-footer">
+  <div class="blog-footer-inner">
+    <span>&copy; 2026 NovaIA</span>
+    <a href="https://novaia.org">novaia.org</a>
+  </div>
+</footer>
+
+</body>
+</html>

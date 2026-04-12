@@ -7,25 +7,25 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://novaia.org/novaia.html</loc>
+    <loc>https://novaia.org/novaia</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://novaia.org/novamemory.html</loc>
+    <loc>https://novaia.org/novamemory</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://novaia.org/novabook.html</loc>
+    <loc>https://novaia.org/novabook</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://novaia.org/novalove.html</loc>
+    <loc>https://novaia.org/novalove</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -37,7 +37,25 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://novaia.org/blog/comment-se-faire-citer-par-les-ia.html</loc>
+    <loc>https://novaia.org/blog/comment-se-faire-citer-par-les-ia</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://novaia.org/blog/combien-coute-un-site-web-artisan-2026</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://novaia.org/blog/site-en-panne-que-faire</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://novaia.org/blog/rendre-site-compatible-agents-ia</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

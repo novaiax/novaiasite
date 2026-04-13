@@ -58,84 +58,125 @@
   <!-- Preload logo -->
   <link rel="preload" href="images/logonova.webp" as="image">
 
-  <!-- Structured Data -->
+  <!-- Structured Data @graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "NovaIA",
-    "url": "https://novaia.org",
-    "logo": "https://novaia.org/images/logonova.webp",
-    "description": "Outils IA concrets pour les entreprises. Automatisation, analyse, optimisation.",
-    "founder": {
-      "@type": "Person",
-      "name": "Yann Wirtz",
-      "url": "https://www.linkedin.com/in/yann-wirtz"
-    },
-    "sameAs": [
-      "https://www.tiktok.com/@novaia.org",
-      "https://www.twitch.tv/novaia_",
-      "https://www.instagram.com/novaia.ai",
-      "https://github.com/novaiax",
-      "https://www.youtube.com/@NovaIA_org",
-      "https://www.linkedin.com/in/yann-wirtz"
-    ],
-    "knowsAbout": [
-      "Intelligence artificielle",
-      "Agents IA",
-      "Automatisation par IA",
-      "Optimisation IA pour entreprises",
-      "Audit compatibilité IA",
-      "Création de sites web"
-    ]
-  }
-  </script>
-
-  <!-- Schema.org FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Qu'est-ce que NovaIA ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "NovaIA est un écosystème d'outils d'intelligence artificielle créé par Yann Wirtz. La plateforme propose des solutions IA concrètes pour les entreprises : audit de compatibilité IA (AgentCheck), mémoire persistante pour agents IA (NovaMemory), et outils de productivité augmentée."
-        }
+        "@type": "Organization",
+        "@id": "https://novaia.org/#organization",
+        "name": "NovaIA",
+        "url": "https://novaia.org",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://novaia.org/images/logonova.webp"
+        },
+        "description": "NovaIA construit des outils IA concrets pour les entreprises : audit IA (AgentCheck), mémoire persistante (NovaMemory), création web, automatisation. 30+ entreprises accompagnées, 559+ vidéos YouTube, build en public.",
+        "foundingDate": "2026-01-01",
+        "founder": { "@id": "https://novaia.org/#founder" },
+        "areaServed": [
+          { "@type": "Country", "name": "France" }
+        ],
+        "sameAs": [
+          "https://www.tiktok.com/@novaia.org",
+          "https://www.twitch.tv/novaia_",
+          "https://www.instagram.com/novaia.ai",
+          "https://github.com/novaiax",
+          "https://www.youtube.com/@NovaIA_org",
+          "https://www.linkedin.com/in/yann-wirtz"
+        ],
+        "knowsAbout": [
+          "Intelligence artificielle",
+          "Agents IA autonomes",
+          "Mémoire persistante pour IA",
+          "Automatisation par IA",
+          "Generative Engine Optimization (GEO)",
+          "Audit compatibilité IA pour sites web",
+          "Création de sites web professionnels",
+          "SEO technique",
+          "Développement Python",
+          "Model Context Protocol (MCP)"
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Comment rendre son site web compatible avec les agents IA ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Pour rendre un site compatible avec les agents IA, il faut optimiser le robots.txt pour autoriser les crawlers IA (GPTBot, ClaudeBot, PerplexityBot), ajouter un fichier llms.txt, implémenter du schema JSON-LD structuré, et s'assurer que le contenu est en HTML statique (SSR). NovaIA propose un audit complet via AgentCheck."
-        }
+        "@type": "Person",
+        "@id": "https://novaia.org/#founder",
+        "name": "Yann Wirtz",
+        "jobTitle": "Fondateur et développeur IA",
+        "url": "https://www.linkedin.com/in/yann-wirtz",
+        "worksFor": { "@id": "https://novaia.org/#organization" },
+        "knowsAbout": [
+          "Intelligence artificielle",
+          "Développement web",
+          "Python",
+          "JavaScript",
+          "Claude API",
+          "Agents IA",
+          "Mémoire persistante",
+          "SEO",
+          "GEO",
+          "Entrepreneuriat"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/yann-wirtz",
+          "https://github.com/novaiax",
+          "https://www.youtube.com/@NovaIA_org",
+          "https://www.twitch.tv/novaia_"
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Qu'est-ce que le GEO (Generative Engine Optimization) ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Le GEO est l'optimisation d'un site web pour être cité et recommandé par les moteurs de recherche IA comme ChatGPT, Gemini, Perplexity et Claude. Contrairement au SEO classique qui cible Google, le GEO cible les réponses générées par l'IA en structurant le contenu pour qu'il soit facilement extractible par les modèles de langage."
-        }
+        "@type": "WebSite",
+        "@id": "https://novaia.org/#website",
+        "name": "NovaIA",
+        "url": "https://novaia.org",
+        "publisher": { "@id": "https://novaia.org/#organization" },
+        "inLanguage": "fr"
       },
       {
-        "@type": "Question",
-        "name": "Quelle est la différence entre le SEO et le GEO ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Le SEO optimise le classement dans les résultats de recherche traditionnels (Google, Bing). Le GEO optimise la citation dans les réponses IA (ChatGPT, Gemini, Perplexity, Claude). Seulement 12% des URLs citées par ChatGPT rankent aussi dans le top 10 de Google — ce sont deux stratégies partiellement décorrélées qui doivent être menées en parallèle."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quels outils IA NovaIA propose-t-elle aux entreprises ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "NovaIA propose AgentCheck (audit de compatibilité IA pour e-commerces et sites web), NovaMemory (système de mémoire persistante pour agents IA), NovaBook (outil de productivité IA), et des services de création web optimisés pour les agents IA. Tous les outils sont développés en interne par Yann Wirtz."
-        }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qu'est-ce que NovaIA ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NovaIA est un écosystème d'outils d'intelligence artificielle fondé en 2026 par Yann Wirtz, 18 ans, basé à Strasbourg. La plateforme propose des solutions IA concrètes : AgentCheck (audit IA-readiness pour e-commerces, 1 284 sites analysés), NovaMemory (mémoire persistante pour Claude AI via MCP, 5 agents de consolidation nocturne), et des services de création web pour artisans et PME (30+ entreprises accompagnées). Tout est construit en public sur YouTube (559+ vidéos) et Twitch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment rendre son site compatible avec les agents IA en 2026 ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pour rendre un site compatible avec les agents IA : 1) Configurer robots.txt pour autoriser explicitement 29+ bots IA (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, etc.), 2) Créer un fichier llms.txt à la racine décrivant le site, 3) Implémenter du schema JSON-LD structuré (Organization, Article, FAQPage) en modèle @graph, 4) S'assurer du rendu HTML côté serveur (69% des crawlers IA ne peuvent pas exécuter JavaScript), 5) Soumettre le sitemap à Bing Webmaster Tools (porte d'entrée ChatGPT) et Google Search Console (porte d'entrée Gemini). NovaIA propose un audit automatisé via AgentCheck.fr."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qu'est-ce que le GEO (Generative Engine Optimization) ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le GEO (Generative Engine Optimization) est l'optimisation d'un site web pour être cité par les IA génératives (ChatGPT, Gemini, Perplexity, Claude, Grok). Selon l'étude Princeton (KDD 2024), l'ajout de statistiques augmente la visibilité IA de 41%, le schema JSON-LD multiplie par 2,5 les chances de citation, et 44,2% des citations proviennent des premiers 30% du contenu. Contrairement au SEO classique, le GEO cible les réponses générées : seulement 12% des URLs citées par ChatGPT apparaissent dans le top 10 Google."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien coûte un site web pour artisan en France en 2026 ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En 2026, un site web pour artisan coûte entre 0€ (DIY avec Wix/WordPress) et 5 000€+ (agence). Un freelance facture 500-2 000€, une agence 2 000-8 000€. YannService propose deux formules : abonnement à 29,99€/mois tout compris (yannservice.fr) ou création one-shot à partir de 499€ (yannservice.com). Livraison en 7 jours, sans engagement. 30+ entreprises accompagnées."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Que faire quand son site web est en panne ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En urgence : 1) Vérifier si le site est down pour tout le monde (downforeveryoneorjustme.com), 2) Checker le statut de l'hébergeur, 3) Vérifier l'expiration du domaine (who.is), 4) Contrôler le certificat SSL, 5) Tester le .htaccess en le renommant, 6) Désactiver les plugins WordPress via FTP. Si rien ne marche : appeler un professionnel. YannService intervient en urgence pour 245€ diagnostic inclus (yannwzservice.com), temps moyen de résolution : 2 heures."
+            }
+          }
+        ]
       }
     ]
   }

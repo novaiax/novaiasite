@@ -55,6 +55,12 @@ Allow: /
 User-agent: GoogleOther
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # === Amazon ===
 User-agent: Amazonbot
 Allow: /

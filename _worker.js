@@ -1,16 +1,27 @@
 /**
- * Cloudflare Pages Function — TikTok OAuth callback handler
+ * Cloudflare Worker entry — novaia-site
  *
- * Triggered when TikTok redirects after user authorization.
- * Receives ?code=xxx&state=yyy in query params.
- * Displays the code on a page so it can be manually copied
- * into the local Jarvis OAuth completion script.
- *
- * URL: https://novaia.org/tiktok/callback
+ * Handles dynamic routes (TikTok OAuth callback, etc.)
+ * then falls back to static assets serving via env.ASSETS binding.
  */
 
-export async function onRequest(context) {
-  const url = new URL(context.request.url);
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+
+    // ───────── Dynamic routes ─────────
+    if (url.pathname === "/tiktok/callback") {
+      return handleTikTokCallback(url);
+    }
+
+    // ───────── Fallback to static assets ─────────
+    return env.ASSETS.fetch(request);
+  },
+};
+
+
+// ─── TikTok OAuth callback handler ──────────────────────────────────
+function handleTikTokCallback(url) {
   const code = url.searchParams.get("code");
   const state = url.searchParams.get("state");
   const error = url.searchParams.get("error");
@@ -208,10 +219,11 @@ export async function onRequest(context) {
       "Content-Type": "text/html; charset=utf-8",
       "Cache-Control": "no-store, no-cache, must-revalidate",
       "X-Content-Type-Options": "nosniff",
-      "Referrer-Policy": "no-referrer"
-    }
+      "Referrer-Policy": "no-referrer",
+    },
   });
 }
+
 
 function escapeHtml(s) {
   return String(s)

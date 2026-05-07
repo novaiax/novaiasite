@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yann.wtz Studio — TikTok Analytics Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100vh;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .screen.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* === SCREEN 1 : LOGIN === */
+        #login-screen {
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FE2C55 0%, #25F4EE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        .logo-subtitle {
+            font-size: 16px;
+            color: #999;
+            font-weight: 400;
+        }
+
+        .login-card {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 16px;
+            padding: 48px 40px;
+            max-width: 460px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .login-description {
+            font-size: 14px;
+            color: #999;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .tiktok-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #fff;
+            color: #000;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+        }
+
+        .tiktok-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+        }
+
+        .tiktok-icon {
+            width: 22px;
+            height: 22px;
+        }
+
+        .features-list {
+            margin-top: 32px;
+            text-align: left;
+            font-size: 13px;
+            color: #777;
+            line-height: 1.8;
+        }
+
+        .features-list li {
+            list-style: none;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #25F4EE;
+            font-weight: 700;
+        }
+
+        /* === SCREEN 2 : OAUTH AUTHORIZATION === */
+        #oauth-screen {
+            background: #fff;
+            color: #000;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .oauth-window {
+            background: #fff;
+            max-width: 480px;
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .oauth-header {
+            padding: 24px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .oauth-logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .oauth-tiktok-text {
+            color: #FE2C55;
+        }
+
+        .oauth-app-circle {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #FE2C55, #25F4EE);
+            border-radius: 50%;
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .oauth-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .oauth-subtitle {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .oauth-permissions {
+            padding: 24px;
+        }
+
+        .permissions-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .permission-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .permission-item:last-child {
+            border-bottom: none;
+        }
+
+        .permission-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #FE2C55;
+            font-size: 16px;
+        }
+
+        .permission-text {
+            flex: 1;
+        }
+
+        .permission-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+            color: #000;
+        }
+
+        .permission-desc {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .oauth-actions {
+            padding: 16px 24px 24px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .oauth-btn {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .oauth-btn-cancel {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .oauth-btn-authorize {
+            background: #FE2C55;
+            color: #fff;
+        }
+
+        .oauth-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* === SCREEN 3 : DASHBOARD === */
+        #dashboard-screen {
+            padding: 24px;
+            justify-content: flex-start;
+        }
+
+        .dashboard-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #2a2a2a;
+            margin-bottom: 32px;
+        }
+
+        .dashboard-title {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .dashboard-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #25F4EE;
+            background: rgba(37, 244, 238, 0.1);
+            padding: 6px 14px;
+            border-radius: 20px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #25F4EE;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .profile-card {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FE2C55, #25F4EE);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .profile-info h2 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .profile-info .handle {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .profile-bio {
+            font-size: 13px;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .stat-card {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .stat-trend {
+            font-size: 12px;
+            color: #25F4EE;
+            margin-top: 4px;
+        }
+
+        .videos-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #ccc;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .videos-table {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .video-row {
+            display: grid;
+            grid-template-columns: 60px 1fr 100px 100px 100px 100px;
+            gap: 16px;
+            padding: 16px 20px;
+            align-items: center;
+            border-bottom: 1px solid #2a2a2a;
+            transition: background 0.2s;
+        }
+
+        .video-row:last-child {
+            border-bottom: none;
+        }
+
+        .video-row:hover {
+            background: #222;
+        }
+
+        .video-row.header {
+            background: #0f0f0f;
+            font-size: 11px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .video-thumb {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .video-title {
+            font-size: 13px;
+            color: #fff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .video-stat {
+            font-size: 13px;
+            color: #ccc;
+            text-align: right;
+        }
+
+        /* Animation entrées dashboard */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-card,
+        .stats-grid,
+        .videos-section {
+            animation: slideUp 0.6s ease-out backwards;
+        }
+
+        .stats-grid {
+            animation-delay: 0.1s;
+        }
+
+        .videos-section {
+            animation-delay: 0.2s;
+        }
+
+        /* Footer info */
+        .integration-note {
+            margin-top: 32px;
+            padding: 16px 20px;
+            background: rgba(37, 244, 238, 0.05);
+            border: 1px solid rgba(37, 244, 238, 0.2);
+            border-radius: 8px;
+            font-size: 12px;
+            color: #25F4EE;
+        }
+
+        .scope-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            background: rgba(37, 244, 238, 0.1);
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 11px;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ====== SCREEN 1 : LOGIN ====== -->
+<div id="login-screen" class="screen active">
+    <div class="logo-container">
+        <div class="logo">Yann.wtz Studio</div>
+        <div class="logo-subtitle">Personal TikTok Content Analytics</div>
+    </div>
+
+    <div class="login-card">
+        <div class="login-title">Connect your TikTok account</div>
+        <div class="login-description">
+            Sign in with your TikTok account to access your personal content analytics dashboard.
+            Your data stays local and private.
+        </div>
+
+        <button class="tiktok-button" onclick="startOAuth()">
+            <svg class="tiktok-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/>
+            </svg>
+            Continue with TikTok
+        </button>
+
+        <ul class="features-list" style="margin-top: 32px;">
+            <li>View your follower growth over time</li>
+            <li>Track your video performance metrics</li>
+            <li>Analyze engagement patterns by content type</li>
+            <li>Read-only access — no posting on your behalf</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ====== SCREEN 2 : OAUTH AUTHORIZATION ====== -->
+<div id="oauth-screen" class="screen">
+    <div class="oauth-window">
+        <div class="oauth-header">
+            <div class="oauth-logo">
+                <span class="oauth-tiktok-text">TikTok</span>
+            </div>
+            <div class="oauth-app-circle">YS</div>
+            <div class="oauth-title">Yann.wtz Studio wants to access your TikTok</div>
+            <div class="oauth-subtitle">Yann.wtz Studio is requesting permission to:</div>
+        </div>
+
+        <div class="oauth-permissions">
+            <div class="permissions-title">Requested permissions</div>
+
+            <div class="permission-item">
+                <div class="permission-icon">👤</div>
+                <div class="permission-text">
+                    <div class="permission-name">Read your basic profile (user.info.basic)</div>
+                    <div class="permission-desc">Open ID, avatar URL, display name</div>
+                </div>
+            </div>
+
+            <div class="permission-item">
+                <div class="permission-icon">📝</div>
+                <div class="permission-text">
+                    <div class="permission-name">Read your profile details (user.info.profile)</div>
+                    <div class="permission-desc">Username, biography, profile picture</div>
+                </div>
+            </div>
+
+            <div class="permission-item">
+                <div class="permission-icon">📊</div>
+                <div class="permission-text">
+                    <div class="permission-name">Read your account statistics (user.info.stats)</div>
+                    <div class="permission-desc">Follower count, video count, total likes</div>
+                </div>
+            </div>
+
+            <div class="permission-item">
+                <div class="permission-icon">🎬</div>
+                <div class="permission-text">
+                    <div class="permission-name">List your videos (video.list)</div>
+                    <div class="permission-desc">Public videos with their engagement stats (views, likes, comments)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="oauth-actions">
+            <button class="oauth-btn oauth-btn-cancel" onclick="cancelOAuth()">Cancel</button>
+            <button class="oauth-btn oauth-btn-authorize" onclick="authorizeOAuth()">Authorize</button>
+        </div>
+    </div>
+</div>
+
+<!-- ====== SCREEN 3 : DASHBOARD ====== -->
+<div id="dashboard-screen" class="screen">
+    <div class="dashboard-header">
+        <div class="dashboard-title">Analytics Dashboard</div>
+        <div class="dashboard-status">
+            <span class="status-dot"></span>
+            Connected to TikTok API
+        </div>
+    </div>
+
+    <div class="profile-card">
+        <div class="profile-avatar">YW</div>
+        <div class="profile-info">
+            <h2>Yann.wtz <span style="color:#25F4EE">🍀</span></h2>
+            <div class="handle">@yann.wtz · open_id verified via user.info.basic</div>
+            <div class="profile-bio">Personal philosophy &amp; thinking — Yann_pensee</div>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-label">Followers</div>
+            <div class="stat-value" id="stat-followers">—</div>
+            <div class="stat-trend">via user.info.stats</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Videos</div>
+            <div class="stat-value" id="stat-videos">—</div>
+            <div class="stat-trend">via user.info.stats</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Total Likes</div>
+            <div class="stat-value" id="stat-likes">—</div>
+            <div class="stat-trend">via user.info.stats</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Total Views</div>
+            <div class="stat-value" id="stat-views">—</div>
+            <div class="stat-trend">via video.list aggregation</div>
+        </div>
+    </div>
+
+    <div class="videos-section">
+        <h3>Recent Videos (via video.list)</h3>
+        <div class="videos-table">
+            <div class="video-row header">
+                <div></div>
+                <div>Title</div>
+                <div style="text-align: right;">Views</div>
+                <div style="text-align: right;">Likes</div>
+                <div style="text-align: right;">Comments</div>
+                <div style="text-align: right;">Shares</div>
+            </div>
+            <div class="video-row">
+                <div class="video-thumb">🎬</div>
+                <div class="video-title">On vous a appris, petit, qu'un homme ça pleure pas...</div>
+                <div class="video-stat" id="v1-views">—</div>
+                <div class="video-stat" id="v1-likes">—</div>
+                <div class="video-stat" id="v1-comments">—</div>
+                <div class="video-stat" id="v1-shares">—</div>
+            </div>
+            <div class="video-row">
+                <div class="video-thumb">🎬</div>
+                <div class="video-title">Quand vous dites 'je m'attends à rien', vous mentez...</div>
+                <div class="video-stat" id="v2-views">—</div>
+                <div class="video-stat" id="v2-likes">—</div>
+                <div class="video-stat" id="v2-comments">—</div>
+                <div class="video-stat" id="v2-shares">—</div>
+            </div>
+            <div class="video-row">
+                <div class="video-thumb">🎬</div>
+                <div class="video-title">Vous attendez le métro, vous sortez votre tel...</div>
+                <div class="video-stat" id="v3-views">—</div>
+                <div class="video-stat" id="v3-likes">—</div>
+                <div class="video-stat" id="v3-comments">—</div>
+                <div class="video-stat" id="v3-shares">—</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="integration-note">
+        ✓ Authenticated via TikTok Login Kit (OAuth 2.0) ·
+        Active scopes: <span class="scope-badge">user.info.basic</span><span class="scope-badge">user.info.profile</span><span class="scope-badge">user.info.stats</span><span class="scope-badge">video.list</span> ·
+        Read-only · Local storage only
+    </div>
+</div>
+
+<script>
+// ============= TRANSITION LOGIC =============
+
+function showScreen(screenId) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(screenId).classList.add('active');
+}
+
+function startOAuth() {
+    showScreen('oauth-screen');
+}
+
+function cancelOAuth() {
+    showScreen('login-screen');
+}
+
+function authorizeOAuth() {
+    showScreen('dashboard-screen');
+    setTimeout(animateStats, 400);
+}
+
+function cancelOAuth() {
+    showScreen('login-screen');
+}
+
+// ============= STAT ANIMATION =============
+
+function animateValue(elementId, finalValue, duration = 1200, suffix = '') {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    const startTime = performance.now();
+    const startValue = 0;
+
+    function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(startValue + (finalValue - startValue) * eased);
+        el.textContent = formatNumber(current) + suffix;
+
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        }
+    }
+    requestAnimationFrame(update);
+}
+
+function formatNumber(n) {
+    if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+    if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+    return n.toString();
+}
+
+function animateStats() {
+    // Profile-level stats (user.info.stats)
+    animateValue('stat-followers', 1247);
+    animateValue('stat-videos', 12);
+    animateValue('stat-likes', 8432);
+    animateValue('stat-views', 47651);
+
+    // Video-level stats (video.list)
+    setTimeout(() => {
+        animateValue('v1-views', 18234, 800);
+        animateValue('v1-likes', 1245, 800);
+        animateValue('v1-comments', 87, 800);
+        animateValue('v1-shares', 124, 800);
+    }, 200);
+
+    setTimeout(() => {
+        animateValue('v2-views', 14782, 800);
+        animateValue('v2-likes', 982, 800);
+        animateValue('v2-comments', 64, 800);
+        animateValue('v2-shares', 88, 800);
+    }, 400);
+
+    setTimeout(() => {
+        animateValue('v3-views', 8123, 800);
+        animateValue('v3-likes', 521, 800);
+        animateValue('v3-comments', 34, 800);
+        animateValue('v3-shares', 41, 800);
+    }, 600);
+}
+</script>
+
+</body>
+</html>

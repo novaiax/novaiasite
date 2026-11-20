@@ -129,13 +129,22 @@ h3 {
 }
 .wordmark {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   font-size: 1.8rem;
   letter-spacing: -0.07em;
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;
+}
+.wordmark-symbol {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.24em;
+  flex-shrink: 0;
+}
+.site-header .wordmark {
+  font-size: 1.9rem;
 }
 .wordmark-nova {
   color: #34c6eb;
@@ -144,22 +153,33 @@ h3 {
   color: #9870e6;
   font-weight: 400;
 }
-.wordmark-dot {
-  color: #9870e6;
+.novalove-name {
+  white-space: nowrap;
+  color: #7458ce;
+  font: inherit;
+  letter-spacing: inherit;
 }
 @supports ((background-clip: text) or (-webkit-background-clip: text)) {
-  .wordmark-nova,
-  .wordmark-love {
+  .novalove-name {
+    background: linear-gradient(100deg, #34c6eb, #478cd9 44%, #9870e6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .wordmark .wordmark-nova,
+  .wordmark .wordmark-love {
     background-size: 220% 100%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: novalove-logo-flow 6s ease-in-out infinite alternate;
   }
-  .wordmark-nova {
+  .wordmark .wordmark-nova {
     background-image: linear-gradient(110deg, #34c6eb, #3788d0, #34c6eb);
   }
-  .wordmark-love {
+  .wordmark .wordmark-love {
     background-image: linear-gradient(110deg, #9870e6, #7057ce, #9870e6);
     animation-delay: -2s;
   }
@@ -257,6 +277,131 @@ h3 {
 .hero .eyebrow {
   color: var(--accent);
   margin-bottom: 24px;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 2px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: linear-gradient(90deg, #34c6eb, #9870e6);
+}
+.paper-excerpt {
+  border-left: 3px solid #9870e6;
+}
+.book-facts p:first-child strong {
+  color: #227f9c;
+}
+.book-facts p:nth-child(2) strong {
+  color: #7954b8;
+}
+.guide-teaser {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-block: 55px;
+  margin-bottom: 70px;
+}
+.guide-teaser h2 {
+  font-size: 2.8rem;
+}
+.guide-teaser p:not(.eyebrow) {
+  margin-bottom: 24px;
+  color: var(--muted);
+}
+.book-identity {
+  margin-top: 22px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.guide-main {
+  width: min(760px, calc(100% - 48px));
+  margin-inline: auto;
+  padding-block: 55px;
+}
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+.guide-main h1 {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+}
+.guide-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 20px;
+}
+.guide-lead {
+  font-size: 1.1rem;
+  margin-top: 28px;
+}
+.guide-answer {
+  margin-block: 30px;
+  padding: 26px;
+  background: var(--lavender);
+  border-left: 3px solid #9870e6;
+}
+.guide-toc {
+  margin-block: 34px;
+  padding-block: 24px;
+  border-block: 1px solid var(--line);
+}
+.guide-toc ul {
+  margin-bottom: 0;
+  padding-left: 22px;
+}
+.guide-toc a {
+  font-size: 0.94rem;
+}
+.guide-body h2 {
+  margin: 50px 0 22px;
+  font-size: 2.5rem;
+}
+.guide-body h3 {
+  margin: 28px 0 12px;
+  font-size: 1.15rem;
+}
+.guide-body p + p {
+  margin-top: 20px;
+}
+.guide-body li {
+  margin-block: 10px;
+}
+.guide-exercise {
+  margin-block: 28px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  background: #fffefa;
+}
+.guide-exercise h3 {
+  margin-top: 0;
+}
+.guide-book {
+  margin-block: 50px;
+  padding: 30px;
+  background: var(--lavender);
+}
+.guide-book h2 {
+  margin-top: 0;
+}
+.guide-book .button {
+  margin-top: 24px;
+}
+.guide-sources {
+  border-top: 1px solid var(--line);
+  margin-top: 45px;
+  padding-top: 28px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.guide-sources h2 {
+  font-family: var(--sans);
+  font-size: 1.1rem;
+  letter-spacing: 0;
 }
 .hero-intro {
   font-size: 1.08rem;
@@ -555,10 +700,14 @@ h3 {
   margin-block: 25px;
 }
 .order-price strong {
-  font-family: var(--serif);
-  font-size: 3.3rem;
-  font-weight: 500;
-  line-height: 1;
+  font-family: var(--sans);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  font-variant-numeric: lining-nums tabular-nums;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .order-price span {
   font-size: 0.8rem;
@@ -604,6 +753,11 @@ h3 {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.faq-question {
+  min-width: 0;
 }
 .faq details[open] summary:after {
   content: "+";
@@ -766,6 +920,11 @@ h3 {
   }
   .site-footer > div {
     margin-left: auto;
+  }
+}
+@media (max-width: 900px) {
+  .site-header .nav-text {
+    display: none;
   }
 }
 @media (max-width: 760px) {
@@ -1122,6 +1281,51 @@ h3 {
   .mobile-purchase .button {
     font-size: 0.75rem;
     padding-inline: 12px;
+  }
+}
+@media (max-width: 760px) {
+  .site-header .wordmark {
+    font-size: 1.55rem;
+  }
+  .site-header nav {
+    gap: 12px;
+  }
+  .site-header .button {
+    font-size: 0.72rem;
+    padding-inline: 10px;
+  }
+  .wordmark-symbol {
+    width: 1.1em;
+    height: 1.1em;
+    margin-right: 0.18em;
+  }
+  .guide-teaser {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-block: 35px;
+    margin-bottom: 50px;
+  }
+  .guide-teaser h2 {
+    font-size: 2.5rem;
+  }
+  .guide-main {
+    padding-block: 35px;
+  }
+  .guide-main h1 {
+    font-size: 2.9rem;
+  }
+  .guide-body h2 {
+    font-size: 2.2rem;
+  }
+  .guide-answer,
+  .guide-exercise,
+  .guide-book {
+    padding: 22px;
+  }
+}
+@media (max-width: 370px) {
+  .site-header .wordmark {
+    font-size: 1.45rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -12,3 +12,11 @@ Site novaia.org
 Le texte du prologue et du chapitre de l’extrait doit rester identique au livre. Les autres pages du site ont leurs propres styles. Le site utilise les URL sans extension fournies par Cloudflare Static Assets ; le Worker `_worker.js` conserve les routes dynamiques existantes.
 
 Validation sans build : `node --check js/novalove.js`, contrôle des liens et ressources, vérification des deux pages sur ordinateur et mobile. Le serveur historique `serve.js` ne reproduit pas les routes sans extension de Cloudflare.
+
+### Référencement et identité
+
+Le guide `/conseils/comment-se-remettre-dune-rupture` complète la page du livre pour les recherches sur l’après-rupture. Ses conseils généraux citent les ressources du NHS ; l’exercice d’écriture est éditorial. Les données `Book`, `WebPage`, `Article` et `BreadcrumbList` décrivent les contenus visibles, sans avis inventés ni promesse de guérison. Le sitemap et les liens internes utilisent les URL canoniques sans extension.
+
+Les mentions de NovaLove dans le contenu utilisent un seul élément `.novalove-name` pour éviter les espacements dus aux conteneurs flex. L’animation est réservée au logo et respecte `prefers-reduced-motion`. Le montant et la devise du prix sont insécables.
+
+L’indexation, les positions Google et les citations dans les réponses IA nécessitent une vérification après publication ; les modifications de code ne les garantissent pas. Le build Cloudflare du 20 novembre 2026 a signalé un jeton supprimé ou renouvelé : sa création de remplacement reste soumise à l’accord de Yann.

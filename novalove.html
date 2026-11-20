@@ -6,17 +6,19 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <title>NovaLove : L’histoire est finie. La tienne continue.</title>
+    <title>
+      NovaLove : le livre pour avancer après une rupture | Yann Wirtz
+    </title>
     <meta
       name="description"
-      content="Un livre pour mettre des mots sur l’après-rupture et revenir à soi. Découvre les premières pages de NovaLove. Livre broché, 120 pages, 13 € sur Amazon."
+      content="NovaLove, le livre de Yann Wirtz pour réfléchir après une rupture amoureuse. Découvre un extrait gratuit, les thèmes du livre et le broché de 120 pages à 13&nbsp;€."
     />
     <link rel="canonical" href="https://novaia.org/novalove" />
     <meta property="og:type" content="book" />
     <meta property="og:locale" content="fr_FR" />
     <meta
       property="og:title"
-      content="NovaLove : L’histoire est finie. La tienne continue."
+      content="NovaLove : le livre pour avancer après une rupture | Yann Wirtz"
     />
     <meta
       property="og:description"
@@ -32,6 +34,8 @@
       content="Couverture originale du livre NovaLove de Yann Wirtz"
     />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Yann Wirtz" />
     <meta name="theme-color" content="#f7f6f2" />
     <link rel="icon" href="/images/favicon/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png" />
@@ -41,7 +45,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/novalovestyles.css?v=20261120-logo" />
+    <link rel="stylesheet" href="/css/novalovestyles.css?v=20261120-final" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-ND6F0PPNE7"
@@ -58,19 +62,65 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Book",
-        "name": "NOVA LOVE : Une rupture… ou ta renaissance.",
-        "author": [
-          { "@type": "Person", "name": "Yann Kevin WIRTZ" },
-          { "@type": "Organization", "name": "Nova IA NovaIA" }
-        ],
-        "inLanguage": "fr",
-        "bookFormat": "https://schema.org/Paperback",
-        "numberOfPages": 120,
-        "isbn": "9798290500430",
-        "datePublished": "2025-07-03",
-        "image": "https://novaia.org/images/couvertureavant.png",
-        "url": "https://novaia.org/novalove"
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://novaia.org/novalove#page",
+            "url": "https://novaia.org/novalove",
+            "name": "NovaLove : le livre pour avancer après une rupture",
+            "inLanguage": "fr",
+            "dateModified": "2026-11-20",
+            "mainEntity": {
+              "@id": "https://novaia.org/novalove#livre"
+            },
+            "breadcrumb": {
+              "@id": "https://novaia.org/novalove#fil-ariane"
+            }
+          },
+          {
+            "@type": "Book",
+            "@id": "https://novaia.org/novalove#livre",
+            "name": "NOVA LOVE : Une rupture… ou ta renaissance.",
+            "alternateName": ["NovaLove", "Nova Love"],
+            "description": "Livre de réflexion personnelle sur la rupture amoureuse, le manque, l’attente et le retour à soi, par Yann Wirtz avec la voix de Nova IA.",
+            "author": [
+              {
+                "@type": "Person",
+                "name": "Yann Kevin WIRTZ"
+              },
+              {
+                "@type": "Organization",
+                "name": "Nova IA NovaIA"
+              }
+            ],
+            "inLanguage": "fr",
+            "bookFormat": "https://schema.org/Paperback",
+            "numberOfPages": 120,
+            "isbn": "9798290500430",
+            "datePublished": "2025-07-03",
+            "image": "https://novaia.org/images/couvertureavant.png",
+            "url": "https://novaia.org/novalove",
+            "sameAs": "https://www.amazon.fr/dp/B0FHHYZ8NJ"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://novaia.org/novalove#fil-ariane",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "NovaIA",
+                "item": "https://novaia.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "NovaLove",
+                "item": "https://novaia.org/novalove"
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
@@ -78,12 +128,21 @@
     <a class="skip-link" href="#contenu">Aller au contenu</a>
     <header class="site-header wrap">
       <a class="wordmark" href="/novalove" aria-label="NovaLove, accueil"
-        ><span class="wordmark-nova">nova</span
-        ><span class="wordmark-love">love</span
-        ><span class="wordmark-dot" aria-hidden="true">.</span></a
+        ><img
+          class="wordmark-symbol"
+          src="/images/logonova.webp"
+          width="512"
+          height="512"
+          alt=""
+          aria-hidden="true"
+        /><span class="wordmark-nova">Nova</span
+        ><span class="wordmark-love">Love</span></a
       >
       <nav aria-label="Navigation principale">
-        <a class="nav-text" href="#le-livre">Le livre</a>
+        <a class="nav-text" href="#le-livre">Le livre</a
+        ><a class="nav-text" href="/conseils/comment-se-remettre-dune-rupture"
+          >Après une rupture</a
+        >
         <a class="nav-text" href="/extraitnovalove" data-cta="nav_extrait"
           >Lire un extrait</a
         >
@@ -93,7 +152,9 @@
     <main id="contenu">
       <section class="hero wrap" aria-labelledby="hero-title" data-sticky-hero>
         <div class="hero-copy">
-          <p class="eyebrow">Pour les jours d’après</p>
+          <p class="eyebrow">
+            <span class="novalove-name">NovaLove</span>, pour les jours d’après
+          </p>
           <h1 id="hero-title">
             L’histoire est finie.<br />La tienne <em>continue.</em>
           </h1>
@@ -102,9 +163,12 @@
             tu relis une conversation, tu cherches un signe.
           </p>
           <p class="hero-description">
-            <strong>NovaLove met des mots sur ce qui te retient.</strong> Un
-            livre au ton direct pour regarder cette histoire autrement et
-            commencer à te retrouver.
+            <strong
+              ><span class="novalove-name">NovaLove</span> met des mots sur ce
+              qui te retient.</strong
+            >
+            Un livre au ton direct pour regarder cette rupture amoureuse
+            autrement et commencer à te retrouver.
           </p>
           <div class="hero-actions">
             <a
@@ -113,7 +177,7 @@
               target="_blank"
               rel="noopener noreferrer"
               data-cta="hero_primary"
-              >Acheter le livre <span class="button-price">13 €</span
+              >Acheter le livre <span class="button-price">13&nbsp;€</span
               ><span class="sr-only"> sur Amazon, nouvel onglet</span></a
             >
             <a class="text-link" href="/extraitnovalove" data-cta="hero_extrait"
@@ -126,7 +190,8 @@
         </div>
         <figure class="book-scene">
           <div class="scene-top">
-            <span>NovaLove</span><span>par Yann Wirtz</span>
+            <span><span class="novalove-name">NovaLove</span></span
+            ><span>par Yann Wirtz</span>
           </div>
           <div class="book-object">
             <picture
@@ -176,10 +241,20 @@
             y croire.
           </p>
           <p>
-            NovaLove part de là. De ces petits moments où une personne prend
-            encore toute la place, même quand elle n’est plus là.
+            <span class="novalove-name">NovaLove</span>
+            part de là. De ces petits moments où une personne prend encore toute
+            la place, même quand elle n’est plus là.
           </p>
           <p class="ink">Et si tu en reprenais un peu pour toi ?</p>
+          <p class="book-identity">
+            <span class="novalove-name">NovaLove</span>, aussi écrit
+            <span class="novalove-name">NovaLove</span>, est un livre de
+            réflexion personnelle de Yann Wirtz, avec la voix de Nova IA. Son
+            titre complet : «
+            <span class="novalove-name">NOVALOVE</span>
+            : Une rupture… ou ta renaissance. ». Édition française brochée de
+            120 pages, publiée le 3 juillet 2025.
+          </p>
         </div>
       </section>
       <section class="inside-section" aria-labelledby="inside-title">
@@ -259,7 +334,8 @@
             </p>
           </blockquote>
           <div class="paper-footer">
-            <span>NovaLove</span><span>Le prologue</span>
+            <span><span class="novalove-name">NovaLove</span></span
+            ><span>Le prologue</span>
           </div>
         </div>
       </section>
@@ -267,7 +343,9 @@
         <div class="voice-label">
           <p class="eyebrow">Un mot sur le livre</p>
           <span
-            >Yann Wirtz<br /><span class="muted">Auteur de NovaLove</span></span
+            >Yann Wirtz<br /><span class="muted"
+              >Auteur de <span class="novalove-name">NovaLove</span></span
+            ></span
           >
         </div>
         <div>
@@ -275,10 +353,11 @@
             Une voix à part.<br />Un sujet très <em>humain.</em>
           </h2>
           <p>
-            NovaLove fait parler Nova, une voix d’IA volontairement franche, qui
-            sert de miroir à nos histoires amoureuses. C’est le parti pris du
-            livre : poser un regard extérieur sur ce qu’on n’arrive plus à voir
-            quand on est au milieu de l’histoire.
+            <span class="novalove-name">NovaLove</span>
+            fait parler Nova, une voix d’IA volontairement franche, qui sert de
+            miroir à nos histoires amoureuses. C’est le parti pris du livre :
+            poser un regard extérieur sur ce qu’on n’arrive plus à voir quand on
+            est au milieu de l’histoire.
           </p>
           <p>
             Son ton peut bousculer. L’extrait est là pour te laisser le
@@ -312,7 +391,7 @@
               reprendre quand les mêmes questions reviennent.
             </p>
             <div class="order-price">
-              <strong>13 €</strong
+              <strong>13&nbsp;€</strong
               ><span>Le livre broché<br />120 pages · Français</span>
             </div>
             <a
@@ -332,6 +411,27 @@
           </div>
         </div>
       </section>
+      <section class="guide-teaser wrap" aria-labelledby="guide-teaser-title">
+        <div>
+          <p class="eyebrow">Pour les jours où ça revient</p>
+          <h2 id="guide-teaser-title">
+            Comment se remettre<br />d’une <em>rupture ?</em>
+          </h2>
+        </div>
+        <div>
+          <p>
+            Que faire quand on attend encore un message ? Comment aller mieux
+            après une rupture, sans se forcer à tout oublier ? Des repères
+            simples et un exercice d’écriture pour commencer.
+          </p>
+          <a
+            class="text-link"
+            href="/conseils/comment-se-remettre-dune-rupture"
+            data-cta="guide_rupture"
+            >Lire le guide pour traverser une rupture</a
+          >
+        </div>
+      </section>
       <section class="faq wrap" aria-labelledby="faq-title">
         <div>
           <p class="eyebrow">Avant de te décider</p>
@@ -339,7 +439,29 @@
         </div>
         <div class="faq-list">
           <details>
-            <summary>À qui s’adresse NovaLove ?</summary>
+            <summary>
+              <span class="faq-question">
+                Un livre peut-il aider à se remettre d’une rupture ?
+              </span>
+            </summary>
+            <p>
+              La lecture peut offrir un moment de recul et des mots pour parler
+              de ce que tu traverses.
+              <span class="novalove-name">NovaLove</span>
+              explore le manque, l’attente et la place de l’autre. Il ne
+              garantit pas de résultat :
+              <a href="/extraitnovalove">lis l’extrait gratuit</a> pour choisir
+              si ce ton te correspond.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span class="faq-question">
+                À qui s’adresse
+                <span class="novalove-name">NovaLove</span>
+                ?
+              </span>
+            </summary>
             <p>
               Aux personnes qui traversent une rupture ou restent attachées à
               une histoire terminée, et qui ont envie de questionner le manque,
@@ -348,14 +470,20 @@
             </p>
           </details>
           <details>
-            <summary>Quel est le format du livre ?</summary>
+            <summary>
+              <span class="faq-question">Quel est le format du livre ?</span>
+            </summary>
             <p>
               Il s’agit d’un livre papier broché de 120 pages, en français. Tu
               peux le commander sur Amazon depuis les boutons de cette page.
             </p>
           </details>
           <details>
-            <summary>Est-ce que je peux le découvrir avant d’acheter ?</summary>
+            <summary>
+              <span class="faq-question"
+                >Est-ce que je peux le découvrir avant d’acheter ?</span
+              >
+            </summary>
             <p>
               Oui. Le prologue et le début du premier chapitre sont
               <a href="/extraitnovalove" data-cta="faq_extrait"
@@ -364,7 +492,11 @@
             </p>
           </details>
           <details>
-            <summary>Est-ce une méthode pour récupérer son ex ?</summary>
+            <summary>
+              <span class="faq-question"
+                >Est-ce une méthode pour récupérer son ex ?</span
+              >
+            </summary>
             <p>
               Le livre invite à revenir à soi et à interroger ce qui nous
               retient dans une relation passée. Il ne propose pas de techniques
@@ -372,7 +504,11 @@
             </p>
           </details>
           <details>
-            <summary>Comment se passent la commande et la livraison ?</summary>
+            <summary>
+              <span class="faq-question"
+                >Comment se passent la commande et la livraison ?</span
+              >
+            </summary>
             <p>
               Les boutons d’achat ouvrent la fiche du livre sur Amazon. Tu y
               retrouves le prix à jour, les frais et les délais de livraison
@@ -383,15 +519,23 @@
         </div>
       </section>
       <p class="care-note wrap">
-        Chacun avance à son rythme. NovaLove est un livre de réflexion
-        personnelle ; il ne remplace pas un accompagnement psychologique.
+        Chacun avance à son rythme.
+        <span class="novalove-name">NovaLove</span>
+        est un livre de réflexion personnelle ; il ne remplace pas un
+        accompagnement psychologique.
       </p>
     </main>
     <footer class="site-footer wrap">
-      <a class="wordmark" href="/novalove"
-        ><span class="wordmark-nova">nova</span
-        ><span class="wordmark-love">love</span
-        ><span class="wordmark-dot" aria-hidden="true">.</span></a
+      <a class="wordmark" href="/novalove" aria-label="NovaLove, accueil"
+        ><img
+          class="wordmark-symbol"
+          src="/images/logonova.webp"
+          width="512"
+          height="512"
+          alt=""
+          aria-hidden="true"
+        /><span class="wordmark-nova">Nova</span
+        ><span class="wordmark-love">Love</span></a
       >
       <p>Une rupture… ou ta renaissance.</p>
       <div>
@@ -400,6 +544,11 @@
           target="_blank"
           rel="noopener noreferrer"
           >Instagram<span class="sr-only">, nouvel onglet</span></a
+        ><a
+          href="https://www.tiktok.com/@novaia_love"
+          target="_blank"
+          rel="noopener noreferrer"
+          >TikTok<span class="sr-only">, nouvel onglet</span></a
         ><a href="/">L’univers NovaIA</a><span>© 2026 NovaIA</span>
       </div>
     </footer>
@@ -409,7 +558,10 @@
       data-sticky-bar
       hidden
     >
-      <div><strong>NovaLove</strong><span>Broché · 13 €</span></div>
+      <div>
+        <strong><span class="novalove-name">NovaLove</span></strong
+        ><span>Broché · 13&nbsp;€</span>
+      </div>
       <a
         class="button button-small"
         href="https://www.amazon.fr/dp/B0FHHYZ8NJ"

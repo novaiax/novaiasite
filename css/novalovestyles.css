@@ -575,7 +575,8 @@ h3 {
   line-height: 1;
 }
 .faq details[open] summary:after {
-  content: "−";
+  content: "+";
+  transform: rotate(45deg);
 }
 .faq details p {
   font-size: 0.9rem;

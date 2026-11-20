@@ -4,6 +4,55 @@
     if (typeof window.gtag === "function") window.gtag("event", name, params);
   };
   const isExcerpt = document.body.classList.contains("reader-page");
+  const readingPreferences = document.querySelector(
+    "[data-reader-preferences]",
+  );
+  if (isExcerpt && readingPreferences) {
+    const storageKey = "novalove-reading-font";
+    const fontNames = {
+      lora: "Lora",
+      georgia: "Georgia",
+      "open-sans": "Open Sans",
+    };
+    const fontOptions = readingPreferences.querySelectorAll(
+      'input[name="reading-font"]',
+    );
+    const fontStatus = readingPreferences.querySelector(
+      "[data-reader-font-status]",
+    );
+    const applyReadingFont = (font, remember = false) => {
+      if (!Object.prototype.hasOwnProperty.call(fontNames, font)) return;
+      document.body.dataset.readingFont = font;
+      fontOptions.forEach((option) => {
+        option.checked = option.value === font;
+      });
+      let saved = false;
+      if (remember) {
+        try {
+          window.localStorage.setItem(storageKey, font);
+          saved = true;
+        } catch {
+          /* Reading controls still work when local storage is unavailable. */
+        }
+      }
+      fontStatus.textContent = `${fontNames[font]} sélectionnée.${saved ? " Choix mémorisé sur cet appareil." : ""}`;
+    };
+    let initialFont = "lora";
+    try {
+      const savedFont = window.localStorage.getItem(storageKey);
+      if (Object.prototype.hasOwnProperty.call(fontNames, savedFont))
+        initialFont = savedFont;
+    } catch {
+      /* Use the default font when storage is blocked. */
+    }
+    applyReadingFont(initialFont);
+    fontOptions.forEach((option) => {
+      option.addEventListener("change", () => {
+        if (option.checked) applyReadingFont(option.value, true);
+      });
+    });
+    readingPreferences.hidden = false;
+  }
   document.querySelectorAll("[data-cta]").forEach((link) => {
     link.addEventListener("click", () => {
       track(isExcerpt ? "click_cta_extrait" : "click_cta", {

@@ -7,6 +7,7 @@ Site novaia.org
 - Extrait : `extraitnovalove.html`, URL publique `/extraitnovalove`.
 - Styles communs à ces deux pages : `css/novalovestyles.css`.
 - Interactions et événements Analytics : `js/novalove.js`.
+- L’extrait propose Lora, Georgia et Open Sans. Le choix s’applique au texte de lecture et est conservé dans `localStorage` sous `novalove-reading-font` ; le lecteur reste fonctionnel si ce stockage est bloqué. Les commandes restent masquées sans JavaScript.
 - Achat : fiche Amazon `B0FHHYZ8NJ` ; prix et caractéristiques vérifiés le 20 novembre 2026 : broché en français, 120 pages, 13 €. Recontrôler la fiche avant de changer les informations commerciales.
 
 Le texte du prologue et du chapitre de l’extrait doit rester identique au livre. Les autres pages du site ont leurs propres styles. Le site utilise les URL sans extension fournies par Cloudflare Static Assets ; le Worker `_worker.js` conserve les routes dynamiques existantes.

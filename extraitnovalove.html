@@ -43,7 +43,11 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/novalovestyles.css?v=20261120-final" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/novalovestyles.css?v=20261120-fonts" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-ND6F0PPNE7"
@@ -56,9 +60,9 @@
       gtag("js", new Date());
       gtag("config", "G-ND6F0PPNE7", { anonymize_ip: true });
     </script>
-    <script src="/js/novalove.js?v=20261120" defer></script>
+    <script src="/js/novalove.js?v=20261120-fonts" defer></script>
   </head>
-  <body class="reader-page">
+  <body class="reader-page" data-reading-font="lora">
     <a class="skip-link" href="#lecture">Aller à la lecture</a>
     <header class="site-header reader-header wrap">
       <a
@@ -106,7 +110,80 @@
         </p>
         <span class="small-note">Extrait gratuit · Sans inscription</span>
       </section>
-      <article class="reading-content" aria-label="Extrait du livre NovaLove">
+      <fieldset class="reader-preferences" data-reader-preferences hidden>
+        <legend>Ta police de lecture</legend>
+        <p class="reader-preferences-hint">
+          Choisis celle qui te donne envie de lire.
+        </p>
+        <div class="reader-font-options">
+          <div class="reader-font-option">
+            <input
+              class="reader-font-radio"
+              type="radio"
+              name="reading-font"
+              id="font-lora"
+              value="lora"
+              aria-controls="texte-extrait"
+              checked
+            />
+            <label for="font-lora"
+              ><span class="reader-font-sample sample-lora" aria-hidden="true"
+                >Aa</span
+              ><span>Lora</span
+              ><span class="reader-font-description">Littéraire</span></label
+            >
+          </div>
+          <div class="reader-font-option">
+            <input
+              class="reader-font-radio"
+              type="radio"
+              name="reading-font"
+              id="font-georgia"
+              value="georgia"
+              aria-controls="texte-extrait"
+            />
+            <label for="font-georgia"
+              ><span
+                class="reader-font-sample sample-georgia"
+                aria-hidden="true"
+                >Aa</span
+              ><span>Georgia</span
+              ><span class="reader-font-description">Classique</span></label
+            >
+          </div>
+          <div class="reader-font-option">
+            <input
+              class="reader-font-radio"
+              type="radio"
+              name="reading-font"
+              id="font-open-sans"
+              value="open-sans"
+              aria-controls="texte-extrait"
+            />
+            <label for="font-open-sans"
+              ><span
+                class="reader-font-sample sample-open-sans"
+                aria-hidden="true"
+                >Aa</span
+              ><span>Open Sans</span
+              ><span class="reader-font-description">Épurée</span></label
+            >
+          </div>
+        </div>
+        <p
+          class="reader-font-status"
+          data-reader-font-status
+          role="status"
+          aria-live="polite"
+        >
+          Lora sélectionnée.
+        </p>
+      </fieldset>
+      <article
+        class="reading-content"
+        id="texte-extrait"
+        aria-label="Extrait du livre NovaLove"
+      >
         <p><strong>Prologue</strong></p>
 
         <p>Tu crois que tu es spécial.</p>

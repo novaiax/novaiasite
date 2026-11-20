@@ -24,4 +24,10 @@ Le guide `/conseils/comment-se-remettre-dune-rupture` complète la page du livre
 
 Les mentions de NovaLove dans le contenu utilisent un seul élément `.novalove-name` pour éviter les espacements dus aux conteneurs flex. L’animation est réservée au logo et respecte `prefers-reduced-motion`. Le montant et la devise du prix sont insécables.
 
-L’indexation, les positions Google et les citations dans les réponses IA nécessitent une vérification après publication ; les modifications de code ne les garantissent pas. Le build Cloudflare du 20 novembre 2026 a signalé un jeton supprimé ou renouvelé : sa création de remplacement reste soumise à l’accord de Yann.
+L’indexation, les positions Google et les citations dans les réponses IA nécessitent une vérification après publication ; les modifications de code ne les garantissent pas.
+
+### Publication du 20 novembre 2026
+
+Le jeton de build invalide a été remplacé avec l’accord explicite de Yann par `novaia-site build token 2026-11-20`, enregistré dans Cloudflare. Aucune valeur secrète n’est conservée dans ce dépôt. Le build relancé `e3f27251` a publié le commit `0223909` (version Worker `d3ad4f4a-197e-4935-8353-d4a156286bde`). Les pages publiques `/novalove`, `/extraitnovalove` et le guide ont été vérifiés, ainsi que la correspondance exacte du CSS, du JavaScript et du sitemap avec les fichiers source. `_worker.js`, `serve.js`, `.git/config` et `wrangler.jsonc` répondent en HTTP 404 sur le site public.
+
+Le projet Cloudflare reste lié à la branche `main` de `novaiax/novaiasite`, avec la commande `npx wrangler deploy`. Vérifier le résultat Cloudflare et la page publique après un push : un push GitHub seul ne prouve pas la publication.

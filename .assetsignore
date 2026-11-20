@@ -1,0 +1,21 @@
+# Server-side entry point is bundled by Wrangler, never served as a static file.
+_worker.js
+
+# Local development, repository metadata, and configuration are not public assets.
+.git/
+.github/
+.wrangler/
+.claude/
+.vite/
+node_modules/
+.env
+.env.*
+.assetsignore
+.gitignore
+.gitattributes
+README.md
+wrangler.jsonc
+wrangler.toml
+serve.js
+start-v9.bat
+*.log

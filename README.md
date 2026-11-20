@@ -12,6 +12,8 @@ Site novaia.org
 
 Le texte du prologue et du chapitre de l’extrait doit rester identique au livre. Les autres pages du site ont leurs propres styles. Le site utilise les URL sans extension fournies par Cloudflare Static Assets ; le Worker `_worker.js` conserve les routes dynamiques existantes.
 
+Le fichier `.assetsignore` exclut l’entrée serveur `_worker.js`, les métadonnées Git et les fichiers de développement de l’hébergement statique. L’entrée serveur reste compilée via `main` dans `wrangler.jsonc`. Vérification du déploiement sans publication : `wrangler deploy --dry-run --outdir <dossier-hors-du-depot>`.
+
 Validation sans build : `node --check js/novalove.js`, contrôle des liens et ressources, vérification des deux pages sur ordinateur et mobile. Le serveur historique `serve.js` ne reproduit pas les routes sans extension de Cloudflare.
 
 ### Référencement et identité

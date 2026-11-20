@@ -16,6 +16,8 @@ Validation sans build : `node --check js/novalove.js`, contrôle des liens et re
 
 ### Référencement et identité
 
+La marque s’écrit `NovaIA`, en un seul mot, y compris dans les textes, les données structurées et les descriptions destinées aux moteurs.
+
 Le guide `/conseils/comment-se-remettre-dune-rupture` complète la page du livre pour les recherches sur l’après-rupture. Ses conseils généraux citent les ressources du NHS ; l’exercice d’écriture est éditorial. Les données `Book`, `WebPage`, `Article` et `BreadcrumbList` décrivent les contenus visibles, sans avis inventés ni promesse de guérison. Le sitemap et les liens internes utilisent les URL canoniques sans extension.
 
 Les mentions de NovaLove dans le contenu utilisent un seul élément `.novalove-name` pour éviter les espacements dus aux conteneurs flex. L’animation est réservée au logo et respecte `prefers-reduced-motion`. Le montant et la devise du prix sont insécables.

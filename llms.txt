@@ -8,7 +8,7 @@
 - [NovaIA](https://novaia.org/novaia.html): L'assistant IA principal
 - [NovaMemory](https://novaia.org/novamemory.html): Systeme de memoire persistante pour agents IA via MCP
 - [NovaBook](https://novaia.org/novabook): Catalogue de livres, dont NovaLove
-- [NovaLove](https://novaia.org/novalove): Livre de reflexion personnelle de Yann Wirtz sur la rupture amoureuse, avec la voix de Nova IA. Titre : NOVA LOVE : Une rupture… ou ta renaissance. ISBN 9798290500430, 120 pages, edition francaise brochee publiee le 3 juillet 2025. Extrait gratuit disponible.
+- [NovaLove](https://novaia.org/novalove): Livre de reflexion personnelle de Yann Wirtz sur la rupture amoureuse, avec la voix de NovaIA. Titre : NOVA LOVE : Une rupture… ou ta renaissance. ISBN 9798290500430, 120 pages, edition francaise brochee publiee le 3 juillet 2025. Extrait gratuit disponible.
 - [Extrait de NovaLove](https://novaia.org/extraitnovalove): Prologue et debut du premier chapitre, sans inscription.
 - [Comment se remettre d’une rupture](https://novaia.org/conseils/comment-se-remettre-dune-rupture): Guide gratuit pour les jours apres une separation, avec reperes pratiques, exercice d’ecriture et sources NHS. Aucun delai de guerison ni resultat garanti.
 

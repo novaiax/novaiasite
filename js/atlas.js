@@ -111,6 +111,10 @@ async function openReader(href,trigger,{historyMode='push',depth}={}){
     if(shared){
       readerTransition?.skipTransition?.();sourceArt.style.viewTransitionName='atlas-artifact';
       readerTransition=document.startViewTransition(apply);
+      // An optional transition can be rejected by browser or document settings.
+      // Its promises must not turn a successful reader navigation into an error.
+      readerTransition.ready?.catch(()=>{});
+      readerTransition.updateCallbackDone?.catch(()=>{});
       readerTransition.finished.catch(()=>{}).finally(()=>{sourceArt.style.viewTransitionName='';targetArt.style.viewTransitionName=''})
     }else apply();
     announce(documentData.heading);

@@ -12,4 +12,6 @@ Le parcours conserve les faits donnés par Yann : bac, formation autodidacte en 
 
 Rock de Strass est un engagement personnel et associatif : danse, membre du bureau, communication digitale, visibilité et site réalisé avec NovaiaWeb. Ne pas raconter la façon dont son implication lui a été proposée. Les conflits internes, personnes tierces, coordonnées privées, données de santé et notes privées restent hors du site.
 
+CS50x est mis en valeur dans le parcours, avec le certificat Verified edX de HarvardX délivré le 14 janvier 2026 au nom de WIRTZ Yann. Le PDF et l’aperçu proviennent de l’impression de la page officielle fournie par Yann. Employer ce document et son lien de vérification ; l’ancien certificat standard daté 2025 est remplacé.
+
 Les quatre anciens articles gardent leur corps d’origine ; leurs bios auteur sont remplacées par la présentation actuelle. `/yann` garde sa présentation simple, avec les seuls retraits et le libellé demandés. NovaLove, son extrait et leurs ressources restent protégés. Ne pas publier les journaux de recherche, secrets ou exports personnels avec les sources du site.

@@ -71,7 +71,7 @@
       "name": "CS50x · Harvard",
       "category": "Apprentissage",
       "status": "Certificat vérifié",
-      "description": "CS50x, le cours de Harvard suivi en autodidacte, avec mon certificat vérifié et mon projet final NovaLog.",
+      "description": "Le cours d’informatique de Harvard, suivi en autodidacte, avec mon certificat vérifié et mon projet final NovaLog.",
       "deck": "Des bases en informatique mises en pratique dans dix séries d’exercices et un projet personnel.",
       "lead": "Apprendre les bases, puis construire mon propre projet.",
       "art": "mark:50",
@@ -95,7 +95,7 @@
         },
         {
           "title": "Mon certificat CS50",
-          "text": "J’ai obtenu mon certificat vérifié pour CS50x, le cours d’introduction à l’informatique de Harvard. Il a été délivré le 14 janvier 2026. Le document et le lien de vérification sont accessibles ici, avec le code de mes exercices et de mon projet final."
+          "text": "J’ai obtenu mon certificat vérifié pour CS50x, le cours d’informatique de Harvard. Il a été délivré le 14 janvier 2026. Le document et le lien de vérification sont accessibles ici, avec le code de mes exercices et de mon projet final."
         }
       ],
       "external": {

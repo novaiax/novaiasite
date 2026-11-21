@@ -221,9 +221,9 @@
     "practices": [
       {
         "id": "calisthenics",
-        "focus": "Force, équilibre et régularité",
+        "focus": "Force et maîtrise du corps",
         "name": "La calisthenics",
-        "html": "<p>Je pratique la calisthenics et la musculation depuis 2025. Je cherche surtout à développer ma force et le contrôle de mon corps. Fin 2025, tenir un handstand quelques secondes était déjà un repère concret de progression.</p><p>J’ai ensuite ajusté la place du sport dans ma semaine : avec la danse, l’impro et les autres activités, je garde davantage la calisthenics pour le week-end. Je retrouve dans cet entraînement quelque chose que j’aime aussi dans le code : essayer un mouvement, comprendre ce qui bloque, puis recommencer.</p>"
+        "html": "<p>Je pratique la calisthenics pour développer ma force et le contrôle de mon corps. Je travaille au poids du corps, les équilibres et les figures, avec des séances que je fais progresser dans la durée.</p><p>Ce que je cherche : gagner en force, en stabilité et en maîtrise, tout en développant mon corps.</p>"
       },
       {
         "id": "danse",
@@ -233,27 +233,27 @@
       },
       {
         "id": "improvisation",
-        "focus": "Écouter et réagir",
+        "focus": "Écouter, rebondir, improviser",
         "name": "Le théâtre d’improvisation",
-        "html": "<p>À Strasbourg, j’ai découvert une impro très physique, avec du mouvement et un engagement immédiat. En septembre 2026, je la décrivais presque comme du sport, tant elle me demandait d’énergie. J’ai aussi obtenu une place dans un atelier hebdomadaire proposé par le CROUS.</p><p>Ce qui m’intéresse, c’est de devoir écouter, rebondir et construire avec les autres sur le moment. C’est un terrain réel pour ce que je travaille aussi dans mes entraînements à la prise de parole.</p>"
+        "html": "<p>J’ai découvert une impro très physique, avec du mouvement et un engagement immédiat. Oui oui, je parle bien du théâtre d’impro, et c’est du sport mine de rien, tant cela me demande d’énergie.</p><p>Ce qui m’intéresse, c’est de devoir écouter, rebondir et construire avec les autres sur le moment. C’est un terrain réel pour ce que je travaille aussi dans mes entraînements à la prise de parole.</p>"
       },
       {
         "id": "eloquence",
-        "focus": "Lire, répéter, prendre la parole",
+        "focus": "Prendre la parole et convaincre",
         "name": "L’éloquence",
-        "html": "<p>Je travaille l’éloquence depuis 2025. Mon programme a mêlé lecture à voix haute, répétition de passages vidéo, improvisation, débats et exercices de répartie. J’ai travaillé notamment à partir de Jean Amadou, puis consacré plusieurs semaines à Haroun pour observer son rythme, ses silences et son expression.</p><p>J’avais remarqué qu’en changeant de modèle chaque semaine, je me dispersais. J’ai donc choisi de rester plus longtemps sur un même orateur et de répéter. En parallèle, je pratique devant d’autres personnes : impro, ateliers et pitchs, dont le Startup Weekend de Strasbourg en octobre 2026.</p>"
+        "html": "<p>Je m’entraîne à prendre la parole avec plus de clarté, de présence et d’impact. Je travaille la voix, le rythme, l’articulation et la répartie, avec des exercices à l’oral, de l’improvisation et des prises de parole en public.</p><p>Mon ambition : participer à des concours d’éloquence et pitcher mes projets devant des investisseurs. Je veux savoir défendre une idée et donner aux autres l’envie de la suivre.</p>"
       },
       {
         "id": "capoeira",
-        "focus": "Découvrir un autre mouvement",
+        "focus": "Rythme et coordination",
         "name": "La capoeira",
-        "html": "<p>La capoeira est une découverte plus récente dans mes activités. En novembre 2026, je me suis intéressé au cours proposé à Strasbourg et à cette rencontre entre danse et combat. Elle m’ouvre un autre terrain de mouvement, en complément du rock et de la calisthenics.</p>"
+        "html": "<p>Je découvre la capoeira, entre danse et combat, avec l’envie de travailler le rythme, la coordination et l’aisance dans le mouvement.</p>"
       },
       {
         "id": "course",
         "name": "La course à pied",
-        "focus": "Courir et suivre ma progression",
-        "html": "<p>Je cours depuis 2025, seul et en groupe. En 2026, j’ai structuré davantage mes séances, entre endurance, fractionné et côtes. Je suis mes temps et mes distances pour voir ce qui évolue.</p><p>Les sorties en groupe donnent aussi une place aux rencontres dans mon entraînement, en complément de la danse et de la calisthenics.</p>"
+        "focus": "Vitesse et endurance",
+        "html": "<p>Je cours seul et en groupe. J’alterne l’endurance, le fractionné et les côtes, en suivant mes temps et mes distances pour ajuster mon entraînement.</p><p>Mon objectif est de progresser en vitesse et en endurance, avec une pratique régulière qui garde aussi une place aux sorties collectives.</p>"
       }
     ],
     "learning": "<div><dt>La lecture.</dt><dd>Pour l’éloquence, j’ai choisi de lire plusieurs livres sur un même sujet et de mettre leurs principes à l’épreuve. Je reviens sur les mêmes idées dans des exercices et des situations réelles, jusqu’à ce qu’elles deviennent plus naturelles.</dd></div><div><dt>L’anglais oral.</dt><dd>J’utilise notamment le shadowing : écouter un passage, le reprendre avec le texte, puis le répéter à voix haute. Mes séances servent à pratiquer l’oral et à repérer un point précis à travailler, plutôt qu’à accumuler des vidéos regardées.</dd></div><div><dt>Suivre ce que je travaille.</dt><dd>NovaFormation me permet d’organiser cet apprentissage personnel. Après une séance d’anglais, d’éloquence ou de vente avec mon assistant IA, je peux garder la durée, les retours et les points de progression dans le même outil.</dd></div>"

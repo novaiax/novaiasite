@@ -1,0 +1,23 @@
+{
+  "name": "novaia-personal-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check _worker.js && node --check js/atlas.js && node --check js/atlas-routing.js && node --check js/atlas-gpu.js && node --check server/journal.js && node --check server/atlas-shell.js",
+    "deploy": "npm run build && wrangler deploy",
+    "build": "node scripts/build-atlas.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "wrangler": "4.166.0"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "three": "^0.187.0"
+  }
+}

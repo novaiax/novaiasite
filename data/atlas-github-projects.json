@@ -1,0 +1,967 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "slug": "duolingo-checker",
+      "name": "Vérificateur Duolingo",
+      "category": "Petit outil",
+      "status": "Expérimentation",
+      "description": "Un petit script Python de vérification de compte Duolingo.",
+      "deck": "Un outil ciblé dans mes premiers dépôts.",
+      "lead": "Une petite expérimentation Python autour de la vérification d’un compte Duolingo.",
+      "art": "mark:Du",
+      "family": "learning",
+      "sections": [
+        {
+          "title": "Un script à fonction précise",
+          "text": "Ce dépôt conserve un petit script Python consacré à la vérification d’un compte Duolingo. Il fait partie de mes outils et expérimentations, avec un périmètre limité à cette fonction."
+        }
+      ],
+      "external": null,
+      "related": "automatisation-python"
+    },
+    {
+      "slug": "premiers-essais-ia",
+      "name": "Premiers essais IA",
+      "category": "Apprentissage",
+      "status": "Expérimentation",
+      "description": "Mes premiers essais d’assistant personnel en Python.",
+      "deck": "Donner l’heure, chercher une information et lire le texte à l’écran : les premiers morceaux d’une idée beaucoup plus grande.",
+      "lead": "En mai 2024, je faisais déjà des essais d’assistant en Python. Je partais de fonctions simples : une fenêtre, l’heure, une recherche sur Wikipédia et du texte récupéré à l’écran.",
+      "art": "mark:N°",
+      "family": "learning",
+      "sections": [
+        {
+          "title": "Assembler les premiers morceaux",
+          "text": "J’utilisais Tkinter pour l’interface, Wikipédia pour les recherches et des outils de capture et d’OCR pour lire du texte affiché à l’écran. J’explorais aussi la vision par ordinateur avec OpenCV."
+        },
+        {
+          "title": "Du prototype aux modules",
+          "text": "En 2025, j’ai organisé ce travail en plusieurs modules : une interface de conversation, une mémoire persistante et un point d’entrée pour les faire fonctionner ensemble. L’assistant prenait une forme plus structurée, avec une interface web et des éléments que je pouvais faire évoluer séparément."
+        },
+        {
+          "title": "Le fil que je suivais déjà",
+          "text": "Je cherchais un assistant personnel capable de garder du contexte et d’évoluer avec les usages. Cette envie relie ces premiers essais en Python aux projets NovaIA que je construis aujourd’hui."
+        }
+      ],
+      "external": null,
+      "related": "cs50"
+    },
+    {
+      "slug": "socle-nextjs",
+      "name": "Socle Next.js",
+      "category": "Socle technique",
+      "status": "Expérimentation",
+      "description": "Un socle Next.js conservé parmi mes bases de développement.",
+      "deck": "Un point de départ technique.",
+      "lead": "Un point de départ Next.js dans mon atelier de développement.",
+      "art": "mark:N/",
+      "family": "web",
+      "sections": [
+        {
+          "title": "Une base de développement",
+          "text": "Ce dépôt rassemble une base Next.js en TypeScript issue du démarrage standard du framework. Sa place dans mon catalogue est celle d’un socle technique pour démarrer un projet."
+        }
+      ],
+      "external": null,
+      "related": "demonstrations-web"
+    },
+    {
+      "slug": "cs50",
+      "name": "CS50x · Harvard",
+      "category": "Apprentissage",
+      "status": "Certificat obtenu en 2025",
+      "description": "Le cours CS50x de Harvard, suivi en autodidacte jusqu’au certificat et à mon projet final NovaLog.",
+      "deck": "Des bases en informatique mises en pratique dans dix séries d’exercices et un projet personnel.",
+      "lead": "Apprendre les bases, puis construire mon propre projet.",
+      "art": "mark:50",
+      "family": "learning",
+      "sections": [
+        {
+          "title": "Une pyramide, du texte, des images",
+          "text": "Les exercices m’ont fait travailler sur des problèmes précis : construire une pyramide dans le terminal, rendre la monnaie, vérifier un numéro avec l’algorithme de Luhn ou calculer la lisibilité d’un texte. Les filtres d’images m’ont aussi amené à manipuler les pixels et les couleurs."
+        },
+        {
+          "title": "Un indice, pas la solution",
+          "text": "Quand je bloquais, je demandais souvent un indice minime plutôt que le code complet. Je voulais réussir à retrouver la logique et pouvoir expliquer ce que j’avais écrit. Comprendre un exercice par moi-même faisait partie de ce que je venais chercher dans ce cours."
+        },
+        {
+          "title": "Faire entrer le web",
+          "text": "Avec Birthdays et Finance, j’ai travaillé sur Flask, les formulaires, les comptes utilisateurs et les bases SQLite. Le projet Homepage m’a permis de faire un site personnel, avec notamment un minuteur Pomodoro. Les exercices ne restaient plus seulement dans le terminal."
+        },
+        {
+          "title": "Un projet que je voulais garder",
+          "text": "Pour le projet final, j’ai choisi NovaLog, un journal de discipline quotidien. Il réunissait une connexion, des catégories de tâches, un suivi et un historique. L’idée me plaisait parce que ce journal pouvait réellement me servir après le cours."
+        }
+      ],
+      "external": {
+        "url": "https://github.com/novaiax/CS50-cours-2025",
+        "label": "Voir le code sur GitHub"
+      },
+      "related": "automatisation-python",
+      "resources": [
+        {
+          "url": "/documents/certificat-cs50-yann-wirtz.pdf",
+          "label": "Voir mon certificat CS50 (PDF)"
+        },
+        {
+          "url": "https://cs50.harvard.edu/certificates/54cf82f4-c2a3-47ef-a105-cd994030368e",
+          "label": "Vérifier le certificat"
+        }
+      ]
+    },
+    {
+      "slug": "pomodoro",
+      "name": "Pomodoro",
+      "category": "Concentration",
+      "status": "Expérimentation",
+      "description": "Le minuteur de mes sessions de travail et de mes lives focus.",
+      "deck": "Donner un rythme à l’apprentissage.",
+      "lead": "Un minuteur pour donner un rythme à mon apprentissage en public.",
+      "art": "mark:25",
+      "family": "apps",
+      "sections": [
+        {
+          "title": "Trouver une durée tenable",
+          "text": "Le Pomodoro fait partie de la manière dont j’ai structuré mon apprentissage. J’ai commencé avec des blocs que je pouvais tenir, puis j’ai ajusté leur durée et les pauses. Le minuteur me sert à poser un début, une fin et un moment pour souffler."
+        },
+        {
+          "title": "Travailler en public",
+          "text": "Dans les lives, ce rythme devient aussi visible pour les personnes qui passent. Le minuteur et ma configuration de diffusion appartiennent au même atelier : rendre une session de travail lisible, avec ses temps de concentration et de respiration."
+        },
+        {
+          "title": "Un petit outil dans un ensemble",
+          "text": "Ces dépôts de minuteurs sont modestes. Leur intérêt dans mon parcours est leur usage : ils accompagnent l’apprentissage du code et la construction d’une routine. Ils racontent une partie de ma façon de travailler, sans avoir besoin de se présenter comme une méthode miracle de productivité."
+        }
+      ],
+      "external": {
+        "url": "https://github.com/novaiax/Pomodoro-focus-live",
+        "label": "Voir le code sur GitHub"
+      },
+      "related": "journal-discipline"
+    },
+    {
+      "slug": "novavalidator",
+      "name": "NovaValidator",
+      "category": "Outil de données",
+      "status": "Expérimentation",
+      "description": "Mon premier projet Python après CS50 : lire un fichier et comprendre ses erreurs.",
+      "deck": "Des notions apprises au programme qui tourne.",
+      "lead": "Appliquer les acquis de CS50 à mon premier projet Python.",
+      "art": "mark:✓",
+      "family": "apps",
+      "sections": [
+        {
+          "title": "Mettre les bases en pratique",
+          "text": "Après CS50, j’ai choisi un problème précis : ouvrir un fichier texte ou CSV, examiner son contenu et produire un rapport lisible. NovaValidator m’a permis de réutiliser les conditions, les boucles, les chaînes de caractères et la manipulation de fichiers dans un même programme Python."
+        },
+        {
+          "title": "Lire, structurer, vérifier",
+          "text": "J’y travaille les arguments d’un programme, les entrées utilisateur, les extensions de fichiers et les lecteurs CSV. La difficulté intéressante est de passer du texte brut à une structure qu’on peut examiner. Il faut définir ce qui constitue une erreur, puis restituer quelque chose de compréhensible."
+        },
+        {
+          "title": "Une petite brique assumée",
+          "text": "Je l’imaginais comme une première brique pour mes projets NovaIA. Cette direction donnait du sens à l’apprentissage, tout en gardant un périmètre abordable. NovaValidator conserve la trace du passage entre les notions découvertes en cours et un outil que je commence à construire par moi-même."
+        }
+      ],
+      "external": {
+        "url": "https://github.com/novaiax/novavalidator",
+        "label": "Voir le code sur GitHub"
+      },
+      "related": "socle-nextjs"
+    },
+    {
+      "slug": "automatisation-python",
+      "name": "Automatisation Python",
+      "category": "Apprentissage",
+      "status": "Ébauches",
+      "description": "Apprendre à repérer et manipuler des informations avec Python.",
+      "deck": "Des exercices d’automatisation, en commençant par les expressions régulières.",
+      "lead": "Après les premiers exercices de CS50, j’ai continué avec Automate the Boring Stuff. En janvier 2026, je travaillais notamment sur les expressions régulières.",
+      "art": "mark:Py",
+      "family": "learning",
+      "sections": [
+        {
+          "title": "Repérer l’information utile",
+          "text": "Les expressions régulières m’ont appris à reconnaître des motifs dans un texte : un groupe de caractères, une partie facultative, une répétition. C’était une façon concrète d’aborder le traitement de l’information avec Python."
+        },
+        {
+          "title": "Une partie de ma formation",
+          "text": "Les entrées ATBS et GITA correspondent à cette partie de mon apprentissage de Python et de l’automatisation. Ce sont des archives de formation encore peu fournies ; je les présente comme des exercices, sans leur attribuer une application terminée."
+        }
+      ],
+      "external": null,
+      "related": "novaformation"
+    },
+    {
+      "slug": "agentcheck",
+      "name": "AgentCheck",
+      "category": "Analyse web et IA",
+      "status": "Expérimentation",
+      "description": "Un scanner pour voir si un site e-commerce peut être compris par un agent IA.",
+      "deck": "Si un assistant cherche un produit sur un site, peut-il retrouver les informations utiles et avancer dans le parcours d’achat ? J’ai construit AgentCheck autour de cette question.",
+      "lead": "Préparer le commerce pour les agents IA.",
+      "art": "mark:Ac",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Regarder le site autrement",
+          "text": "J’ai développé AgentCheck pour examiner les catalogues et les parcours e-commerce du point de vue d’un agent IA. Les informations doivent être compréhensibles au-delà de ce qui se voit à l’écran."
+        },
+        {
+          "title": "Rendre les points à améliorer visibles",
+          "text": "Le scanner examine la structure du catalogue, l’accès aux données produits, les API et le parcours de commande. Il réunit ces constats dans un score accompagné des points relevés, pour donner une base à un audit plus précis."
+        },
+        {
+          "title": "Relier la veille à la création web",
+          "text": "Ce projet réunit deux choses qui m’intéressent : les nouveaux usages de l’IA et la manière de construire des sites utiles. Il me permet d’explorer une évolution du commerce en ligne à travers un outil concret."
+        }
+      ],
+      "external": null,
+      "related": "novaradar"
+    },
+    {
+      "slug": "veille-google-ads",
+      "name": "Veille Google Ads",
+      "category": "Automatisation",
+      "status": "Expérimentation",
+      "description": "Un agent pour examiner mes campagnes Google Ads et les recherches qui amènent les clics.",
+      "deck": "Je l’ai construit pour rapprocher le suivi publicitaire de mon activité réelle : comprendre ce que les gens cherchent et repérer les ajustements à examiner.",
+      "lead": "Comprendre ce qu’il y a derrière le clic.",
+      "art": "mark:Ad",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Relier les campagnes à leur contexte",
+          "text": "J’ai développé cet agent autour de mes campagnes de services web. Il rassemble des éléments de suivi et de diagnostic pour m’aider à comprendre les requêtes qui déclenchent les annonces."
+        },
+        {
+          "title": "Regarder l’intention",
+          "text": "Une personne qui recherche le nom d’une erreur technique ne cherche pas forcément un prestataire. L’outil examine ce type d’écart et les requêtes mal ciblées pour préparer les ajustements et les exclusions à considérer."
+        }
+      ],
+      "external": null,
+      "related": "novaradar"
+    },
+    {
+      "slug": "novaia-assistant",
+      "name": "NovaIA",
+      "category": "Assistant personnel",
+      "status": "En évolution continue",
+      "description": "Mon IA personnelle pour gérer mon quotidien, mon entreprise et les outils qui m’aident à avancer.",
+      "deck": "NovaIA m’aide à m’organiser, à gérer mon entreprise, à déléguer et à repérer les opportunités. Je la développe autour de mes besoins et de mes propres outils.",
+      "lead": "Une IA personnelle, reliée à mon quotidien et à mon entreprise.",
+      "art": "novaia",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "L’IA personnelle",
+          "text": "NovaIA est l’IA personnelle que je développe pour m’accompagner au quotidien. Elle est reliée à mes outils et à mes systèmes : mes projets, ma mémoire, mon organisation, mon apprentissage et ma veille.\n\nJe m’en sers pour retrouver les informations utiles, organiser ce que j’ai à faire, préparer du travail et déléguer des tâches. Je peux garder une vue d’ensemble tout en avançant sur plusieurs projets."
+        },
+        {
+          "title": "M’aider à gérer mon entreprise",
+          "text": "NovaIA m’accompagne aussi dans la gestion de mon entreprise. Je l’utilise pour faire de la recherche, organiser mon travail, préparer des actions et repérer des opportunités commerciales.\n\nL’objectif est très concret : gagner du temps, m’aider à développer mes revenus et laisser moins d’opportunités de côté. Je construis un système que je peux utiliser dans ma propre activité."
+        },
+        {
+          "title": "Rester à la pointe et faire évoluer mes outils",
+          "text": "Je m’appuie sur NovaIA pour suivre les nouvelles technologies et comprendre ce qui peut être utile à mes projets. Cette veille nourrit aussi ce que je développe pour moi et pour les clients de NovaiaWeb.\n\nL’écosystème continue d’évoluer : NovaMemory garde le contexte, NovaFormation suit mon apprentissage, et des modules comme NovaHub, NovaCognition ou NovaGoals apportent leurs propres fonctions. Je construis progressivement un environnement IA qui suit ma façon de travailler."
+        }
+      ],
+      "external": null,
+      "related": "novamemory"
+    },
+    {
+      "slug": "atlas-novaia",
+      "name": "Novaia.org",
+      "category": "Site personnel",
+      "status": "Réalisation web",
+      "description": "Le site personnel où mes projets, mes pratiques et mon parcours se répondent.",
+      "deck": "Je crée, j’apprends, j’entreprends.",
+      "lead": "Une carte pour explorer ce que j’ai construit et ce qui me construit.",
+      "art": "mark:↗",
+      "family": "web",
+      "sections": [
+        {
+          "title": "Chercher avant de dessiner",
+          "text": "Je ne voulais pas simplement aligner une photo, un titre et des cartes. J’ai demandé une recherche de directions visuelles, puis une bibliothèque réutilisable pour les futurs projets NovaiaWeb. Sources, références et techniques y sont distinguées pour comparer des approches et construire un brief. Plusieurs pistes ont été présentées avant mon choix de l’Atlas vivant."
+        },
+        {
+          "title": "Une carte personnelle",
+          "text": "Le site réunit mes projets, mes pratiques et les étapes de mon parcours. Les relations ne sont pas seulement décoratives : apprendre le code mène à construire des outils, l’éloquence nourrit la vente, la danse et l’improvisation trouvent aussi leur place. L’idée est de laisser voir cette continuité, sans imposer un ordre unique de lecture."
+        },
+        {
+          "title": "Le mouvement au service de l’exploration",
+          "text": "J’ai voulu une carte animée avec WebGPU, des reliefs et des liaisons qui accompagnent l’exploration. Les textes et les liens restent accessibles directement, et une version statique conserve la carte lorsque l’animation est arrêtée ou que le rendu n’est pas disponible. Ce chantier est aussi une recherche sur la manière de faire un site personnel qui me ressemble."
+        }
+      ],
+      "external": {
+        "url": "https://github.com/novaiax/novaiasite",
+        "label": "Voir le code sur GitHub"
+      },
+      "related": "novaiaweb"
+    },
+    {
+      "slug": "novaradar",
+      "name": "NovaRadar",
+      "category": "Analyse web",
+      "status": "Expérimentation",
+      "description": "Mon outil interne pour trouver des entreprises à contacter à partir de problèmes concrets sur leur site.",
+      "deck": "NovaRadar relie ma création web au terrain : examiner un site, repérer ce qui pourrait être amélioré et préparer une prise de contact qui a une raison d’être.",
+      "lead": "Une prospection qui part du concret.",
+      "art": "mark:Nr",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Repérer les problèmes utiles",
+          "text": "J’ai développé NovaRadar pour mon activité web. Il examine des sites et rassemble des constats sur leur fonctionnement, leur présentation ou leur visibilité. Je peux ensuite retrouver les éléments utiles et prioriser les pistes."
+        },
+        {
+          "title": "Préparer une conversation",
+          "text": "Un site difficile à utiliser, lent ou mal présenté ne demande pas le même échange. Je m’appuie sur les constats pour préparer un message adapté à la situation de l’entreprise, plutôt qu’un texte identique envoyé partout."
+        },
+        {
+          "title": "Un outil au service de mon activité",
+          "text": "Le projet réunit des analyses techniques, un volet SEO, le module HotLeads et des connexions à mon assistant. J’ai choisi de le garder comme outil interne pour accompagner ma prospection et mes autres projets."
+        }
+      ],
+      "external": null,
+      "related": "agentcheck"
+    },
+    {
+      "slug": "youtube-mcp",
+      "name": "YouTube · connecteur IA",
+      "category": "Connecteur",
+      "status": "Expérimentation",
+      "description": "Relier mon assistant aux vidéos, aux transcriptions et aux informations utiles sur YouTube.",
+      "deck": "J’ai construit ce connecteur pour nourrir mon travail de création : retrouver un passage, rechercher des vidéos et disposer de repères sur la chaîne depuis les mêmes outils.",
+      "lead": "Faire entrer les vidéos dans mon travail de recherche.",
+      "art": "mark:Yt",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Retrouver la matière",
+          "text": "Le connecteur permet à mon assistant de rechercher des vidéos, de retrouver leurs informations et de lire des transcriptions. Je peux ainsi travailler à partir de contenus précis au lieu de tout recopier à la main."
+        },
+        {
+          "title": "Préparer les contenus",
+          "text": "Je l’ai relié à mon atelier éditorial pour alimenter la recherche et la préparation des sujets. Les informations sur les vidéos et la chaîne deviennent une matière que je peux croiser avec mes idées et mes autres sources."
+        }
+      ],
+      "external": null,
+      "related": "brevo-mcp"
+    },
+    {
+      "slug": "brevo-mcp",
+      "name": "Brevo · connecteur IA",
+      "category": "Connecteur",
+      "status": "Expérimentation",
+      "description": "Relier mon assistant aux emails et au suivi des contacts dans mon activité.",
+      "deck": "J’ai construit ce connecteur pour prolonger le travail de prospection : partir d’un constat précis, préparer un message naturel et garder une continuité dans la relance.",
+      "lead": "Un message qui a une raison d’être.",
+      "art": "mark:Br",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Du diagnostic au contact",
+          "text": "NovaRadar m’aide à comprendre un site. Le connecteur Brevo prolonge ce travail en reliant mon assistant aux fonctions d’email, de contacts et de suivi. Je peux préparer un échange autour des éléments qui concernent réellement l’entreprise."
+        },
+        {
+          "title": "Soigner la suite de la conversation",
+          "text": "Une relance doit tenir compte de ce qui a déjà été dit. Je travaille les messages pour apporter un élément utile, garder un ton humain et poser une question simple. L’outil relie ces étapes au suivi des échanges."
+        }
+      ],
+      "external": {
+        "url": "https://github.com/novaiax/MCP-Brevo",
+        "label": "Voir le code sur GitHub"
+      },
+      "related": "youtube-mcp"
+    },
+    {
+      "slug": "demonstrations-web",
+      "name": "Démonstrations web",
+      "category": "Interfaces web",
+      "status": "Démonstrations",
+      "description": "Des maquettes de sites pour montrer une idée avant de la développer.",
+      "deck": "Passer d’une explication à une page que l’on peut ouvrir et parcourir.",
+      "lead": "J’ai préparé des démonstrations de sites pour présenter des propositions web. Elles me permettent de montrer une interface concrète pendant un échange.",
+      "art": "mark:Web",
+      "family": "web",
+      "sections": [
+        {
+          "title": "Mettre la proposition à l’écran",
+          "text": "Dans mes premiers échanges autour des sites, je partageais des maquettes en ligne. On pouvait ouvrir le lien et voir la proposition. Le dépôt DemoSite rassemble des travaux de ce type."
+        },
+        {
+          "title": "Des essais, pas une liste de clients",
+          "text": "Cette collection conserve des démonstrations. Elle montre des directions d’interface et des propositions ; chaque maquette ne correspond pas nécessairement à une prestation commandée ou livrée."
+        }
+      ],
+      "external": {
+        "url": "https://github.com/novaiax/DemoSite",
+        "label": "Voir le code sur GitHub"
+      },
+      "related": "novaiaweb"
+    },
+    {
+      "slug": "evenemency",
+      "name": "Evenemency",
+      "category": "Découverte et organisation",
+      "status": "Logiciel personnel",
+      "description": "Mon outil pour découvrir ce qui vaut la peine de vivre autour de Strasbourg.",
+      "deck": "Sortir de la recherche, entrer dans l’expérience.",
+      "lead": "Trouver les occasions de pratiquer, rencontrer et entreprendre autour de Strasbourg.",
+      "art": "mark:Ev",
+      "family": "apps",
+      "sections": [
+        {
+          "title": "Des intérêts qui se croisent",
+          "text": "J’ai créé Evenemency pour repérer plus tôt les activités autour de Strasbourg, sans refaire les mêmes recherches à la main. La danse, l’improvisation, l’éloquence et l’entrepreneuriat ne se trouvent pas sur un seul agenda. L’outil rassemble plusieurs sources et aide à examiner les événements selon mes intérêts et mes contraintes."
+        },
+        {
+          "title": "Chercher la participation",
+          "text": "J’ai précisé ce que j’attends des propositions : une rencontre de créateurs de projets, un concours de pitch ou un atelier où l’on fait quelque chose n’ont pas le même intérêt qu’une conférence simplement étiquetée « business ». Le système doit comprendre ce que l’événement permet de vivre, pas seulement reconnaître des mots-clés."
+        },
+        {
+          "title": "Voir assez tôt pour agir",
+          "text": "Les occasions rares demandent parfois de s’inscrire ou de préparer quelque chose longtemps à l’avance. J’ai donc distingué les sorties proches des concours, scènes et appels à candidatures à surveiller plus tôt. La découverte du Startup Weekend Strasbourg fait partie des exemples concrets retrouvés dans mon historique : une proposition qui rejoint à la fois mon envie de construire et de rencontrer d’autres porteurs de projets."
+        }
+      ],
+      "external": null,
+      "related": "novagenda"
+    },
+    {
+      "slug": "instagram-mcp",
+      "name": "Instagram · connecteur IA",
+      "category": "Connecteur",
+      "status": "Expérimentation",
+      "description": "Retrouver les nouveaux messages Instagram avec mon assistant, sans refaire des exports.",
+      "deck": "J’ai lancé ce connecteur pour garder un contexte de conversation plus à jour et éviter de travailler avec un export déjà dépassé.",
+      "lead": "Retrouver le fil d’un échange.",
+      "art": "mark:Ig",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Accéder au contexte utile",
+          "text": "Je voulais permettre à mon assistant de retrouver une conversation Instagram et les nouveaux messages depuis le dernier point connu. Cela répond à une friction simple : un export manuel peut déjà être décalé au moment où l’on s’en sert."
+        },
+        {
+          "title": "Garder la main sur les réponses",
+          "text": "J’ai donné au connecteur un périmètre en lecture seule. Il sert à comprendre le contexte et à retrouver les échanges utiles ; je garde la main sur ce que j’écris et sur la relation avec mes interlocuteurs."
+        }
+      ],
+      "external": null,
+      "related": "youtube-mcp"
+    },
+    {
+      "slug": "novacognition",
+      "name": "NovaCognition",
+      "category": "Méthodes de raisonnement",
+      "status": "En évolution continue",
+      "description": "Aider mon assistant à examiner une idée avant de me donner une réponse.",
+      "deck": "Je veux pouvoir discuter d’un choix avec une IA qui questionne ses hypothèses, cherche ce qui les soutient et envisage d’autres explications.",
+      "lead": "Une réponse qui mérite qu’on s’y fie.",
+      "art": "mark:Nc",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Aller plus loin que la première réponse",
+          "text": "Je développe NovaCognition pour travailler la façon dont mon assistant raisonne. Qu’est-ce qui soutient cette affirmation ? Y a-t-il une autre explication ? Qu’est-ce qui manque pour décider ? Le module lui apporte des méthodes pour examiner ces questions."
+        },
+        {
+          "title": "Des méthodes utilisables",
+          "text": "J’y réunis des approches pour revoir une affirmation, réfléchir aux causes d’un problème ou comparer des décisions. Le premier usage que j’ai testé portait justement sur la revue d’une affirmation : prendre du recul sur ce qui vient d’être avancé avant de s’appuyer dessus."
+        },
+        {
+          "title": "Rendre l’analyse utile",
+          "text": "Je m’intéresse aussi à la manière de formuler une réponse pour qu’elle aide à agir. Une réflexion peut être juste mais trop abstraite. Ce travail relie l’analyse à mes objectifs et aux décisions que je dois prendre."
+        }
+      ],
+      "external": null,
+      "related": "novalearning"
+    },
+    {
+      "slug": "novalearning",
+      "name": "NovaLearning",
+      "category": "Apprentissage de l’assistant",
+      "status": "En évolution continue",
+      "description": "Aider mon assistant à revenir sur ses prédictions, ses erreurs et ses corrections.",
+      "deck": "Une recommandation ne se termine pas au moment où elle est donnée. Je veux pouvoir comparer ce qui était prévu avec ce qui arrive réellement.",
+      "lead": "Apprendre de la suite.",
+      "art": "mark:Nl",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Garder une trace de ce qui était prévu",
+          "text": "J’ai donné à NovaLearning un rôle précis : organiser les prédictions, les erreurs, les corrections et les résultats de mon assistant. L’objectif est de pouvoir y revenir et de comprendre ce qui a changé."
+        },
+        {
+          "title": "Transformer un résultat en retour utile",
+          "text": "Si une estimation se révèle mauvaise, je veux pouvoir retrouver l’estimation de départ, le résultat et la correction apportée. NovaLearning donne une place à ce retour d’expérience dans mon environnement IA, pour que la suite du travail puisse en tenir compte."
+        }
+      ],
+      "external": null,
+      "related": "novacognition"
+    },
+    {
+      "slug": "novasocial",
+      "name": "NovaSocial",
+      "category": "Contexte relationnel",
+      "status": "En évolution continue",
+      "description": "Aider mon assistant à garder le contexte des relations et des échanges.",
+      "deck": "Les relations évoluent. J’ai voulu un outil capable de relier les observations dans le temps, en gardant une différence claire entre ce qui est connu et ce qui est interprété.",
+      "lead": "Garder le contexte humain.",
+      "art": "mark:Ns",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Retrouver le fil d’une relation",
+          "text": "NovaSocial est la partie de mon environnement IA consacrée au contexte relationnel. Je l’ai développée pour organiser les observations et leurs liens, afin que mon assistant ne traite pas chaque échange comme une situation isolée."
+        },
+        {
+          "title": "Rester attentif à ce que l’on sait",
+          "text": "Une observation et l’interprétation qu’on en fait ne disent pas la même chose. Le travail conserve l’origine des éléments et leurs évolutions. Cela permet de revenir sur une lecture de la situation lorsque le contexte change."
+        }
+      ],
+      "external": null,
+      "related": "novamemory"
+    },
+    {
+      "slug": "novaimagination",
+      "name": "NovaImagination",
+      "category": "Exploration de scénarios",
+      "status": "En évolution continue",
+      "description": "Explorer plusieurs façons d’avancer avant de choisir.",
+      "deck": "Je veux pouvoir poser une idée, faire varier les contraintes et examiner ce que chaque possibilité implique. NovaImagination donne un espace à ce travail avec mon assistant.",
+      "lead": "Essayer les possibilités avant d’agir.",
+      "art": "mark:Ni",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Ouvrir plusieurs chemins",
+          "text": "J’ai construit NovaImagination pour explorer des scénarios avec mon assistant. Plutôt que rester sur une première idée, je peux lui faire examiner plusieurs chemins et leurs conséquences possibles."
+        },
+        {
+          "title": "Donner des contraintes à l’idée",
+          "text": "Du temps disponible, des ressources limitées ou des étapes qui dépendent les unes des autres : ces contraintes changent un scénario. Le module apporte des outils pour les représenter et comparer des possibilités plus concrètes."
+        },
+        {
+          "title": "Garder le réel comme repère",
+          "text": "Un scénario aide à réfléchir ; il reste une possibilité. J’ai conservé cette distinction dans le projet pour pouvoir explorer librement des idées tout en gardant la trace de ce qui s’est réellement passé."
+        }
+      ],
+      "external": null,
+      "related": "novagoals"
+    },
+    {
+      "slug": "novagoals",
+      "name": "NovaGoals",
+      "category": "Objectifs et plans",
+      "status": "En évolution continue",
+      "description": "Aider mon assistant à transformer un objectif en étapes et à suivre le chemin.",
+      "deck": "Je veux pouvoir garder une direction claire, voir ce qui a été fait et ajuster le plan quand la situation évolue.",
+      "lead": "Passer de l’objectif au chemin.",
+      "art": "mark:Ng",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Décomposer ce que je veux faire",
+          "text": "NovaGoals est mon travail sur les objectifs et les plans dans l’environnement IA. Le module aide à relier une direction à des étapes, à leurs dépendances et à la progression."
+        },
+        {
+          "title": "Voir où j’en suis vraiment",
+          "text": "Une idée suggérée, un objectif que j’adopte et une action que j’ai réalisée représentent des étapes différentes. J’ai tenu à garder cette distinction pour que le suivi reste rattaché à ce qui a réellement été fait."
+        },
+        {
+          "title": "Ajuster sans perdre le fil",
+          "text": "Un plan peut changer. Je veux pouvoir le réorganiser tout en retrouvant l’objectif de départ et les décisions prises en chemin. C’est cette continuité que je travaille avec NovaGoals."
+        }
+      ],
+      "external": null,
+      "related": "novacognition"
+    },
+    {
+      "slug": "novahub",
+      "name": "NovaHub",
+      "category": "Écosystème Nova",
+      "status": "En évolution continue",
+      "description": "M’aider à choisir les bons outils pour le travail en cours.",
+      "deck": "J’ai relié plusieurs outils à mon assistant : une mémoire, des objectifs, des recherches, des scénarios. NovaHub l’aide à savoir lesquels mobiliser et comment les combiner.",
+      "lead": "Le bon outil au bon moment.",
+      "art": "mark:Nh",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Donner un rôle clair à chaque outil",
+          "text": "J’ai construit NovaHub pour que mon assistant comprenne ce que chaque outil apporte. Retrouver une ancienne décision, examiner une idée et préparer un plan demandent des choses différentes. NovaHub donne des repères pour choisir une manière de travailler adaptée."
+        },
+        {
+          "title": "Les faire travailler ensemble",
+          "text": "Pour préparer un projet, la mémoire peut retrouver le contexte, un outil de réflexion examiner les hypothèses et un autre organiser les étapes. NovaHub aide à voir cette complémentarité. Mon assistant utilise ensuite directement les outils utiles, chacun gardant son rôle."
+        }
+      ],
+      "external": null,
+      "related": "novaia-assistant"
+    },
+    {
+      "slug": "obs-configuration",
+      "name": "Configuration OBS",
+      "category": "Configuration",
+      "status": "Ébauche",
+      "description": "La configuration qui accompagne mes lives d’apprentissage.",
+      "deck": "Construire le cadre du travail en public.",
+      "lead": "Le cadre visuel de mes lives d’apprentissage et de construction.",
+      "art": "mark:OBS",
+      "family": "apps",
+      "sections": [
+        {
+          "title": "Un bureau qui devient une scène",
+          "text": "Mes lives focus m’ont amené à travailler ce qu’on voit pendant que j’apprends. À l’automne 2025, j’ai configuré OBS avec plusieurs caméras, des changements de scène automatiques et des mouvements de zoom légers. Je cherchais ma propre manière de rendre une longue session de travail lisible."
+        },
+        {
+          "title": "Adapter le cadre au moment",
+          "text": "J’ai distingué des sessions silencieuses et d’autres plus interactives. Les scènes, le son et l’éclairage participent à ce choix. Ce projet n’est pas seulement une liste de réglages : il accompagne l’apprentissage en public et la façon dont je veux accueillir les personnes qui passent sur le live."
+        },
+        {
+          "title": "Construire aussi l’environnement",
+          "text": "Les scènes, les transitions et les sources vidéo forment un ensemble qu’il faut faire fonctionner et entretenir. Cette configuration illustre mon goût pour les outils construits autour d’un usage réel : ici, apprendre et travailler en public dans un cadre que j’ai préparé."
+        }
+      ],
+      "external": {
+        "url": "https://github.com/novaiax/obs-config-",
+        "label": "Voir le code sur GitHub"
+      },
+      "related": "novaprompter"
+    },
+    {
+      "slug": "novagenda",
+      "name": "NovAgenda",
+      "category": "Calendrier",
+      "status": "Logiciel personnel",
+      "description": "Trouver du temps commun entre des calendriers qui vivent déjà.",
+      "deck": "Moins se coordonner, plus se voir.",
+      "lead": "Un agenda partagé pour trouver plus facilement du temps à deux.",
+      "art": "mark:Na",
+      "family": "apps",
+      "sections": [
+        {
+          "title": "Commencer par la bonne question",
+          "text": "NovAgenda est né d’un besoin à deux : voir quand nous sommes disponibles, sans comparer nos agendas à la main. La durée souhaitée, les jours de semaine ou le week-end doivent suffire à faire ressortir des possibilités. Je tenais à ce que ces propositions soient visibles directement sous l’agenda, plutôt que cachées derrière une recherche à recommencer."
+        },
+        {
+          "title": "L’usage se joue sur téléphone",
+          "text": "Nous utilisons des iPhones, mais je voulais une application accessible depuis le web, sans imposer un passage par l’App Store. J’ai travaillé le formulaire de création, les vues année, mois, semaine et jour, ainsi qu’un affichage en grand. Un agenda doit rester lisible quand on le consulte rapidement sur un petit écran."
+        },
+        {
+          "title": "Une continuité au quotidien",
+          "text": "J’ai aussi travaillé une copie hors ligne et une reprise au retour d’Internet. L’agenda doit rester consultable lorsque le réseau manque, puis retrouver une continuité à la reconnexion. Ce projet combine un besoin de coordination très personnel avec le travail sur une application web mobile et ses synchronisations."
+        }
+      ],
+      "external": null,
+      "related": "evenemency"
+    },
+    {
+      "slug": "harley",
+      "name": "Harley",
+      "category": "Entrepreneuriat",
+      "status": "Expérimentation",
+      "description": "Un agent entrepreneurial pour explorer des opportunités et préparer des tests concrets.",
+      "deck": "Je développe Harley pour faire avancer une piste jusqu’aux questions qui comptent : quelle offre construire, à qui la proposer et quelles preuves chercher avant de continuer ?",
+      "lead": "Confronter une idée au réel.",
+      "art": "mark:H.",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Chercher une piste qui mérite un test",
+          "text": "Avec Harley, je travaille sur un agent capable de rechercher des opportunités et d’organiser les éléments utiles autour d’une piste. Je veux retrouver les observations, les preuves et les prochaines actions dans un même dossier."
+        },
+        {
+          "title": "Aller jusqu’à une proposition concrète",
+          "text": "L’expérience porte sur la préparation d’une offre et la manière de vérifier si elle intéresse réellement quelqu’un. Le but est de pouvoir décider de poursuivre, de modifier l’approche ou de passer à une autre piste à partir de ce qui a été observé."
+        },
+        {
+          "title": "Garder ma place dans les décisions",
+          "text": "Je veux aussi un conseiller proactif qui m’aide à choisir les actions à mener et les contacts à privilégier. Les décisions qui engagent une dépense restent soumises à mon accord."
+        }
+      ],
+      "external": null,
+      "related": "novaiaweb"
+    },
+    {
+      "slug": "equation-g",
+      "name": "Equation G",
+      "category": "Cours particuliers",
+      "status": "Application",
+      "description": "Une application de cours particuliers de maths pensée pour la prof et ses élèves.",
+      "deck": "Réserver un cours, préparer la suite.",
+      "lead": "Relier les besoins d’une prof au parcours de ses élèves.",
+      "art": "mark:G.",
+      "family": "apps",
+      "sections": [
+        {
+          "title": "Relier réservation et préparation",
+          "text": "Je suis parti de l’activité réelle d’une prof de maths, avec un besoin qui dépassait la réservation d’un créneau. J’ai conçu un parcours où le nouvel élève renseigne son niveau, ses objectifs et les notions à travailler. Ces informations servent ensuite à préparer la séance et restent attachées au rendez-vous lorsqu’il est déplacé."
+        },
+        {
+          "title": "Un outil pour l’activité réelle",
+          "text": "Côté prof, l’application réunit les disponibilités, les blocages, les durées et les grilles tarifaires. Elle permet aussi d’organiser une réservation directement depuis le planning ou la fiche élève. Mon travail consiste à relier ces usages dans une interface cohérente, en conservant les engagements déjà pris pour un cours."
+        },
+        {
+          "title": "Un espace pour continuer",
+          "text": "L’élève retrouve ses cours et des repères de progression, tandis que la prof dispose de sa propre interface de suivi. Ce projet m’a demandé de tenir ensemble deux expériences : celle de la personne qui organise son activité et celle de la personne qui vient apprendre. Les contenus pédagogiques et les informations individuelles restent privés."
+        }
+      ],
+      "external": null,
+      "related": "novaformation"
+    },
+    {
+      "slug": "journal-discipline",
+      "name": "Journal de discipline",
+      "category": "Suivi personnel",
+      "status": "Logiciel personnel",
+      "description": "Le journal de bord que j’ai construit pour suivre ce que je fais vraiment.",
+      "deck": "De mes journées à mon premier vrai outil.",
+      "lead": "Mon projet final de CS50 est devenu mon journal de bord.",
+      "art": "mark:Jd",
+      "family": "life",
+      "sections": [
+        {
+          "title": "Apprendre sur un besoin réel",
+          "text": "Je suivais déjà mes journées lorsque j’ai choisi ce besoin pour mon projet final de CS50. Fin 2025, j’ai construit le journal en Flask et Python : authentification, base de données, tâches, catégories et historique. Un exercice d’apprentissage est ainsi devenu un outil que je pouvais utiliser et faire évoluer moi-même."
+        },
+        {
+          "title": "Rendre la progression visible",
+          "text": "J’ai travaillé les tâches récurrentes, les scores, les bilans et la distinction entre une journée renseignée et une journée sans données. J’ai aussi dû simplifier. Quand trop de règles finissent par noyer l’usage, le journal perd ce qui le rend utile : comprendre sa journée et décider quoi reprendre."
+        },
+        {
+          "title": "Un premier intérêt extérieur",
+          "text": "Pendant un live focus, des personnes qui voyaient le journal m’ont demandé à y accéder. C’était un premier signal concret : l’outil que j’avais construit pour moi pouvait intéresser quelqu’un d’autre. Cela ne transforme pas le projet en succès commercial, mais cela fait partie de son histoire."
+        }
+      ],
+      "external": null,
+      "related": "novaformation"
+    },
+    {
+      "slug": "fileshare",
+      "name": "FileShare",
+      "category": "Fichiers et assistants",
+      "status": "Expérimentation",
+      "description": "Un pont entre mes fichiers locaux et mes conversations de travail avec l’IA.",
+      "deck": "Le bon dossier, sans tout renvoyer.",
+      "lead": "Garder mes fichiers de travail accessibles dans mes conversations avec l’IA.",
+      "art": "mark:Fs",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Un outil de mon atelier",
+          "text": "Quand je travaille sur plusieurs projets et plusieurs conversations, renvoyer les mêmes fichiers casse la continuité. En mars 2026, j’ai cherché à donner un accès persistant aux documents utiles de mon ordinateur. FileShare est cette pièce de mon atelier : un dossier de travail consultable par l’assistant dans un périmètre défini."
+        },
+        {
+          "title": "Une lecture délimitée",
+          "text": "La conception a été revue pour que l’assistant consulte les fichiers, sans mélanger cette lecture avec des opérations de suppression ou d’écriture. C’est une distinction concrète : un outil qui transmet le contexte de travail doit garder un périmètre compréhensible."
+        },
+        {
+          "title": "Synchroniser les changements",
+          "text": "Le travail technique porte aussi sur ce qu’il faut envoyer : les fichiers qui changent, l’ordre des opérations et les reprises quand un transfert échoue. FileShare est une pièce de mon environnement de développement, conçue pour que l’accès aux documents suive le travail en cours."
+        }
+      ],
+      "external": null,
+      "related": "novaia-assistant"
+    },
+    {
+      "slug": "screenpipe-audio",
+      "name": "Screenpipe · adaptation audio",
+      "category": "Adaptation open source",
+      "status": "Expérimentation",
+      "description": "Mon adaptation du connecteur Screenpipe pour retrouver et examiner des passages audio.",
+      "deck": "Revenir aux mots réellement prononcés.",
+      "lead": "Revenir sur mes échanges pour apprendre de mes propres mots.",
+      "art": "mark:Sa",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Partir d’un projet existant",
+          "text": "Je n’ai pas créé Screenpipe. J’ai adapté son connecteur pour mon environnement de travail et ajouté des fonctions orientées audio : rechercher des transcriptions, retrouver des sessions et récupérer un passage précis."
+        },
+        {
+          "title": "Relier l’outil à la pratique",
+          "text": "En travaillant la vente, j’ai voulu pouvoir revenir sur mes propres échanges : une objection, une réponse, une formulation à reprendre. Le projet part de ce besoin d’examiner des exemples réels et de rapprocher la pratique commerciale de l’apprentissage."
+        },
+        {
+          "title": "Faire le lien entre plusieurs outils",
+          "text": "Cette adaptation relie une application existante, ses transcriptions et les outils de consultation d’un assistant. Elle illustre une part de mon travail : comprendre ce qu’un logiciel sait déjà faire, puis construire l’intégration qui rend un usage précis possible."
+        }
+      ],
+      "external": null,
+      "related": "youtube-mcp"
+    },
+    {
+      "slug": "youtube-agence",
+      "name": "Expérimentation vidéo",
+      "category": "Idée en préparation",
+      "status": "Ébauche",
+      "description": "Une piste de projet YouTube restée au stade d’ébauche.",
+      "deck": "Un dépôt encore vide.",
+      "lead": "Le dépôt associé à cette piste de projet ne contient pas de réalisation documentée.",
+      "art": "mark:Yv",
+      "family": "web",
+      "sections": [],
+      "external": null,
+      "related": "yann-pensee"
+    },
+    {
+      "slug": "laboratoire-tests",
+      "name": "Laboratoire de tests",
+      "category": "Essais",
+      "status": "Ébauche",
+      "description": "Un emplacement d’essais, encore vide.",
+      "deck": "Une ébauche de dépôt.",
+      "lead": "Le dépôt de test associé à cette entrée est vide.",
+      "art": "mark:T.",
+      "family": "learning",
+      "sections": [],
+      "external": null,
+      "related": "premiers-essais-ia"
+    },
+    {
+      "slug": "trends-mcp",
+      "name": "Tendances de recherche",
+      "category": "Veille",
+      "status": "Expérimentation",
+      "description": "Un outil de veille pour voir les recherches qui montent et nourrir mes idées de contenus.",
+      "deck": "Je l’ai relié à mon atelier de création pour croiser mon intuition avec l’évolution des sujets et les questions que les gens se posent.",
+      "lead": "Donner des repères à la curiosité.",
+      "art": "mark:Tr",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Observer un sujet",
+          "text": "Le connecteur permet d’examiner l’intérêt pour une recherche dans le temps, les régions concernées et les sujets associés. Il apporte des repères quand je cherche un angle à travailler."
+        },
+        {
+          "title": "Croiser les signaux",
+          "text": "Je rapproche ces tendances d’autres sources, de vidéos et de questions qui m’intéressent. Le sujet ne vient pas d’un chiffre isolé : la veille m’apporte de la matière, puis je travaille le lien et la manière de le raconter."
+        }
+      ],
+      "external": null,
+      "related": "yann-pensee"
+    },
+    {
+      "slug": "yann-pensee",
+      "name": "Yann Pensée",
+      "category": "Création de contenus",
+      "status": "Expérimentation",
+      "description": "Mon atelier de vidéos pour relier philosophie, technologie et vie quotidienne.",
+      "deck": "J’aime partir d’une scène concrète, y trouver une question et en faire une pensée que l’on a envie de suivre. Yann Pensée donne une forme à cette envie de créer.",
+      "lead": "Une idée, ma voix, un fil.",
+      "art": "mark:Yp",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Partir de ce qui nous entoure",
+          "text": "Une technologie que l’on croise, un objet que l’on consomme ou une habitude quotidienne peut ouvrir une question plus grande. Je travaille ces liens autour du temps, de l’attention, de la conscience et de la manière dont on vit."
+        },
+        {
+          "title": "Préparer, puis reprendre la main",
+          "text": "Je m’appuie sur des agents pour chercher des sujets, croiser des informations et préparer des scénarios. Je repasse toujours derrière les scripts : je veux garder ma façon de parler et une idée qui se déroule clairement."
+        },
+        {
+          "title": "Donner envie d’écouter",
+          "text": "Je travaille l’accroche, les transitions et la fin avec une même exigence : un seul fil que l’on peut suivre. Les références et les recherches servent cette pensée ; la profondeur et la manière de raconter donnent sa personnalité à la vidéo."
+        }
+      ],
+      "external": null,
+      "related": "novaprompter"
+    },
+    {
+      "slug": "lebonterra",
+      "name": "Lebonterra",
+      "category": "Place de marché",
+      "status": "Démo",
+      "description": "Un projet de marketplace terrariophile construit avec quelqu’un du milieu.",
+      "deck": "Une passion de terrain, un chantier technique.",
+      "lead": "Un projet de niche construit avec un ami du milieu.",
+      "art": "mark:Lt",
+      "family": "apps",
+      "sections": [
+        {
+          "title": "Partir d’une communauté précise",
+          "text": "J’explore LeBonTerra avec un ami passionné et actif dans le milieu terrariophile. Le concept est un espace spécialisé pour les annonces d’insectes, de spécimens de collection et de matériel. Lui apporte la connaissance de la communauté et du terrain ; j’apporte la technique et le travail de stratégie."
+        },
+        {
+          "title": "Penser aussi la rencontre des utilisateurs",
+          "text": "Nous avons exploré comment faire connaître le projet auprès de la communauté : groupes spécialisés, réseaux sociaux, bourses et événements terrariophiles. Cette réflexion fait partie de la construction d’une marketplace : l’interface seule ne suffit pas, il faut comprendre où les personnes se rencontrent déjà."
+        },
+        {
+          "title": "Construire avec une connaissance du terrain",
+          "text": "Ce projet me fait travailler une autre forme de collaboration : partir d’une passion que quelqu’un connaît de l’intérieur et réfléchir ensemble à un produit qui lui correspond. La compréhension de la communauté, les choix techniques et la manière de faire connaître le service doivent avancer ensemble."
+        }
+      ],
+      "external": null,
+      "related": "demonstrations-web"
+    },
+    {
+      "slug": "assistant-emploi",
+      "name": "Assistant de recherche d’emploi",
+      "category": "Recherche et organisation",
+      "status": "Logiciel personnel",
+      "description": "L’outil personnel né de ma recherche de postes commerciaux.",
+      "deck": "Une recherche suivie, plutôt qu’une pile d’annonces.",
+      "lead": "Un outil né de ma propre recherche de postes commerciaux.",
+      "art": "mark:Em",
+      "family": "ia",
+      "sections": [
+        {
+          "title": "Chercher selon mon parcours",
+          "text": "Au printemps 2026, j’ai exploré le travail salarié dans la vente pour apprendre le commercial dans un cadre structuré, tout en gardant NovaiaWeb. J’ai réorienté un ancien agent de recherche de missions de développement vers des postes commerciaux. La zone, le type de contrat, l’expérience demandée et la proximité avec le web ou la tech devaient aider à faire ressortir les offres auxquelles je pouvais réellement candidater."
+        },
+        {
+          "title": "Garder une continuité",
+          "text": "Le système rassemble les offres, les identifie pour éviter de les recréer et les fait avancer dans un tableau de suivi. Une candidature déjà traitée ne doit pas revenir comme si elle était nouvelle. Ce travail m’a fait pratiquer l’ingestion, les identifiants stables et la déduplication sur un problème qui avait une utilité immédiate pour moi."
+        },
+        {
+          "title": "Une étape, pas ma direction actuelle",
+          "text": "Cette exploration fait partie de mon parcours. Aujourd’hui, ma priorité reste de développer NovaiaWeb. Je conserve ce projet comme une expérimentation concrète de l’automatisation : partir d’une tâche répétitive, la structurer et garder la main sur les décisions."
+        }
+      ],
+      "external": null,
+      "related": "trouvejob"
+    }
+  ],
+  "augment": [
+    {
+      "slug": "novamemory",
+      "sections": []
+    },
+    {
+      "slug": "novaformation",
+      "sections": [
+        {
+          "title": "Relier mon assistant à mon apprentissage",
+          "text": "Le connecteur IA de NovaFormation permet de travailler avec mes programmes, livres, exercices et activités depuis un assistant. Il prolonge mon outil personnel de suivi du niveau et de la progression."
+        }
+      ]
+    },
+    {
+      "slug": "novaiaweb",
+      "sections": []
+    },
+    {
+      "slug": "novaprompter",
+      "sections": [
+        {
+          "title": "De l’atelier à la version publique",
+          "text": "Les premiers travaux de téléprompteur et la version Windows publiée appartiennent au même projet. L’éditeur, la fenêtre de lecture et le suivi vocal local sont réunis dans cette famille ; le dépôt public reste le point d’entrée pour le téléchargement."
+        }
+      ]
+    },
+    {
+      "slug": "trouvejob",
+      "sections": [
+        {
+          "title": "Un produit encore en bêta privée",
+          "text": "Le projet comprend une vitrine et un outil de préparation de recherche. L’ouverture de l’application candidate complète reste une étape distincte de ces premiers parcours."
+        }
+      ]
+    }
+  ]
+}

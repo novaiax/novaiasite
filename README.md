@@ -1,6 +1,14 @@
 # novaiasite
 Site novaia.org
 
+## Atlas vivant — site personnel
+
+La refonte du 21 novembre 2026 se construit avec Node 24 : `npm ci`, `npm run build`, `npm run check`, puis `npm test`. `npm run dev` lance le Worker local. Le build vérifie les 24 empreintes protégées de `/yann` et de NovaLove, génère les pages et compile le moteur Three.js WebGPU/TSL avec repli WebGL2.
+
+Le contenu éditorial est dans `data/atlas-content.json`. Les styles sont dans `css/atlas.css`, le lecteur dans `js/atlas.js`. Ne pas utiliser l'ancien générateur du brouillon personnel. La documentation de livraison et la procédure Cloudflare sont dans [docs/ATLAS_RELEASE.md](docs/ATLAS_RELEASE.md), le journal dans [docs/JOURNAL.md](docs/JOURNAL.md) et le rendu graphique dans [docs/ATLAS_GPU.md](docs/ATLAS_GPU.md).
+
+`npm run deploy` reconstruit avant la publication. Le build Cloudflare historique appelle directement `npx wrangler deploy` : les pages et le bundle générés doivent donc être présents et actualisés dans le commit publié. Une configuration D1 avec un identifiant nul ne suffit pas à déployer le journal ; provisionner les bindings réels et les secrets selon la documentation. La validation locale ne prouve pas la mise en ligne.
+
 ## NovaLove
 
 - Page de présentation : `novalove.html`, URL publique `/novalove`.

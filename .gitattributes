@@ -1,0 +1,35 @@
+# Preserve exact bytes for the accepted pages and their baseline fixtures.
+yann/index.html -text
+css/links.css -text
+fonts/inter.ttf -text
+images/personnel/yann.jpg -text
+images/liens/novaiaweb.png -text
+images/liens/github-nw.svg -text
+images/linkedin.webp -text
+images/personnel/monogram.svg -text
+novalove.html -text
+extraitnovalove.html -text
+novabook.html -text
+conseils/comment-se-remettre-dune-rupture.html -text
+css/novalovestyles.css -text
+js/novalove.js -text
+images/couvertureavant.png -text
+images/couvertureavant.webp -text
+images/logonova.webp -text
+images/favicon/apple-touch-icon.png -text
+images/favicon/favicon-96x96.png -text
+images/favicon/favicon.ico -text
+images/favicon/favicon.svg -text
+images/favicon/site.webmanifest -text
+images/favicon/web-app-manifest-192x192.png -text
+images/favicon/web-app-manifest-512x512.png -text
+tests/fixtures/yann-before-authorized-edits.html -text
+tests/fixtures/protected-atlas-baseline.json -text
+tests/fixtures/* whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+js/generated/* -diff linguist-generated=true
+# Existing legacy files retain their original bytes as well.
+css/styles.css -text
+novaia.html -text
+serve.js -text
+images/projets/* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+documents/*.pdf -text

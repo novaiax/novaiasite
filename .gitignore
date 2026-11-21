@@ -1,0 +1,8 @@
+.dev.vars
+.dev.vars.*
+.wrangler/
+node_modules/
+*.log
+css/personal.css
+css/activities.css
+js/personal.js

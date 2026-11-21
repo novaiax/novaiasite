@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-21",
+  "projects": [
+    {
+      "slug": "novamemory",
+      "name": "NovaMemory",
+      "category": "Intelligence artificielle",
+      "status": "Projet en évolution",
+      "description": "La mémoire à long terme de mon IA, pour retrouver les informations importantes sur ma vie et mes projets d’une conversation à l’autre.",
+      "deck": "J’ai créé NovaMemory pour que mon IA retrouve ce qui compte : mes projets, mes décisions, mes objectifs et les choses que je lui ai déjà expliquées.",
+      "lead": "Reprendre là où j’en étais, avec une IA qui retrouve le contexte.",
+      "art": "memory",
+      "external": null,
+      "sections": [
+        {
+          "title": "Pourquoi j’en avais besoin",
+          "text": "Quand je passe d’un projet à l’autre, j’ai besoin que mon assistant retrouve les bonnes informations : ce que j’ai décidé, pourquoi je l’ai décidé, mes contraintes et les prochaines étapes. Réexpliquer toute l’histoire à chaque nouvelle conversation fait perdre du temps.\n\nNovaMemory me sert à garder ce contexte dans la durée. Je l’ai construit pour que mon IA puisse s’appuyer sur les échanges précédents quand je reprends un travail."
+        },
+        {
+          "title": "Ce que j’ai construit",
+          "text": "NovaMemory conserve les informations utiles que je choisis de garder : des faits sur mon parcours, des objectifs, des décisions, des préférences de travail ou l’avancement d’un projet. Mon assistant peut ensuite les rechercher au moment où il en a besoin.\n\nLa mémoire est séparée de la conversation en cours. Je peux donc retrouver un choix fait plusieurs semaines auparavant, même en commençant un nouvel échange."
+        },
+        {
+          "title": "Comment je m’en sers",
+          "text": "Au début d’un échange, mon assistant récupère le contexte utile. Si un sujet demande plus de détails, il recherche les souvenirs qui le concernent. De nouvelles informations et les décisions importantes peuvent ensuite être enregistrées pour les prochaines conversations.\n\nC’est devenu un appui quotidien pour organiser mes projets, reprendre un dossier et éviter de repartir de zéro."
+        },
+        {
+          "title": "Un exemple concret",
+          "text": "Pour raconter mon parcours sur ce site, je peux retrouver quand mon activité était encore du freelance sous YannService, puis quand j’ai créé NovaiaWeb. Pour un logiciel, je peux retrouver le besoin de départ, les fonctions que j’ai voulu construire et les décisions prises pendant le développement.\n\nL’intérêt est de redonner ces éléments à mon IA au bon moment, pour qu’elle m’aide à avancer avec le contexte de mon travail."
+        },
+        {
+          "title": "Garder une mémoire que je peux vérifier",
+          "text": "Une information peut changer. J’ai donc travaillé sur les sources et sur l’historique des corrections : d’où vient ce souvenir, à quelle version il correspond et ce qui a été mis à jour.\n\nEn octobre 2026, j’ai fait évoluer le moteur de recherche, la protection et la durabilité de NovaMemory tout en conservant les souvenirs existants. Ce travail de fond permet de continuer à enrichir ma mémoire sans perdre ce que j’ai déjà construit."
+        }
+      ],
+      "related": "novaformation"
+    },
+    {
+      "slug": "novalove",
+      "name": "NovaLove",
+      "category": "Écriture",
+      "status": "Livre publié",
+      "description": "Un livre construit autour de Nova, de l’amour et de la rupture, puis mené jusqu’à l’épreuve papier et la publication.",
+      "deck": "Avec NovaLove, j’ai appris à construire un livre : sa voix, ses chapitres, ses espaces d’écriture, sa couverture et sa version papier.",
+      "lead": "Donner une voix à Nova, puis en faire un livre.",
+      "art": "book",
+      "external": {
+        "url": "/novalove",
+        "label": "Découvrir le livre et son extrait"
+      },
+      "sections": [
+        {
+          "title": "La voix de Nova",
+          "text": "J’ai construit NovaLove autour d’une voix : Nova s’adresse directement au lecteur, lui pose des questions et le pousse à regarder ce qu’il vit. L’amour, la rupture et le fait de s’oublier pour quelqu’un traversent le livre.\n\nJ’ai travaillé avec l’IA sur cette voix et sur la façon de faire avancer les chapitres. Je voulais que Nova ait un ton reconnaissable, avec des passages qui font réfléchir et d’autres qui invitent à écrire."
+        },
+        {
+          "title": "Laisser aussi une place au lecteur",
+          "text": "Les questions et les espaces d’écriture font partie du projet depuis ses premières versions. Je voulais que le lecteur puisse prendre le temps de répondre et mettre ses propres mots à côté du texte.\n\nLa construction du livre a donc demandé de travailler le rythme des chapitres, la place des questions et le lien entre la voix de Nova et celle du lecteur."
+        },
+        {
+          "title": "Apprendre le livre en le fabriquant",
+          "text": "Il a aussi fallu sortir du texte. J’ai travaillé la couverture avant et arrière, les dimensions, les marges et les contraintes de mise en page pour Amazon KDP. J’ai commandé une épreuve papier : un fichier à l’écran devient alors un objet que l’on peut tenir et relire autrement.\n\nCette partie m’a fait apprendre des choses très concrètes sur l’édition et la publication, jusqu’aux ajustements de couverture et de format."
+        },
+        {
+          "title": "Le faire découvrir",
+          "text": "J’ai publié mes premiers TikTok autour du livre en août 2025. J’ai essayé des diaporamas et des dialogues entre un humain et Nova, pour raconter certains thèmes dans un format court.\n\nNovaLove a ainsi ouvert plusieurs chantiers à la fois : l’écriture avec l’IA, la fabrication d’un livre et la façon de le présenter à des lecteurs. La page du livre permet de découvrir l’extrait et l’édition disponible."
+        }
+      ],
+      "related": "novaprompter"
+    },
+    {
+      "slug": "novaformation",
+      "name": "NovaFormation",
+      "category": "Apprentissage",
+      "status": "Logiciel personnel",
+      "description": "Mon logiciel de formation personnel pour organiser mon apprentissage en autodidacte, suivre mon niveau et voir ma progression.",
+      "deck": "NovaFormation est mon logiciel de formation personnel : il m’aide à organiser mon apprentissage en autodidacte, suivre mon niveau et voir ma progression.",
+      "lead": "Organiser mon apprentissage et voir où j’en suis.",
+      "art": "formation",
+      "external": {
+        "url": "https://github.com/novaiax/app-novaformation-mcp",
+        "label": "Voir l’intégration ouverte sur GitHub"
+      },
+      "sections": [
+        {
+          "title": "Une méthode qui me correspond",
+          "text": "Une liste de cours ne suffit pas à construire une formation. J’ai besoin d’organiser ce que je travaille et d’appliquer ce que j’apprends. NovaFormation rassemble mes programmes, mes semaines, mes modules et mes exercices. J’y retrouve la méthode qui me correspond : contrôler mon rythme, prendre mes propres notes, me tester et pratiquer."
+        },
+        {
+          "title": "Le niveau se travaille",
+          "text": "Je l’utilise notamment pour l’anglais oral, la vente et l’éloquence. Une séance devient une trace : ce que j’ai pratiqué, l’objectif travaillé, les difficultés à reprendre et la suite du programme. Les notes et les indicateurs me servent de repères de progression personnels. Ils ne remplacent ni la pratique réelle, ni une évaluation officielle."
+        },
+        {
+          "title": "Un outil qui suit ma vie",
+          "text": "Mon apprentissage ne se limite pas à un cours devant un écran. J’ai aussi voulu y intégrer des activités récurrentes, dont la danse rock. L’application évolue avec cet usage : réorganiser les éléments, distinguer les séances passées des prochaines et garder une vue claire de ce que je fais maintenant. Je construis ma formation et l’outil qui m’aide à la suivre en même temps."
+        }
+      ],
+      "related": "rock-de-strass"
+    },
+    {
+      "slug": "novaiaweb",
+      "name": "NovaiaWeb",
+      "category": "Entrepreneuriat",
+      "status": "Activité en cours",
+      "description": "Mon activité web, commencée en freelance puis devenue mon entreprise.",
+      "deck": "De YannService à NovaiaWeb : faire des sites, résoudre des problèmes techniques et travailler avec de vraies entreprises.",
+      "lead": "J’ai commencé à travailler en freelance sous le nom YannService, de septembre 2025 à janvier 2026. En janvier 2026, j’ai créé ma propre entreprise et lancé NovaiaWeb.",
+      "art": "web",
+      "external": {
+        "url": "https://novaiaweb.com/",
+        "label": "Visiter NovaiaWeb"
+      },
+      "sections": [
+        {
+          "title": "Les premières prestations",
+          "text": "Avant de lancer ma propre agence, j’avais déjà réalisé des prestations techniques en marque blanche. Je travaillais pour le compte d’autres structures. Cette expérience a précédé les projets que j’ai ensuite portés sous mon propre nom."
+        },
+        {
+          "title": "Ce qu’il faut faire fonctionner",
+          "text": "Le travail a compris la création de sites, mais aussi du dépannage : configurer un nom de domaine, régler un problème de certificat ou comprendre pourquoi les e-mails n’arrivent pas. Un site doit être accessible à la bonne adresse et permettre aux messages de parvenir à leur destinataire."
+        },
+        {
+          "title": "Montrer une page que l’on peut ouvrir",
+          "text": "Pour présenter une proposition, j’ai pris l’habitude de préparer des démonstrations en ligne. Cela donne quelque chose de concret à regarder et à parcourir. Cette collection de sites et de maquettes fait aussi partie du chemin qui m’a amené à NovaiaWeb."
+        }
+      ],
+      "related": "trouvejob"
+    },
+    {
+      "slug": "rock-de-strass",
+      "name": "Rock de Strass",
+      "category": "Vie associative",
+      "status": "Engagement en cours",
+      "description": "Je danse à Rock de Strass. Aujourd’hui, je fais aussi partie du bureau et je m’occupe de sa présence en ligne.",
+      "deck": "Je danse avec Rock de Strass et je fais partie de son bureau. J’y réunis mon engagement associatif, la communication digitale et le plaisir de faire vivre un collectif.",
+      "lead": "Danser, et prendre ma place dans l’association.",
+      "art": "rock",
+      "external": {
+        "url": "https://rockdestrass.fr/",
+        "label": "Découvrir l’association"
+      },
+      "sections": [
+        {
+          "title": "Danser et m’impliquer",
+          "text": "Le rock fait partie de ma semaine. Je viens danser, pratiquer avec d’autres et rencontrer des gens. Aujourd’hui, je suis aussi membre du bureau de Rock de Strass.\n\nJe m’occupe de la communication digitale, de la visibilité et de la présence en ligne de l’association. J’ai un rôle concret dans un collectif dont je fais moi-même partie."
+        },
+        {
+          "title": "Donner envie de venir essayer",
+          "text": "Dans ce travail, je pense notamment à quelqu’un qui découvre une vidéo sur Instagram et se demande s’il peut venir sans savoir danser.\n\nJe veux qu’il puisse comprendre comment se passe une soirée, qu’il sache où trouver les informations et qu’il se sente bienvenu. Dans le travail sur le site, cette question a compté autant que le visuel : comment rendre le premier pas plus simple ?"
+        },
+        {
+          "title": "Ce que j’y apporte",
+          "text": "J’ai réalisé rockdestrass.fr avec NovaiaWeb. J’y mets mes compétences en développement, en référencement et en communication. C’est aussi l’occasion de construire quelque chose pour une association dont je fais moi-même partie.\n\nLe rock, l’impro et l’éloquence se croisent dans ma semaine. Je travaille la prise de parole chez moi, puis je retrouve les autres sur le terrain. L’association donne une place concrète à ces échanges et à mon envie de m’impliquer."
+        }
+      ],
+      "related": "novaiaweb"
+    },
+    {
+      "slug": "novaprompter",
+      "name": "NovaPrompter",
+      "category": "Application Windows",
+      "status": "Version publique",
+      "description": "Un téléprompteur qui laisse de la place à ma voix et à l’improvisation.",
+      "deck": "Garder le fil, garder sa liberté.",
+      "lead": "Un téléprompteur pour garder le fil sans perdre ma liberté.",
+      "art": "prompter",
+      "external": {
+        "url": "https://github.com/novaiax/NovaPrompter-App",
+        "label": "Voir NovaPrompter sur GitHub"
+      },
+      "sections": [
+        {
+          "title": "Parler à mon rythme",
+          "text": "Je prépare des textes pour mes vidéos et mes prises de parole. Je voulais pouvoir les suivre sans devenir prisonnier d’un défilement. Avec NovaPrompter, l’idée est de garder sa place lorsqu’on improvise, puis de retrouver le passage quand on revient au script. Je peux ajouter une idée ou reformuler sans abandonner le fil."
+        },
+        {
+          "title": "Un outil pensé pour la parole",
+          "text": "Je ne lis pas toujours chaque mot exactement comme il est écrit. Le mode vocal travaille donc le recalage à partir des mots récents et la reprise après une digression. Cette souplesse est au cœur du produit : le texte prépare la parole, il doit aussi lui laisser de la place."
+        },
+        {
+          "title": "Le partager simplement",
+          "text": "J’ai ensuite rendu l’application accessible à d’autres, avec une version publique et un installateur Windows téléchargeable sans compte GitHub. Le projet relie un besoin personnel, le travail sur la reconnaissance vocale et le soin apporté à une application que quelqu’un d’autre peut découvrir."
+        }
+      ],
+      "related": "novalove"
+    },
+    {
+      "slug": "trouvejob",
+      "name": "TrouveJob",
+      "category": "Projet web",
+      "status": "Bêta privée",
+      "description": "Réunir la recherche d’emploi pour arrêter de chercher partout.",
+      "deck": "Des offres dispersées à une recherche lisible.",
+      "lead": "Rassembler les offres pour rendre la recherche d’emploi plus simple.",
+      "art": "jobs",
+      "external": {
+        "url": "https://trouvejob.fr/",
+        "label": "Voir l’état actuel de TrouveJob"
+      },
+      "sections": [
+        {
+          "title": "Partir d’un outil, penser un produit",
+          "text": "Passer la soirée entre plusieurs sites, recroiser les mêmes annonces, comparer et préparer ses candidatures : c’est le problème de départ. J’avais déjà travaillé sur un pipeline personnel de recherche et de suivi. En juin 2026, j’ai commencé à en faire un produit avec une première page de présentation : TrouveJob."
+        },
+        {
+          "title": "Clarifier à qui il s’adresse",
+          "text": "J’ai envisagé une entrée par les étudiants, puis j’ai corrigé ce positionnement : le besoin concerne aussi les personnes qui cherchent un emploi ou une alternance, quel que soit leur parcours. Le cœur du projet est le temps passé à chercher et à trier. Je veux ensuite y intégrer le rapprochement des offres et l’aide à la candidature."
+        },
+        {
+          "title": "Apprendre à expliquer la valeur",
+          "text": "Préparer le pitch pour le Startup Weekend m’a obligé à formuler le problème avec des mots simples. Regrouper, dédoublonner, faire ressortir les offres pertinentes : c’est ce que je dois rendre compréhensible avant de parler d’IA. TrouveJob est aussi un travail de produit et de positionnement, au-delà de l’agrégation technique."
+        }
+      ],
+      "related": "novaformation"
+    }
+  ],
+  "parcours": {
+    "about": "<p class=\"eyebrow\">Le fil conducteur</p><h2>Commencer par faire.</h2><p>« Learning by working » : apprendre en faisant. C’est ce qui guide mon parcours depuis mes premiers projets.</p><p>Mon parcours n’est pas tout à fait classique. Le bac en poche, je décide de me lancer dans l’entrepreneuriat, tout en me formant en autodidacte à l’intelligence artificielle et à l’informatique. Je commence par travailler en freelance, en marque blanche, de septembre 2025 à janvier 2026. Puis, en janvier 2026, je crée ma propre structure : NovaiaWeb.</p><p>Je travaille sur l’intelligence artificielle, les outils numériques et le web. Je m’intéresse aussi à la façon d’apprendre, de présenter une idée et de la confronter à un usage réel.</p><p>J’apprends mieux quand je peux contrôler mon rythme et mettre tout de suite quelque chose en pratique. Un livre peut me donner une idée ; un exercice, un projet ou une discussion me permet de voir ce que j’en fais. En 2026, j’ai résumé cette méthode par une phrase : « former l’instinct par l’action ».</p><p>NovaIA relie ces créations. Ce site en raconte l’évolution et en garde les étapes : les projets publiés, ceux qui continuent de grandir et tout ce qu’il me reste à apprendre.</p>",
+    "timeline": "<li><time>Septembre 2025 à janvier 2026</time><div><h3>Travailler en freelance.</h3><p>Je réalise des projets pour des clients sous le nom YannService.</p></div></li><li><time>Janvier 2026</time><div><h3>Je crée mon entreprise : NovaiaWeb.</h3><p>Après cette période en freelance, je crée ma propre entreprise. YannService devient NovaiaWeb.</p><a href=\"/projets/novaiaweb\">L’histoire de NovaiaWeb</a></div></li><li><time>Au fil de 2026</time><div><h3>Créer mes propres outils.</h3><p>Les projets prennent différentes formes : mémoire pour assistants IA, applications Windows, outils d’apprentissage. NovaLove ouvre un autre terrain, celui du livre.</p><a href=\"/projets\">Entrer dans l’atelier</a></div></li><li id=\"pitch-startup-weekend\"><time>Octobre 2026</time><div><h3>Mettre une idée face à une salle.</h3><p>Au Startup Weekend de Strasbourg, je travaille en équipe sur un projet entrepreneurial et participe aux pitchs, jusqu’à la présentation devant 140 personnes.</p></div></li><li><time>2026–2027</time><div><h3>Un cadre pour continuer.</h3><p>J’obtiens le Statut national étudiant-entrepreneur avec Pépite ETENA et rejoins le Programme D2E à l’Université de Strasbourg. Une nouvelle étape pour travailler le projet entrepreneurial.</p></div></li>",
+    "practices": [
+      {
+        "id": "calisthenics",
+        "focus": "Force, équilibre et régularité",
+        "name": "La calisthenics",
+        "html": "<p>Je pratique la calisthenics et la musculation depuis 2025. Je cherche surtout à développer ma force et le contrôle de mon corps. Fin 2025, tenir un handstand quelques secondes était déjà un repère concret de progression.</p><p>J’ai ensuite ajusté la place du sport dans ma semaine : avec la danse, l’impro et les autres activités, je garde davantage la calisthenics pour le week-end. Je retrouve dans cet entraînement quelque chose que j’aime aussi dans le code : essayer un mouvement, comprendre ce qui bloque, puis recommencer.</p>"
+      },
+      {
+        "id": "danse",
+        "focus": "Danser et m’impliquer",
+        "name": "Le rock, avec Rock de Strass",
+        "html": "<p>Je danse avec Rock de Strass et je fais partie du bureau de l’association. J’y prends en charge la communication digitale et la visibilité, et j’ai réalisé le site avec NovaiaWeb.</p><p>C’est une activité où mes projets et ma vie associative se rejoignent : je partage les soirées, et j’apporte aussi mes compétences pour les faire connaître.</p><p><a href=\"https://www.instagram.com/rock_de_strass/\">@rock_de_strass</a> · <a href=\"/projets/rock-de-strass/\" data-atlas-link>Mon engagement dans l’association</a></p>"
+      },
+      {
+        "id": "improvisation",
+        "focus": "Écouter et réagir",
+        "name": "Le théâtre d’improvisation",
+        "html": "<p>À Strasbourg, j’ai découvert une impro très physique, avec du mouvement et un engagement immédiat. En septembre 2026, je la décrivais presque comme du sport, tant elle me demandait d’énergie. J’ai aussi obtenu une place dans un atelier hebdomadaire proposé par le CROUS.</p><p>Ce qui m’intéresse, c’est de devoir écouter, rebondir et construire avec les autres sur le moment. C’est un terrain réel pour ce que je travaille aussi dans mes entraînements à la prise de parole.</p>"
+      },
+      {
+        "id": "eloquence",
+        "focus": "Lire, répéter, prendre la parole",
+        "name": "L’éloquence",
+        "html": "<p>Je travaille l’éloquence depuis 2025. Mon programme a mêlé lecture à voix haute, répétition de passages vidéo, improvisation, débats et exercices de répartie. J’ai travaillé notamment à partir de Jean Amadou, puis consacré plusieurs semaines à Haroun pour observer son rythme, ses silences et son expression.</p><p>J’avais remarqué qu’en changeant de modèle chaque semaine, je me dispersais. J’ai donc choisi de rester plus longtemps sur un même orateur et de répéter. En parallèle, je pratique devant d’autres personnes : impro, ateliers et pitchs, dont le Startup Weekend de Strasbourg en octobre 2026.</p>"
+      },
+      {
+        "id": "capoeira",
+        "focus": "Découvrir un autre mouvement",
+        "name": "La capoeira",
+        "html": "<p>La capoeira est une découverte plus récente dans mes activités. En novembre 2026, je me suis intéressé au cours proposé à Strasbourg et à cette rencontre entre danse et combat. Elle m’ouvre un autre terrain de mouvement, en complément du rock et de la calisthenics.</p>"
+      },
+      {
+        "id": "course",
+        "name": "La course à pied",
+        "focus": "Courir et suivre ma progression",
+        "html": "<p>Je cours depuis 2025, seul et en groupe. En 2026, j’ai structuré davantage mes séances, entre endurance, fractionné et côtes. Je suis mes temps et mes distances pour voir ce qui évolue.</p><p>Les sorties en groupe donnent aussi une place aux rencontres dans mon entraînement, en complément de la danse et de la calisthenics.</p>"
+      }
+    ],
+    "learning": "<div><dt>La lecture.</dt><dd>Pour l’éloquence, j’ai choisi de lire plusieurs livres sur un même sujet et de mettre leurs principes à l’épreuve. Je reviens sur les mêmes idées dans des exercices et des situations réelles, jusqu’à ce qu’elles deviennent plus naturelles.</dd></div><div><dt>L’anglais oral.</dt><dd>J’utilise notamment le shadowing : écouter un passage, le reprendre avec le texte, puis le répéter à voix haute. Mes séances servent à pratiquer l’oral et à repérer un point précis à travailler, plutôt qu’à accumuler des vidéos regardées.</dd></div><div><dt>Suivre ce que je travaille.</dt><dd>NovaFormation me permet d’organiser cet apprentissage personnel. Après une séance d’anglais, d’éloquence ou de vente avec mon assistant IA, je peux garder la durée, les retours et les points de progression dans le même outil.</dd></div>"
+  },
+  "privacy": "<h2>Le site</h2><p>Novaia.org est le site personnel de Yann Wirtz. Pour toute question : <a href=\"mailto:contact@novaia.org\">contact@novaia.org</a>. Le site est hébergé par Cloudflare. Les sites externes liés appliquent leurs propres règles.</p><h2>Le journal et les likes</h2><p>La lecture ne demande pas de compte. À l’ouverture d’un article du journal, un identifiant anonyme est conservé dans un cookie pour retrouver votre choix lors d’une prochaine visite. Les réactions sont enregistrées dans une base de données ; elles ne constituent pas un suivi publicitaire. Le système de likes n’utilise pas votre adresse IP comme identifiant.</p><p>Le cookie anonyme dure au maximum un an. Effacer les cookies du navigateur supprime la possibilité de retrouver vos anciens choix sur cet appareil. Un clic supplémentaire sur un cœur actif retire votre réaction.</p><h2>Administration privée</h2><p>Une session d’administration protégée par mot de passe permet de gérer les publications. Son cookie expire après huit heures. La publication et la modification sont réservées à l’administrateur.</p><h2>Liens, images et mesures</h2><p>Le site personnel charge ses images et ses polices depuis son propre domaine. Les liens vers Instagram, TikTok, YouTube et les autres plateformes ouvrent leurs sites ; aucun contenu social embarqué n’est nécessaire à la lecture.</p><p>Les anciennes pages conservées, notamment le livre et les archives, peuvent avoir leurs propres ressources et outils de mesure. Leurs informations légales restent disponibles sur les pages concernées. Cloudflare peut traiter des données techniques nécessaires à la sécurité et à la distribution du site.</p>"
+}

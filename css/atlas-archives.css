@@ -1,0 +1,51 @@
+/* Archive article markup is kept verbatim. All presentation stays scoped here. */
+.atlas-archive .archive-main{width:min(780px,calc(100% - 80px));margin-inline:auto;padding-bottom:70px}
+.atlas-archive .archive-context{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding-top:32px;font-size:.85rem;color:#526773}
+.atlas-archive .archive-context a{min-height:44px;display:inline-flex;align-items:center;text-decoration:none}
+.atlas-archive .archive-context a:hover{text-decoration:underline;text-underline-offset:4px}
+.atlas-archive .blog-header{padding:48px 0 37px;border-bottom:1px solid #c8d1d5;margin-bottom:38px}
+.atlas-archive .blog-date{display:block;font-size:.8rem;color:#526773;letter-spacing:.06em;margin-bottom:22px}
+.atlas-archive .blog-header h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(2.75rem,5.2vw,4.7rem);line-height:1.06;letter-spacing:-.055em;margin:0 0 25px;overflow-wrap:anywhere}
+.atlas-archive .blog-subtitle{font-size:1.25rem;line-height:1.65;color:#526773;margin:0;max-width:690px}
+.atlas-archive .blog-content{font-size:1.06rem;line-height:1.9;overflow-wrap:break-word}
+.atlas-archive .blog-content h2{font-family:Georgia,'Times New Roman',serif;font-size:2rem;font-weight:400;letter-spacing:-.025em;line-height:1.2;margin:46px 0 20px}
+.atlas-archive .blog-content h3{font-family:Georgia,'Times New Roman',serif;font-size:1.5rem;font-weight:400;line-height:1.3;margin:30px 0 15px}
+.atlas-archive .blog-content p{margin:0 0 22px}
+.atlas-archive .blog-content a{color:#2d5b57;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;overflow-wrap:anywhere}
+.atlas-archive .blog-content a:hover{color:#a44d35}
+.atlas-archive .blog-content strong{font-weight:650;color:#173244}
+.atlas-archive .blog-content ul,.atlas-archive .blog-content ol{padding-left:1.45em;margin:0 0 25px}
+.atlas-archive .blog-content li{margin-bottom:10px;padding-left:5px}
+.atlas-archive .blog-content li::marker{color:#a95b43}
+.atlas-archive .blog-content blockquote{margin:32px 0;padding:5px 0 5px 25px;border-left:2px solid #b26a54;color:#425b68;font-family:Georgia,'Times New Roman',serif;font-size:1.4rem}
+.atlas-archive .blog-content table{display:block;max-width:100%;width:100%;overflow-x:auto;border-collapse:collapse;margin:28px 0 32px;font-size:.9rem;line-height:1.65;overscroll-behavior-x:contain;scrollbar-color:#a3b6ba transparent}
+.atlas-archive .blog-content thead{background:#dbe5e6}
+.atlas-archive .blog-content th{font-size:.8rem;font-weight:600;letter-spacing:.03em;text-align:left;color:#294e53;padding:14px 16px;border-bottom:1px solid #aebfc2;min-width:110px}
+.atlas-archive .blog-content td{padding:13px 16px;border-bottom:1px solid #c8d1d5;vertical-align:top;color:#425b68;min-width:110px}
+.atlas-archive .blog-content tr:hover td{background:#e0e9e9}
+.atlas-archive .blog-content pre{max-width:100%;overflow-x:auto;margin:25px 0 30px;padding:22px 25px;border:1px solid #c6d2d4;background:#e0e8e9;border-radius:5px;line-height:1.7;scrollbar-color:#a3b6ba transparent}
+.atlas-archive .blog-content code{font-family:Consolas,'SFMono-Regular',monospace;font-size:.85em;background:#dfe8e9;color:#345c5a;padding:3px 5px;border-radius:3px;overflow-wrap:anywhere}
+.atlas-archive .blog-content pre code{background:none;padding:0;border:0;overflow-wrap:normal}
+.atlas-archive .blog-author-box{display:flex;gap:20px;align-items:flex-start;margin-top:52px;padding:27px 0;border-top:1px solid #c8d1d5;border-bottom:1px solid #c8d1d5}
+.atlas-archive .blog-author-box img{width:64px;height:76px;flex-shrink:0;object-fit:cover;object-position:center 25%;border:5px solid #f7f7ef;box-shadow:0 4px 12px #17324414;transform:rotate(-4deg)}
+.atlas-archive .blog-author-box strong{display:block;margin-bottom:7px;font-size:1rem}
+.atlas-archive .blog-author-box p{font-size:.9rem;line-height:1.7;color:#526773;margin:0}
+.atlas-archive .archive-continuation{padding-top:36px;display:flex;gap:18px 30px;flex-wrap:wrap}
+.atlas-archive .archive-continuation .eyebrow{width:100%;margin:0 0 2px}
+.atlas-archive .archive-continuation a{margin-left:0}
+@media(max-width:760px){
+ .atlas-archive .archive-main{width:calc(100% - 40px);padding-bottom:45px}
+ .atlas-archive .archive-context{padding-top:18px;font-size:.8rem}
+ .atlas-archive .blog-header{padding:25px 0 28px;margin-bottom:28px}
+ .atlas-archive .blog-date{font-size:.75rem;margin-bottom:18px}
+ .atlas-archive .blog-header h1{font-size:clamp(2.35rem,9.3vw,3.5rem);letter-spacing:-.045em;line-height:1.1;margin-bottom:22px}
+ .atlas-archive .blog-subtitle{font-size:1.15rem;line-height:1.65}
+ .atlas-archive .blog-content{font-size:1rem;line-height:1.85}
+ .atlas-archive .blog-content h2{font-size:1.75rem;margin-top:34px}
+ .atlas-archive .blog-content h3{font-size:1.4rem}
+ .atlas-archive .blog-content pre{padding:18px 16px;font-size:.9rem}
+ .atlas-archive .blog-content th,.atlas-archive .blog-content td{padding:11px 12px;min-width:115px}
+ .atlas-archive .blog-author-box{gap:17px;padding:22px 0;margin-top:36px}
+ .atlas-archive .blog-author-box img{width:53px;height:65px}
+ .atlas-archive .archive-continuation{padding-top:28px;gap:14px}
+}

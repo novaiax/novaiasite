@@ -19,3 +19,25 @@ wrangler.toml
 serve.js
 start-v9.bat
 *.log
+server/
+migrations/
+tests/
+docs/
+fonts/OFL.txt
+.dev.vars
+.dev.vars.*
+package.json
+package-lock.json
+pnpm-lock.yaml
+AGENTS.md
+work/
+scripts/
+data/
+*.map
+
+# Previous personal draft is kept locally but no longer used by the Atlas.
+js/personal.js
+css/personal.css
+css/activities.css
+
+.git

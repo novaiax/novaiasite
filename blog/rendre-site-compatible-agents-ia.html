@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -16,10 +16,6 @@
   <title>Comment rendre son site compatible avec les agents IA | NovaIA</title>
 
   <link rel="icon" href="../images/favicon/favicon.ico" sizes="any">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="blog.css">
 
   <!-- Schema.org Article -->
   <script type="application/ld+json">
@@ -97,20 +93,25 @@
     ]
   }
   </script>
+
+  <meta name="theme-color" content="#e9eff2">
+  <link rel="preload" href="/fonts/newatlas-inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/atlas.css">
+  <link rel="stylesheet" href="/css/atlas-archives.css">
+  <link rel="alternate" type="application/rss+xml" title="Le journal de Yann Wirtz" href="/journal.xml">
+  <script type="module" src="/js/atlas.js"></script>
 </head>
-<body>
-
-<nav class="blog-nav">
-  <div class="blog-nav-inner">
-    <a href="https://novaia.org" class="blog-nav-logo">
-      <img src="../images/logonova.webp" alt="NovaIA" width="28" height="28">
-      <span>NovaIA</span>
-    </a>
-    <a href="index.html" class="blog-nav-link">Blog</a>
-  </div>
-</nav>
-
-<main class="blog-main">
+<body class="atlas-site atlas-archive" data-page="archive-article">
+<a class="skip-link" href="#main-content">Aller au contenu</a>
+<header class="atlas-header">
+  <a class="atlas-wordmark" href="/" aria-label="NovaIA, accueil de Yann">novaia<small>Yann Wirtz</small></a>
+  <button class="atlas-menu-toggle" id="atlas-menu-toggle" type="button" aria-expanded="false" aria-controls="atlas-navigation" aria-label="Ouvrir le menu">Menu</button>
+  <nav class="atlas-nav" id="atlas-navigation" aria-label="Navigation principale">
+    <a href="/parcours">Parcours</a><a href="/projets">Créations</a><a href="/journal" aria-current="page">Journal</a><a href="/yann">Mes liens</a>
+  </nav>
+</header>
+<main id="main-content" class="archive-main">
+  <nav class="archive-context" aria-label="Fil d’Ariane"><a href="/">L’Atlas</a><span aria-hidden="true">/</span><a href="/blog/">Les archives</a></nav>
 <article class="blog-article">
 
   <header class="blog-header">
@@ -366,25 +367,13 @@ Sitemap: https://votresite.fr/sitemap.xml</code></pre>
 
     <p>Les agents IA sont en train de devenir un canal d'acquisition a part entiere. Les sites qui sont lisibles par ces agents maintenant prennent une avance enorme. C'est le même moment que le SEO en 2005. La fenêtre est ouverte. Autant en profiter.</p>
 
-    <div class="blog-author-box">
-      <img src="../images/yann.png" alt="Yann Wirtz" loading="lazy">
-      <div>
-        <strong>Yann Wirtz</strong>
-        <p>18 ans, fondateur de <a href="https://novaia.org">NovaIA</a>. Je construis des outils IA et je partage tout en public. <a href="https://www.youtube.com/@NovaIA_org">YouTube</a> / <a href="https://www.twitch.tv/novaia_">Twitch</a></p>
-      </div>
-    </div>
+    <div class="blog-author-box"><img src="/images/personnel/yann.jpg" alt="" aria-hidden="true" loading="lazy"><div><strong>Yann Wirtz</strong><p>Étudiant-entrepreneur à Strasbourg, créateur de <a href="https://novaiaweb.com/">NovaiaWeb</a>. Programme D2E, accompagné par Pépite ETENA. Je crée des outils, j’apprends et j’entreprends.</p><a href="/parcours/">Découvrir mon parcours</a></div></div>
 
   </section>
 
 </article>
+  <aside class="archive-continuation"><p class="eyebrow">La suite du chemin</p><a class="text-link" href="/blog/">Retrouver les premières pages</a><a class="text-link" href="/journal/">Lire le journal actuel</a></aside>
 </main>
-
-<footer class="blog-footer">
-  <div class="blog-footer-inner">
-    <span>&copy; 2026 NovaIA</span>
-    <a href="https://novaia.org">novaia.org</a>
-  </div>
-</footer>
-
+<footer class="atlas-footer"><a class="atlas-wordmark" href="/">novaia<small>Yann Wirtz</small></a><p>Strasbourg aujourd’hui. Ambition Paris.</p><nav aria-label="Liens de bas de page"><a href="/journal.xml">Flux RSS</a><a href="/confidentialite">Confidentialité</a><a href="mailto:contact@novaia.org">M’écrire</a></nav></footer>
 </body>
 </html>

@@ -1,6 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "novaia-site",
+  "workers_dev": true,
+  "preview_urls": true,
+  "routes": [
+    {"pattern":"novaia.org","custom_domain":true},
+    {"pattern":"www.novaia.org","custom_domain":true}
+  ],
   "main": "_worker.js",
   "compatibility_date": "2025-09-27",
   "observability": {
@@ -9,8 +15,12 @@
   "assets": {
     "directory": ".",
     "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/admin", "/admin/*", "/journal/*", "/journal-plan", "/journal.xml", "/journal-sitemap.xml", "/media/journal/*", "/tiktok/*", "/novaia", "/novaia.html", "/novamemory", "/novamemory.html"],
     "not_found_handling": "404-page"
   },
+  "d1_databases": [{"binding":"JOURNAL_DB","database_name":"novaia-journal","database_id":"105d16fb-9a9d-4564-b726-0a1bdfb51734","migrations_dir":"migrations"}],
+  // Optional JOURNAL_MEDIA R2 binding: enable only after the account owner
+  // activates the R2 subscription. Hosted image URLs already work without it.
   "compatibility_flags": [
     "nodejs_compat"
   ]

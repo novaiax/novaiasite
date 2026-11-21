@@ -5,9 +5,24 @@
  * then falls back to static assets serving via env.ASSETS binding.
  */
 
+import { handleJournal } from './server/journal.js';
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    const legacyDestinations = {
+      '/novaia': '/parcours/',
+      '/novaia.html': '/parcours/',
+      '/novamemory': '/projets/novamemory/',
+      '/novamemory.html': '/projets/novamemory/',
+    };
+    if (legacyDestinations[url.pathname]) {
+      return new Response(null, {status:301,headers:{Location:legacyDestinations[url.pathname] + url.search}});
+    }
+
+    const journal = await handleJournal(request, env);
+    if (journal) return journal;
 
     // ───────── Dynamic routes ─────────
     if (url.pathname === "/tiktok/callback") {

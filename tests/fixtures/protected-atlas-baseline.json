@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-11-21T12:03:58.150685+00:00",
+  "files": {
+    "yann/index.html": "a338a6339e059f39ea335e4d9c95b728116d1f07dcbb185af935ee47ec4176eb",
+    "css/links.css": "0be9c00493d9305a6251895010abba23d34024a3650fd7564c360ba04d225c7b",
+    "fonts/inter.ttf": "0be2399ea925f1f83ff974764761da9860ec50742ed29a5d4c1ffd0c5c7ac3a8",
+    "images/personnel/yann.jpg": "88ad53f156cdbc4695d62e87a36050e41acaef7822d171bffd1e4d24fc10e378",
+    "images/liens/novaiaweb.png": "dae3d97a2de1bd6e1358e57cc77fe3587a668e272d91f89c48fb481541825d01",
+    "images/liens/github-nw.svg": "f1752ec99d5ccc6718ae986f588e3124f70a34faab3870a619f66d807322a1b5",
+    "images/linkedin.webp": "c58cf46670bf232721b2597d7c8fc0b4d83c5baeede4de619eb03cb1e8eb53eb",
+    "images/personnel/monogram.svg": "d60949afcb35bec77bcfcc21a6edfa5518dd9f335ba698c762c593797921cf8f",
+    "novalove.html": "aa9a0795a7d967209c6761869c811b2b72c3fa1216bc57baff45a4393e0ff969",
+    "extraitnovalove.html": "54eddd2d655b0fdeb07a4a7657fd4e2b185dec00ded3302e6ef75ff86bd62d14",
+    "novabook.html": "91e21c94db6b0a11b5bb26ec1673eee560004a24aee67792a7c4d6862967ffef",
+    "conseils/comment-se-remettre-dune-rupture.html": "c38b7d38e58dfc7eaa2bcf7be39c9e66a48d61f528573db4a1177d4492ace97c",
+    "css/novalovestyles.css": "d9b804f70561e551df08598052cbe7308c02d8f8c4c837ace961dfa41021a546",
+    "js/novalove.js": "6b85b4a6ca59ecf1f44b31868030e73e88e6aa275fb36b29a5872b8b2f048ec0",
+    "images/couvertureavant.png": "d5bc9696809c6278f83cefaf5592296d35641aa8d2af9affce174a58dd33403c",
+    "images/couvertureavant.webp": "43aff00a6a245761a19cb94ff571fcb9f2de630273079e64326426242c9796ff",
+    "images/logonova.webp": "ecc5f720f7b60fda03ef554842cf427211c5cc61fdc479c46e74b1650069d627",
+    "images/favicon/apple-touch-icon.png": "57afb7bed22207439040ef92931628ca499b30b68e86e99db674593ccfef58c9",
+    "images/favicon/favicon-96x96.png": "b02f4cccce031dfc319bcd8c83cd80181ff72490e2572c15b0bf17c5727bc588",
+    "images/favicon/favicon.ico": "9c5a72d18770a9190ad20fb855f53dbe1d2e9e1390c1fc7ae1709549d2b7ddda",
+    "images/favicon/favicon.svg": "cbf11b68be1b4d05d772152815b74b12c173b03a7ee502adf5e21612d6737d9d",
+    "images/favicon/site.webmanifest": "805171dc5ea054818720e45294ff48eb4656109461b3e53995228c65f1524c6b",
+    "images/favicon/web-app-manifest-192x192.png": "22a1ac4c2024e3b2ad6f25e1adb917791c60df0b748efb42110ec0c963168689",
+    "images/favicon/web-app-manifest-512x512.png": "a673c17bbd8dff8e00f858ae02dea1c6fa8fba0e441ed10846abbc82bb20f3f7"
+  }
+}

@@ -1,0 +1,58 @@
+/* Page /yann: approved identity, independent of the main site's redesign. */
+@font-face{font-family:Inter;src:url('/fonts/inter.ttf') format('truetype');font-display:swap;font-weight:100 900}
+*{box-sizing:border-box}
+body{margin:0;color:#202328;font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+a:focus-visible{outline:3px solid #2448c6;outline-offset:5px}
+img{max-width:100%;display:block}
+h1,p{margin:0}
+::selection{background:#d8f3a6;color:#142217}
+.links-body{background:#edf0f6;background-image:radial-gradient(ellipse at 10% 0%,#dbe4fa 0%,transparent 60%),radial-gradient(ellipse at 100% 100%,#e6ecd8 0%,transparent 55%);min-height:100vh}
+.links-page{width:min(540px,calc(100% - 40px));margin:auto;padding:30px 0}
+.links-profile{text-align:center;position:relative}
+.tiny-wordmark{font-size:18px;font-weight:750;letter-spacing:-1px;display:block;text-align:left;margin-bottom:24px}
+.links-profile>img{width:106px;height:106px;border-radius:50%;object-fit:cover;object-position:center 35%;margin:0 auto 20px;border:4px solid #fff;box-shadow:0 8px 20px #273b6310}
+.links-profile h1{font-size:2rem;letter-spacing:-.05em;line-height:1.08;font-weight:650;display:flex;gap:10px;justify-content:center;align-items:center}
+.links-profile h1>span{font-size:22px;color:#2440ac}
+.links-profile p{color:#5d626b;font-size:.875rem;margin-top:15px;line-height:1.65}
+.profile-handle{font-size:.75rem;color:#4b6092;display:inline-block;margin-top:12px}
+.bio-links{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.bio-link{background:#ffffffb8;border:1px solid #fff;border-radius:12px;padding:18px;display:flex;align-items:center;gap:15px;box-shadow:0 3px 12px #12244a04;transition:transform .2s,background .2s;min-height:86px}
+.bio-link:hover{transform:translateY(-2px);background:#fff}
+.bio-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;background:#edf1f8;border-radius:10px;color:#405795;font-size:1.1rem;letter-spacing:-.05em;font-weight:600}
+.bio-icon img{width:27px;height:27px;object-fit:contain}
+.bio-icon--novaiaweb img{width:34px;height:34px;border-radius:7px}
+.bio-link>span:nth-child(2){flex:1}
+.bio-link strong{font-size:.92rem;line-height:1.4;display:block}
+.bio-link small{display:block;font-size:.75rem;line-height:1.5;color:#727b8b;margin-top:3px}
+.bio-primary{background:#2440ac;color:#fff;border-color:#2440ac}
+.bio-primary:hover{background:#1b328e}
+.bio-primary .bio-icon{background:#ffffff18;color:white}
+.bio-primary small{color:#d6dffb}
+.links-footer{display:flex;justify-content:space-between;font-size:.75rem;padding:30px 8px;color:#737f94}
+/* Brand treatments keep the approved layout; only these links are affected. */
+.bio-link--novalove,.bio-link--novaiaweb{position:relative;isolation:isolate;overflow:hidden}
+.bio-link--novalove>span,.bio-link--novaiaweb>span{position:relative;z-index:1}
+.bio-link--novalove{background:#f7f6f2;border-color:#e2dae8}
+.bio-link--novalove:hover{background:#f7f6f2}
+.bio-link--novalove::before{content:"";position:absolute;inset:-25%;z-index:0;background:radial-gradient(ellipse at 18% 40%,#34c6eb30,transparent 55%),radial-gradient(ellipse at 80% 65%,#9870e638,transparent 60%);animation:novalove-card-light 9s ease-in-out infinite alternate;pointer-events:none}
+.bio-link--novalove-tiktok::before{animation-delay:-4.5s}
+.bio-link--novalove .bio-icon{background:#e7e3ed;border:1px solid #ffffff96;box-shadow:0 2px 10px #70465b0c}
+.bio-link--novalove .novalove-word{color:#6e4d85;animation:novalove-word-color 7s ease-in-out infinite alternate}
+.bio-link--novalove small{color:#69636b}
+.bio-link--novalove .bio-icon img{filter:drop-shadow(0 0 2px #34c6eb40);animation:novalove-logo-light 7s ease-in-out infinite alternate}
+.bio-link--novaiaweb{color:#f7f4ed;background:#0b1b46;border-color:#17325c;box-shadow:0 5px 18px #0b1b4618}
+.bio-link--novaiaweb:hover{background:#0b1b46}
+.bio-link--novaiaweb::before{content:"";position:absolute;inset:-50%;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 18% 55%,#315b969c,transparent 46%),radial-gradient(ellipse at 82% 20%,#1b4a7860,transparent 46%),radial-gradient(ellipse at 65% 85%,#b9503525,transparent 38%);animation:novaiaweb-light 10s ease-in-out infinite alternate}
+.bio-link--novaiaweb::after{content:"";position:absolute;top:-90%;bottom:-90%;width:40%;left:-65%;z-index:0;pointer-events:none;background:linear-gradient(90deg,transparent,#b1cffb1c,transparent);transform:rotate(18deg);animation:novaiaweb-reflection 12s ease-in-out infinite}
+.bio-link--novaiaweb small{color:#c8d3e9}
+.bio-link--novaiaweb .bio-icon{background:#f7f4ed;border:1px solid #ffffff30;box-shadow:0 0 12px #648cca20}
+.bio-icon--github img{width:34px;height:34px}
+@keyframes novalove-card-light{from{transform:translate3d(-4%,0,0);opacity:.72}to{transform:translate3d(4%,0,0);opacity:1}}
+@keyframes novalove-word-color{from{color:#6e4d85}to{color:#225f85}}
+@keyframes novalove-logo-light{from{filter:drop-shadow(0 0 2px #34c6eb40)}to{filter:drop-shadow(0 0 5px #9870e680)}}
+@keyframes novaiaweb-light{from{transform:translate3d(-5%,0,0);opacity:.65}to{transform:translate3d(7%,4%,0);opacity:1}}
+@keyframes novaiaweb-reflection{0%,24%{left:-65%;opacity:0}35%{opacity:1}65%{left:140%;opacity:0}100%{left:140%;opacity:0}}
+@media(max-width:760px){.links-page{padding-top:22px}.links-profile .tiny-wordmark{margin-bottom:15px}.links-profile>img{width:95px;height:95px}.links-profile h1{font-size:1.85rem}.links-profile p{font-size:.85rem}.bio-link{padding:16px 14px;gap:12px}.bio-link strong{font-size:.875rem}.bio-link small{font-size:.72rem}.bio-icon{width:38px;height:38px;flex-basis:38px}.bio-links{margin-top:25px}}
+@media(max-width:360px){.links-page{width:calc(100% - 28px)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

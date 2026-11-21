@@ -113,3 +113,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://novaia.org/sitemap.xml
+
+Sitemap: https://novaia.org/journal-sitemap.xml

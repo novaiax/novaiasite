@@ -14,6 +14,8 @@ Pour les textes : au moins trois recherches réelles distinctes dans NovaMemory 
 
 Derniers choix : les sept fiches clients sont retirées des créations personnelles ; conserver NovaiaWeb. Les déclinaisons privées de mémoire ne sont pas citées. Le logo NovaMemory retenu est le cerveau violet fourni par Yann, et NovaHub reprend l’icône orbitale orange fournie. Employer les vrais logos des projets sur la carte, les fiches et l’écosystème. CS50x est présenté dans le parcours avec le certificat VERIFIED edX / HarvardX délivré le 14 janvier 2026, lien officiel ea8d527454164678b3742bc0f8901702. Le PDF affiché est une impression fidèle de cette page officielle. Il remplace l’ancien certificat CS50 standard 2025 ; ne pas en faire un diplôme universitaire ni un projet principal sur l’accueil.
 
+Libellés publics CS50 demandés ensuite : « CS50x · Harvard » et « Certificat vérifié ». Ne pas citer la plateforme dans le texte de présentation ; conserver le document authentique et son URL de vérification.
+
 ## Contenu et comportement
 
 - YannService freelance : septembre 2025 à janvier 2026, puis création de NovaiaWeb en janvier 2026.

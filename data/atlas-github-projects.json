@@ -68,10 +68,10 @@
     },
     {
       "slug": "cs50",
-      "name": "CS50x · Harvard",
+      "name": "CS50x · HarvardX",
       "category": "Apprentissage",
-      "status": "Certificat obtenu en 2025",
-      "description": "Le cours CS50x de Harvard, suivi en autodidacte jusqu’au certificat et à mon projet final NovaLog.",
+      "status": "Certificat Verified edX",
+      "description": "CS50x, le cours de HarvardX suivi en autodidacte, avec mon certificat Verified edX et mon projet final NovaLog.",
       "deck": "Des bases en informatique mises en pratique dans dix séries d’exercices et un projet personnel.",
       "lead": "Apprendre les bases, puis construire mon propre projet.",
       "art": "mark:50",
@@ -92,6 +92,10 @@
         {
           "title": "Un projet que je voulais garder",
           "text": "Pour le projet final, j’ai choisi NovaLog, un journal de discipline quotidien. Il réunissait une connexion, des catégories de tâches, un suivi et un historique. L’idée me plaisait parce que ce journal pouvait réellement me servir après le cours."
+        },
+        {
+          "title": "Le certificat Verified edX",
+          "text": "J’ai obtenu le certificat Verified de CS50x sur edX, proposé par HarvardX. Il a été délivré le 14 janvier 2026. Le document et le lien de vérification sont accessibles ici, avec le code de mes exercices et de mon projet final."
         }
       ],
       "external": {
@@ -102,11 +106,11 @@
       "resources": [
         {
           "url": "/documents/certificat-cs50-yann-wirtz.pdf",
-          "label": "Voir mon certificat CS50 (PDF)"
+          "label": "Voir mon certificat Verified edX (PDF)"
         },
         {
-          "url": "https://cs50.harvard.edu/certificates/54cf82f4-c2a3-47ef-a105-cd994030368e",
-          "label": "Vérifier le certificat"
+          "url": "https://courses.edx.org/certificates/ea8d527454164678b3742bc0f8901702",
+          "label": "Vérifier mon certificat sur edX"
         }
       ]
     },

@@ -4,7 +4,7 @@
 
 L’Atlas vivant est la direction choisie par Yann le 21 novembre 2026 pour le site personnel principal. La page de liens `/yann`, NovaLove, son extrait et les ressources protégées restent hors refonte. Le manifeste `tests/fixtures/protected-atlas-baseline.json` conserve les empreintes SHA-256 de 24 fichiers acceptés avant le travail Atlas. Il ne faut jamais le régénérer pour masquer une modification.
 
-L’Atlas a été publié et vérifié le 21 novembre 2026 sur `novaia.org` et `www.novaia.org`. Les 133 contrôles HTTP de production passent, dont les empreintes des trois ressources Atlas principales, les routes, les contenus et la protection des sources privées. Les six contrôles d’administration authentifiée passent aussi, sans écrire de publication. La base D1 réelle est configurée et les deux migrations sont appliquées.
+L’Atlas a été publié et vérifié le 21 novembre 2026 sur `novaia.org` et `www.novaia.org`. Les contrôles HTTP de production passent, dont les empreintes des trois ressources Atlas principales, les routes, les contenus et la protection des sources privées. Les six contrôles d’administration authentifiée passent aussi, sans écrire de publication. La base D1 réelle est configurée et les deux migrations sont appliquées. Les logos, les retraits demandés et le certificat Verified edX font l’objet de contrôles complémentaires.
 
 Exception demandée explicitement ensuite sur `/yann` : retirer l’étoile et le bouton TikTok NovaIA, et employer Programme D2E. Le helper `scripts/protected-atlas.mjs` exige ces transformations exactes depuis la fixture originale. Le manifeste initial reste intact ; les 23 autres fichiers protégés gardent leurs octets. `.gitattributes` protège ces octets entre Windows et le build distant.
 

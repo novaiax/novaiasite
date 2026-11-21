@@ -33,3 +33,4 @@ novaia.html -text
 serve.js -text
 images/projets/* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 documents/*.pdf -text
+css/atlas.css text eol=lf

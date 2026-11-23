@@ -142,3 +142,15 @@
 
 /* Native reader scroll containment; a progressive enhancement on older engines. */
 .atlas-reader:modal{overscroll-behavior:contain}.atlas-reader::backdrop{overflow:hidden;overscroll-behavior:contain}
+
+/* NovaBU joins the living map; mobile keeps it in the first pair of creations. */
+.node-bu{--x:45%;--y:87%}
+@media(min-width:1201px) and (max-width:1360px){.atlas-node.node-practices{--x:12%}}
+@media(min-width:761px) and (max-width:1200px){
+ .atlas-intro{position:relative;top:auto;left:auto;max-width:none;padding:40px 40px 12px}
+ .atlas-intro h1{max-width:540px}.atlas-intro .intro-copy{max-width:540px}
+ .atlas-map{height:auto;min-height:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:center;gap:20px;padding:28px 24px 40px}
+ .atlas-node{position:relative;left:auto;top:auto;transform:none!important;min-width:0;width:100%;max-width:none;min-height:170px;padding:12px 5px;gap:10px;align-self:stretch;justify-content:center}
+}
+@media(max-width:1200px){.node-memory{order:1}.node-bu{order:2}.node-web{order:3}.node-formation{order:4}.node-yann{order:5}.node-novaia{order:6}.node-book{order:7}.node-rock{order:8}.node-practices{order:9}.node-hub{order:10}.node-journal{order:11}}
+@media(max-width:760px){.node-journal{grid-column:1/-1;width:50%;justify-self:center}}

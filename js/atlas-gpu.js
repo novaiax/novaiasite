@@ -14,6 +14,7 @@ const THREADS = [
   ['novaia-assistant','parcours'],['novaia-assistant','novamemory'],
   ['novaia-assistant','novahub'],['novaia-assistant','novaformation'],
   ['novaia-assistant','novaiaweb'],['novahub','novamemory'],['novahub','journal'],
+  ['novabu','novaformation'],['novabu','parcours'],
 ];
 
 export function atlasQuality({width=1200,height=760,dpr=1,coarse=false,cores=8,memory=8,saveData=false}={}) {

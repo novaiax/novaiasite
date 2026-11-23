@@ -24,6 +24,6 @@ test('main pages share one Atlas identity, retain real links and contain correct
   const projects=extendAtlasProjects(JSON.parse(fs.readFileSync(path.join(root,'data/atlas-content.json'),'utf8')).projects,root);
   const files=['index.html','parcours/index.html','projets/index.html','journal/index.html','blog/index.html','confidentialite/index.html',...projects.map(p=>`projets/${p.slug}/index.html`)];
   for(const file of files){const html=fs.readFileSync(path.join(root,file),'utf8');assert.match(html,/css\/atlas\.css/);assert.match(html,/id="main-content"/);assert.doesNotMatch(html,/css\/personal\.css/)}
-  const home=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.equal((home.match(/data-atlas-node=/g)||[]).length,10);assert.match(home,/Ambition Paris/);assert.match(home,/href="\/parcours\/#sur-le-terrain"/);assert.match(home,/data-atlas-node="novaia-assistant"/);assert.doesNotMatch(home,/data-atlas-node="novaprompter"/);
+  const home=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.equal((home.match(/data-atlas-node=/g)||[]).length,11);assert.match(home,/Ambition Paris/);assert.match(home,/href="\/parcours\/#sur-le-terrain"/);assert.match(home,/data-atlas-node="novaia-assistant"/);assert.doesNotMatch(home,/data-atlas-node="novaprompter"/);assert.match(home,/data-atlas-node="novabu"[^>]*href="\/projets\/novabu\/"/);
   const story=fs.readFileSync(path.join(root,'projets/novaiaweb/index.html'),'utf8');assert.match(story,/septembre 2025 à janvier 2026/);assert.doesNotMatch(story,/mai 2026/);
 });

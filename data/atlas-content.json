@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-21",
+  "updated_at": "2026-11-23",
   "projects": [
     {
       "slug": "novamemory",
@@ -97,6 +97,46 @@
         }
       ],
       "related": "rock-de-strass"
+    },
+    {
+      "slug": "novabu",
+      "name": "NovaBU",
+      "category": "Applications & outils",
+      "family": "apps",
+      "status": "Application web & Windows",
+      "description": "Mon outil pour trouver une salle en bibliothèque à Strasbourg, comparer les créneaux et organiser mes réservations.",
+      "deck": "Trouver une salle où parler et travailler, seul ou à plusieurs.",
+      "lead": "Une date, un horaire, un nombre de personnes : NovaBU compare les possibilités.",
+      "art": "bu",
+      "external": {
+        "url": "https://novabu.novaia.org/",
+        "label": "Ouvrir NovaBU"
+      },
+      "resources": [
+        {
+          "url": "https://github.com/novaiax/NovaBU",
+          "label": "Voir le projet sur GitHub"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Ce que j’ai construit",
+          "text": "NovaBU rassemble les disponibilités de plusieurs bibliothèques de Strasbourg, dont le Studium, la BNU et le PEGE. L’application recherche des salles adaptées au nombre de personnes et compare les créneaux selon la durée couverte, les déplacements et les changements de salle."
+        },
+        {
+          "title": "Comment ça fonctionne",
+          "text": "Je choisis le jour, les heures et le nombre de personnes. NovaBU consulte les créneaux publics sur Affluences et propose des possibilités. Un agenda permet de garder les réservations confirmées, d’éviter les chevauchements et de suivre le temps déjà prévu. Je peux aussi ajouter d’autres lieux."
+        },
+        {
+          "title": "Réserver auprès du bon endroit",
+          "text": "Le créneau choisi ouvre le formulaire officiel Affluences, dans l’application ou dans un autre onglet. La confirmation et les conditions d’accès restent celles de l’établissement. NovaBU m’aide à trouver et organiser les possibilités ; la réservation se confirme auprès du service officiel."
+        },
+        {
+          "title": "Sur le web et sur Windows",
+          "text": "L’instance en ligne est accessible avec un compte. Le dépôt public contient aussi le code source et un installeur Windows gratuit pour utiliser NovaBU en local, sans compte NovaBU ni clé API."
+        }
+      ],
+      "related": "novaformation"
     },
     {
       "slug": "novaiaweb",

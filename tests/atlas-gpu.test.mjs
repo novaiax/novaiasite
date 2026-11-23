@@ -26,13 +26,14 @@ test('known relations are preserved and a future creation is not isolated',()=>{
  assert.deepEqual(atlasThreads([]),[]);assert.deepEqual(atlasThreads([{id:'solo',x:.5,y:.5}]),[]);
 });
 
-test('the ten-node home connects central NovaIA and advisory NovaHub to the intended stories',()=>{
- const ids=['parcours','novamemory','novaformation','pratiques','rock-de-strass','novaiaweb','novalove','journal','novahub','novaia-assistant'];
+test('the eleven-node home connects NovaIA, NovaHub and NovaBU to the intended stories',()=>{
+ const ids=['parcours','novamemory','novaformation','pratiques','rock-de-strass','novaiaweb','novalove','journal','novahub','novaia-assistant','novabu'];
  const points=ids.map((id,index)=>({id,x:(index%5+.5)/5,y:index<5?.3:.7}));
  const links=atlasThreads(points);
  const connected=(a,b)=>links.some(([x,y])=>(ids[x]===a&&ids[y]===b)||(ids[x]===b&&ids[y]===a));
  for(const neighbor of ['parcours','novamemory','novahub','novaformation','novaiaweb'])assert.ok(connected('novaia-assistant',neighbor),neighbor);
  for(const neighbor of ['novamemory','journal'])assert.ok(connected('novahub',neighbor),neighbor);
+ for(const neighbor of ['novaformation','parcours'])assert.ok(connected('novabu',neighbor),neighbor);
  assert.ok(points.every((_,index)=>links.some(pair=>pair.includes(index))));
  assert.ok(links.every(([a,b])=>a>=0&&b>=0&&a<ids.length&&b<ids.length&&a!==b));
  assert.equal(new Set(links.map(pair=>[...pair].sort((a,b)=>a-b).join(':'))).size,links.length);

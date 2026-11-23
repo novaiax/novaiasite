@@ -12,6 +12,8 @@ NovaFormation est son logiciel de formation personnel : organiser son apprentiss
 
 Le parcours conserve les faits donnés par Yann : bac, formation autodidacte en IA et informatique, freelance en marque blanche sous YannService de septembre 2025 à janvier 2026, puis création de NovaiaWeb en janvier 2026. Les libellés sont « Étudiant-entrepreneur », « Programme D2E » et « Accompagné par Pépite ETENA ». Strasbourg est sa ville actuelle ; Paris est une ambition.
 
+La fiche personnelle NovaiaWeb présente l'agence actuelle : sites, automatisations, outils sur mesure ; manière de travailler et ambition de structurer l'entreprise. La chronologie tient dans une note finale. Elle ne devient pas un catalogue commercial ni un historique de dépannages. Les applications et intégrations sont présentées comme une offre et une ambition, sans inventer de livraisons clients. Une nouvelle recherche sur quatre angles dans NovaMemory, avec sept sources lues en entier, a servi à cette réécriture du 23 novembre ; le registre privé reste hors du dépôt.
+
 Rock de Strass est un engagement personnel et associatif : danse, membre du bureau, communication digitale, visibilité et site réalisé avec NovaiaWeb. Ne pas raconter la façon dont son implication lui a été proposée. Les conflits internes, personnes tierces, coordonnées privées, données de santé et notes privées restent hors du site.
 
 CS50x est mis en valeur dans le parcours, avec le certificat Verified edX de HarvardX délivré le 14 janvier 2026 au nom de WIRTZ Yann. Le PDF et l’aperçu proviennent de l’impression de la page officielle fournie par Yann. Employer ce document et son lien de vérification ; l’ancien certificat standard daté 2025 est remplacé.

@@ -6,6 +6,7 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 const cache=new Map(),journalRoots=new WeakMap();
 let gpu,gpuAbort,pendingReader,readerSequence=0,readerDepth=0,readerBase,readerFocus,readerTransition;
 let motionEnabled=!reduced.matches;
+let novaiawebStyles;
 try{if(localStorage.getItem('atlas-motion')==='paused')motionEnabled=false}catch{}
 document.documentElement.classList.add('atlas-js');
 
@@ -42,6 +43,25 @@ async function getDocument(destination,signal){
   const html=await response.text();
   if(destination.cacheable){cache.set(destination.href,{html,time:Date.now()});if(cache.size>24)cache.delete(cache.keys().next().value)}
   return html;
+}
+
+// Only this owned profile needs an additional stylesheet. Keep it in the head
+// so its scoped rules also work when the reader replaces its document body.
+function prepareReaderStyles(destination){
+  if(!/^\/projets\/novaiaweb\/?$/.test(destination.path))return Promise.resolve();
+  const existing=$('link[data-atlas-novaiaweb-style]');
+  if(existing?.sheet)return Promise.resolve();
+  if(novaiawebStyles)return novaiawebStyles;
+  novaiawebStyles=new Promise((resolve,reject)=>{
+    const link=existing||document.createElement('link');
+    const cleanup=()=>{clearTimeout(timer);link.removeEventListener('load',loaded);link.removeEventListener('error',failed)};
+    const loaded=()=>{cleanup();resolve()};
+    const failed=()=>{cleanup();link.remove();novaiawebStyles=undefined;reject(Error('La présentation ne peut pas être chargée.'))};
+    const timer=setTimeout(failed,8000);
+    link.addEventListener('load',loaded,{once:true});link.addEventListener('error',failed,{once:true});
+    if(!existing){link.rel='stylesheet';link.href='/css/atlas-novaiaweb.css';link.dataset.atlasNovaiawebStyle='';document.head.append(link)}
+  });
+  return novaiawebStyles;
 }
 
 function readerDocument(html,destination){
@@ -82,7 +102,7 @@ async function openReader(href,trigger,{historyMode='push',depth}={}){
   if(trigger){trigger.setAttribute('aria-busy','true');trigger.classList.add('atlas-opening')}
   announce('Ouverture de la lecture…');
   try{
-    const html=await getDocument(destination,pendingReader.signal);
+    const [html]=await Promise.all([getDocument(destination,pendingReader.signal),prepareReaderStyles(destination)]);
     if(sequence!==readerSequence)return;
     const documentData=readerDocument(html,destination);
     if(!reader.open){

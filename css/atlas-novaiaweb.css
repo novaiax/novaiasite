@@ -1,0 +1,138 @@
+/* NovaiaWeb's personal profile keeps its scope when opened in the Atlas reader. */
+.novaiaweb-profile {
+ --nw-navy: #142654;
+ --nw-ink: #173244;
+ --nw-muted: #526d7b;
+ --nw-line: #b8c9d0;
+ color: var(--nw-ink);
+ padding: 32px 0 0;
+ overflow-wrap: break-word;
+}
+.novaiaweb-profile h1, .novaiaweb-profile h2, .novaiaweb-profile h3 { text-wrap: balance; }
+.novaiaweb-profile > *, .novaiaweb-profile .nw-opening > *, .novaiaweb-profile .nw-service > *, .novaiaweb-profile .nw-method-list li > * { min-width: 0; }
+.novaiaweb-profile .nw-breadcrumbs { margin: 0 0 36px; }
+.novaiaweb-profile .nw-opening { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(220px, .7fr); gap: 50px 8%; padding-bottom: 70px; align-items: center; }
+.novaiaweb-profile .nw-opening-copy > .eyebrow { color: var(--nw-navy); margin-bottom: 22px; }
+.novaiaweb-profile h1 { max-width: 850px; font: 400 clamp(3.8rem, 6.2vw, 6.5rem)/1.04 var(--atlas-serif); letter-spacing: -.065em; }
+.novaiaweb-profile h1 em { color: var(--nw-navy); }
+.novaiaweb-profile .nw-deck { max-width: 660px; margin-top: 30px; color: #3f5c6d; font: 400 clamp(1.3rem, 1.8vw, 1.6rem)/1.55 var(--atlas-serif); letter-spacing: -.025em; }
+.novaiaweb-profile .nw-intro { max-width: 640px; margin-top: 23px; color: var(--nw-muted); font-size: 1rem; line-height: 1.85; }
+.novaiaweb-profile .nw-intro p + p { margin-top: 16px; }
+.novaiaweb-profile .nw-identity { margin: 0; padding: 25px 0 30px; align-self: stretch; display: flex; flex-direction: column; align-items: center; justify-content: center; border-top: 1px solid var(--nw-line); border-bottom: 1px solid var(--nw-line); }
+.novaiaweb-profile .nw-logo { width: min(75%, 256px); aspect-ratio: 1; display: grid; place-items: center; }
+.novaiaweb-profile .nw-logo .node-art, .novaiaweb-profile .nw-logo > img { width: 100%; height: 100%; min-width: 0; max-width: 100%; padding: 0; border: 0; background: none; border-radius: 0; box-shadow: none; transform: none; scale: 1; filter: none; }
+.novaiaweb-profile .nw-logo .node-art img { width: 100%; height: 100%; max-width: 100%; object-fit: contain; border-radius: 20%; }
+.novaiaweb-profile .nw-identity figcaption { display: flex; flex-direction: column; align-items: center; gap: 5px; margin-top: 20px; text-align: center; }
+.novaiaweb-profile .nw-identity strong { color: var(--nw-navy); font-size: 1.15rem; font-weight: 600; letter-spacing: -.045em; }
+.novaiaweb-profile .nw-identity figcaption > span { font-size: .75rem; color: var(--nw-muted); }
+.novaiaweb-profile .nw-section { padding: 57px 0 65px; border-top: 1px solid var(--nw-line); }
+.novaiaweb-profile .nw-section-heading { display: grid; grid-template-columns: minmax(0, .46fr) minmax(0, 1fr); gap: 14px 8%; align-items: start; margin-bottom: 36px; }
+.novaiaweb-profile .nw-section-heading > .eyebrow { grid-column: 1; grid-row: 1 / 3; margin-top: 10px; color: var(--nw-navy); }
+.novaiaweb-profile .nw-section-heading h2 { grid-column: 2; max-width: 720px; font: 400 clamp(2.4rem, 3.6vw, 3.6rem)/1.1 var(--atlas-serif); letter-spacing: -.055em; }
+.novaiaweb-profile .nw-section-intro { grid-column: 2; max-width: 700px; margin-top: 5px; color: #486674; font-size: 1rem; line-height: 1.8; }
+.novaiaweb-profile .nw-section-intro p + p { margin-top: 15px; }
+.novaiaweb-profile .nw-service { display: grid; grid-template-columns: 48px minmax(0, .72fr) minmax(0, 1fr); gap: 20px 5%; align-items: baseline; padding: 28px 0 31px; border-top: 1px solid var(--nw-line); }
+.novaiaweb-profile .nw-service:last-child { border-bottom: 1px solid var(--nw-line); }
+.novaiaweb-profile .nw-number { font-size: .75rem; font-weight: 500; color: var(--nw-muted); letter-spacing: .05em; }
+.novaiaweb-profile .nw-service h3 { max-width: 370px; color: var(--nw-navy); font: 400 clamp(1.6rem, 2.1vw, 2rem)/1.2 var(--atlas-serif); letter-spacing: -.035em; }
+.novaiaweb-profile .nw-prose { font-size: 1rem; line-height: 1.8; color: #486674; }
+.novaiaweb-profile .nw-prose p + p { margin-top: 15px; }
+.novaiaweb-profile .nw-context { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 7%; max-width: 990px; margin: 38px 0 0 auto; }
+.novaiaweb-profile .nw-context h3 { font: 400 1.55rem/1.25 var(--atlas-serif); letter-spacing: -.035em; margin-bottom: 14px; }
+.novaiaweb-profile .nw-context > section:only-child { grid-column: 1 / -1; max-width: 740px; }
+.novaiaweb-profile .nw-method { padding-bottom: 70px; }
+.novaiaweb-profile .nw-method-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); list-style: none; gap: 32px 7%; padding: 0; margin: 0; }
+.novaiaweb-profile .nw-method-list li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 20px; padding-top: 24px; border-top: 1px solid var(--nw-line); }
+.novaiaweb-profile .nw-step-index { color: var(--nw-navy); font: italic 1.45rem/1.2 var(--atlas-serif); }
+.novaiaweb-profile .nw-method-list h3 { margin: 0 0 12px; font: 400 1.6rem/1.2 var(--atlas-serif); letter-spacing: -.035em; }
+.novaiaweb-profile .nw-ambition { display: grid; grid-template-columns: minmax(0, .46fr) minmax(0, 1fr); gap: 28px 8%; padding: 46px 4.5% 48px; background: var(--nw-navy); color: #f4f3eb; }
+.novaiaweb-profile .nw-ambition > .eyebrow { color: #b9c8df; margin-top: 9px; }
+.novaiaweb-profile .nw-ambition h2 { color: #f4f3eb; font: 400 clamp(2.1rem, 3.4vw, 3.25rem)/1.15 var(--atlas-serif); letter-spacing: -.05em; max-width: 730px; }
+.novaiaweb-profile .nw-ambition-copy { font-size: 1rem; line-height: 1.85; color: #dce3eb; margin-top: 23px; max-width: 680px; }
+.novaiaweb-profile .nw-ambition-copy p + p { margin-top: 17px; }
+.novaiaweb-profile .nw-origin { display: grid; grid-template-columns: minmax(0, .46fr) minmax(0, 1fr); gap: 22px 8%; padding: 36px 0 38px; border-bottom: 1px solid var(--nw-line); }
+.novaiaweb-profile .nw-origin h2 { color: var(--nw-muted); font: 400 1.4rem/1.3 var(--atlas-serif); letter-spacing: -.025em; }
+.novaiaweb-profile .nw-origin > div { color: var(--nw-muted); font-size: .875rem; line-height: 1.8; max-width: 740px; }
+.novaiaweb-profile .nw-origin p + p { margin-top: 13px; }
+.novaiaweb-profile .nw-next { display: flex; align-items: center; justify-content: space-between; gap: 24px 35px; padding: 42px 0 64px; }
+.novaiaweb-profile .nw-next .eyebrow { margin-bottom: 5px; }
+.novaiaweb-profile .nw-site-link { display: inline-flex; gap: 20px; min-height: 48px; align-items: center; color: var(--nw-navy); font: 400 clamp(1.75rem, 2.6vw, 2.5rem)/1.25 var(--atlas-serif); letter-spacing: -.035em; text-decoration: none; }
+.novaiaweb-profile .nw-site-link > span[aria-hidden] { font: 400 1.5rem/1 var(--atlas-sans); transition: transform .2s; }
+.novaiaweb-profile .nw-site-link:hover { text-decoration: underline; text-underline-offset: 8px; }
+.novaiaweb-profile .nw-site-link:hover > span[aria-hidden] { transform: translate(3px, -3px); }
+.novaiaweb-profile .nw-atlas-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font-size: .875rem; text-decoration: none; }
+.novaiaweb-profile .nw-atlas-link:hover { text-decoration: underline; }
+
+/* The compact reader keeps the same hierarchy and all content. */
+.reader-body .novaiaweb-profile { padding-top: 0; }
+.reader-body .novaiaweb-profile .nw-breadcrumbs { margin-bottom: 20px; font-size: .8rem; }
+.reader-body .novaiaweb-profile .nw-opening { grid-template-columns: minmax(0, 1fr) 180px; gap: 30px; padding-bottom: 35px; }
+.reader-body .novaiaweb-profile .nw-opening-copy > .eyebrow { margin-bottom: 13px; }
+.reader-body .novaiaweb-profile h1 { font-size: clamp(2.7rem, 4.8vw, 4rem); line-height: 1.06; }
+.reader-body .novaiaweb-profile .nw-deck { font-size: 1.3rem; margin-top: 20px; }
+.reader-body .novaiaweb-profile .nw-intro { font-size: .95rem; margin-top: 16px; line-height: 1.75; }
+.reader-body .novaiaweb-profile .nw-identity { padding: 15px 0 20px; }
+.reader-body .novaiaweb-profile .nw-logo { width: 140px; }
+.reader-body .novaiaweb-profile .nw-identity strong { font-size: 1rem; }
+.reader-body .novaiaweb-profile .nw-identity figcaption { margin-top: 14px; }
+.reader-body .novaiaweb-profile .nw-section { padding-block: 33px 38px; }
+.reader-body .novaiaweb-profile .nw-section-heading { grid-template-columns: minmax(0, .38fr) minmax(0, 1fr); column-gap: 25px; margin-bottom: 25px; }
+.reader-body .novaiaweb-profile .nw-section-heading h2 { font-size: 2.35rem; }
+.reader-body .novaiaweb-profile .nw-section-heading > .eyebrow { margin-top: 6px; }
+.reader-body .novaiaweb-profile .nw-service { grid-template-columns: 30px minmax(0, .7fr) minmax(0, 1fr); column-gap: 20px; padding-block: 23px; }
+.reader-body .novaiaweb-profile .nw-service h3 { font-size: 1.6rem; }
+.reader-body .novaiaweb-profile .nw-prose { font-size: .95rem; line-height: 1.75; }
+.reader-body .novaiaweb-profile .nw-method-list { column-gap: 30px; row-gap: 25px; }
+.reader-body .novaiaweb-profile .nw-method-list li { grid-template-columns: 28px minmax(0, 1fr); gap: 13px; padding-top: 20px; }
+.reader-body .novaiaweb-profile .nw-method-list h3 { font-size: 1.45rem; }
+.reader-body .novaiaweb-profile .nw-ambition { grid-template-columns: minmax(0, .38fr) minmax(0, 1fr); gap: 25px; padding: 30px; }
+.reader-body .novaiaweb-profile .nw-ambition h2 { font-size: 2.15rem; }
+.reader-body .novaiaweb-profile .nw-origin { grid-template-columns: minmax(0, .38fr) minmax(0, 1fr); gap: 25px; padding-block: 27px; }
+.reader-body .novaiaweb-profile .nw-next { padding-block: 30px 5px; }
+.reader-body .novaiaweb-profile .nw-site-link { font-size: 1.9rem; }
+
+@media (max-width: 980px) {
+ .novaiaweb-profile .nw-opening { grid-template-columns: minmax(0, 1fr) 220px; column-gap: 35px; }
+ .novaiaweb-profile h1 { font-size: clamp(3.3rem, 6.5vw, 5rem); }
+ .novaiaweb-profile .nw-service { grid-template-columns: 34px minmax(0, .75fr) minmax(0, 1fr); gap: 20px 25px; }
+}
+@media (max-width: 760px) {
+ .novaiaweb-profile { padding-top: 20px; }
+ .novaiaweb-profile .nw-breadcrumbs { margin-bottom: 24px; font-size: .8rem; }
+ .novaiaweb-profile .nw-opening, .reader-body .novaiaweb-profile .nw-opening { grid-template-columns: minmax(0, 1fr); gap: 30px; padding-bottom: 38px; }
+ .novaiaweb-profile .nw-opening-copy > .eyebrow { margin-bottom: 17px; }
+ .novaiaweb-profile h1, .reader-body .novaiaweb-profile h1 { font-size: clamp(2.7rem, 10.4vw, 4.3rem); line-height: 1.06; letter-spacing: -.06em; }
+ .novaiaweb-profile .nw-deck, .reader-body .novaiaweb-profile .nw-deck { font-size: 1.3rem; margin-top: 22px; }
+ .novaiaweb-profile .nw-intro, .reader-body .novaiaweb-profile .nw-intro { font-size: 1rem; line-height: 1.8; margin-top: 18px; }
+ .novaiaweb-profile .nw-identity, .reader-body .novaiaweb-profile .nw-identity { flex-direction: row; justify-content: flex-start; align-items: center; gap: 23px; padding: 20px 0; }
+ .novaiaweb-profile .nw-logo, .reader-body .novaiaweb-profile .nw-logo { flex: 0 0 96px; width: 96px; }
+ .novaiaweb-profile .nw-identity figcaption, .reader-body .novaiaweb-profile .nw-identity figcaption { align-items: flex-start; text-align: left; margin: 0; }
+ .novaiaweb-profile .nw-identity strong { font-size: 1.15rem; }
+ .novaiaweb-profile .nw-section, .reader-body .novaiaweb-profile .nw-section { padding-block: 35px 38px; }
+ .novaiaweb-profile .nw-work { border-top: 0; padding-top: 0; }
+ .novaiaweb-profile .nw-section-heading, .reader-body .novaiaweb-profile .nw-section-heading { display: block; margin-bottom: 27px; }
+ .novaiaweb-profile .nw-section-heading > .eyebrow, .reader-body .novaiaweb-profile .nw-section-heading > .eyebrow { margin: 0 0 15px; }
+ .novaiaweb-profile .nw-section-heading h2, .reader-body .novaiaweb-profile .nw-section-heading h2 { font-size: 2.45rem; line-height: 1.12; }
+ .novaiaweb-profile .nw-section-intro { margin-top: 17px; }
+ .novaiaweb-profile .nw-service, .reader-body .novaiaweb-profile .nw-service { grid-template-columns: 26px minmax(0, 1fr); gap: 10px 15px; padding-block: 23px 26px; }
+ .novaiaweb-profile .nw-service h3, .reader-body .novaiaweb-profile .nw-service h3 { font-size: 1.75rem; }
+ .novaiaweb-profile .nw-service .nw-prose { grid-column: 2; }
+ .novaiaweb-profile .nw-prose, .reader-body .novaiaweb-profile .nw-prose { font-size: 1rem; line-height: 1.8; }
+ .novaiaweb-profile .nw-context { grid-template-columns: minmax(0, 1fr); gap: 25px; margin-top: 28px; }
+ .novaiaweb-profile .nw-method-list, .reader-body .novaiaweb-profile .nw-method-list { grid-template-columns: minmax(0, 1fr); gap: 23px; }
+ .novaiaweb-profile .nw-method-list li, .reader-body .novaiaweb-profile .nw-method-list li { grid-template-columns: 28px minmax(0, 1fr); gap: 15px; padding-top: 22px; }
+ .novaiaweb-profile .nw-method-list h3, .reader-body .novaiaweb-profile .nw-method-list h3 { font-size: 1.6rem; }
+ .novaiaweb-profile .nw-ambition, .reader-body .novaiaweb-profile .nw-ambition { display: block; padding: 28px 24px 31px; }
+ .novaiaweb-profile .nw-ambition > .eyebrow, .reader-body .novaiaweb-profile .nw-ambition > .eyebrow { margin: 0 0 18px; }
+ .novaiaweb-profile .nw-ambition h2, .reader-body .novaiaweb-profile .nw-ambition h2 { font-size: 2.2rem; line-height: 1.15; }
+ .novaiaweb-profile .nw-ambition-copy { margin-top: 20px; font-size: 1rem; line-height: 1.8; }
+ .novaiaweb-profile .nw-origin, .reader-body .novaiaweb-profile .nw-origin { grid-template-columns: minmax(0, 1fr); gap: 15px; padding-block: 28px; }
+ .novaiaweb-profile .nw-origin h2 { font-size: 1.4rem; }
+ .novaiaweb-profile .nw-origin > div { font-size: .9rem; }
+ .novaiaweb-profile .nw-next, .reader-body .novaiaweb-profile .nw-next { flex-direction: column; align-items: flex-start; gap: 19px; padding-block: 30px 42px; }
+ .novaiaweb-profile .nw-site-link, .reader-body .novaiaweb-profile .nw-site-link { font-size: clamp(1.75rem, 7.2vw, 2.2rem); gap: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .novaiaweb-profile .nw-site-link > span[aria-hidden] { transition: none; }
+ .novaiaweb-profile .nw-site-link:hover > span[aria-hidden] { transform: none; }
+}

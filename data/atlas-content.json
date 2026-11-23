@@ -102,30 +102,60 @@
       "slug": "novaiaweb",
       "name": "NovaiaWeb",
       "category": "Entrepreneuriat",
-      "status": "Activité en cours",
-      "description": "Mon activité web, commencée en freelance puis devenue mon entreprise.",
-      "deck": "De YannService à NovaiaWeb : faire des sites, résoudre des problèmes techniques et travailler avec de vraies entreprises.",
-      "lead": "J’ai commencé à travailler en freelance sous le nom YannService, de septembre 2025 à janvier 2026. En janvier 2026, j’ai créé ma propre entreprise et lancé NovaiaWeb.",
+      "status": "Mon agence web, depuis janvier 2026",
+      "description": "Mon agence web : création de sites, automatisations et outils sur mesure pour les indépendants, artisans et entreprises.",
+      "deck": "Des sites web, des automatisations et des outils pour les professionnels.",
+      "lead": "Un site pour présenter son activité. Une automatisation pour gagner du temps. Un outil pour mieux travailler. Je pars du besoin du professionnel pour proposer une solution adaptée.",
       "art": "web",
       "external": {
         "url": "https://novaiaweb.com/",
-        "label": "Visiter NovaiaWeb"
+        "label": "Découvrir l’agence"
       },
-      "sections": [
+      "sections": [],
+      "related": "trouvejob",
+      "intro": "Avec NovaiaWeb, je relie le développement, la relation client et l’entrepreneuriat. J’accompagne des indépendants, des artisans et des entreprises, en Alsace et à distance.",
+      "servicesTitle": "Construire ce qui sert vraiment.",
+      "services": [
         {
-          "title": "Les premières prestations",
-          "text": "Avant de lancer ma propre agence, j’avais déjà réalisé des prestations techniques en marque blanche. Je travaillais pour le compte d’autres structures. Cette expérience a précédé les projets que j’ai ensuite portés sous mon propre nom."
+          "title": "Créer et refaire des sites",
+          "text": "Je conçois des sites pour présenter une activité, faciliter la prise de contact et développer sa visibilité. Je m’occupe aussi de leur mise en ligne, de leurs mises à jour et de leur suivi."
         },
         {
-          "title": "Ce qu’il faut faire fonctionner",
-          "text": "Le travail a compris la création de sites, mais aussi du dépannage : configurer un nom de domaine, régler un problème de certificat ou comprendre pourquoi les e-mails n’arrivent pas. Un site doit être accessible à la bonne adresse et permettre aux messages de parvenir à leur destinataire."
+          "title": "Simplifier le quotidien",
+          "text": "Je propose des automatisations pour relier les outils, organiser les demandes et réduire les tâches répétitives : formulaires, rendez-vous, suivi client ou relances."
         },
         {
-          "title": "Montrer une page que l’on peut ouvrir",
-          "text": "Pour présenter une proposition, j’ai pris l’habitude de préparer des démonstrations en ligne. Cela donne quelque chose de concret à regarder et à parcourir. Cette collection de sites et de maquettes fait aussi partie du chemin qui m’a amené à NovaiaWeb."
+          "title": "Développer sur mesure",
+          "text": "Quand le besoin dépasse un site vitrine, je propose des outils métiers, des applications web et des intégrations IA. Le périmètre se définit avec le professionnel, selon son usage."
         }
       ],
-      "related": "trouvejob"
+      "methodTitle": "Échanger, construire, ajuster.",
+      "method": [
+        {
+          "title": "Comprendre l’activité",
+          "text": "Je discute du métier, des clients et de ce qui prend du temps au quotidien."
+        },
+        {
+          "title": "Poser un cadre clair",
+          "text": "Nous définissons les priorités, le périmètre et le devis. Un aperçu concret permet de valider la direction."
+        },
+        {
+          "title": "Développer avec des retours",
+          "text": "Je réalise, fais essayer, ajuste et vérifie avant la mise en ligne."
+        },
+        {
+          "title": "Continuer à faire évoluer",
+          "text": "Je propose un suivi pour maintenir le site et l’adapter aux nouveaux besoins."
+        }
+      ],
+      "ambition": {
+        "title": "Faire grandir ma propre entreprise.",
+        "text": "Je veux structurer NovaiaWeb et prendre en charge des projets plus complets, des refontes aux applications et aux intégrations IA. J’aime autant construire que rencontrer les personnes pour qui je travaille. Mon ambition : vivre de ce que je crée et développer une agence qui reste proche du terrain."
+      },
+      "origin": {
+        "title": "Le point de départ.",
+        "text": "J’ai travaillé en freelance sous le nom YannService de septembre 2025 à janvier 2026. En janvier 2026, j’ai créé ma propre entreprise : NovaiaWeb."
+      }
     },
     {
       "slug": "rock-de-strass",

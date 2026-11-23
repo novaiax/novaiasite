@@ -1,5 +1,7 @@
 # Novaia.org — Atlas vivant
 
+Avant toute création, refonte ou choix technique important, consulter obligatoirement Modern Web Guidance : https://github.com/googlechrome/modern-web-guidance et https://developer.chrome.com/docs/modern-web-guidance?hl=fr. Lire les guides pertinents, vérifier la compatibilité et les replis, et consigner les lectures et décisions réelles dans `docs/MODERN_WEB_GUIDANCE.md`.
+
 Le 21 novembre 2026, Yann a choisi l’Atlas vivant et autorisé la refonte complète du site principal avec de belles animations WebGPU. Le site reste personnel, non commercial. Préserver les contenus factuels corrigés, les anciennes URL et les routes dynamiques Cloudflare.
 
 ## Périmètre figé
